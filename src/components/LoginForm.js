@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
+import loginForm from "../reducers/loginForm";
 
-const Login = () => {
+const Login = (props) => {
 
     handleSubmit = () => {
         
@@ -12,8 +13,8 @@ const Login = () => {
     }
     return (
         <form onSubmit={this.handleSubmit}>
-            <input type="text" name="username" onChange={this.handleChange} />
-            <input type="text" name="password" onChange={this.handleChange} />
+            <input type="text" name="username" value={props.username} onChange={this.handleChange} />
+            <input type="text" name="password" value={props.password} onChange={this.handleChange} />
             <input type="submit" />
         </form>
 
@@ -26,4 +27,4 @@ const mapStateToProps = state = {
         password: state.loginForm.password
     }
 }
-export default connect()(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
