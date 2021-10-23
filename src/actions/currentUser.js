@@ -9,13 +9,13 @@ export const setCurrentUser = user => {
 
 //asynchronous action creators
 export const login = credentials => {
-    debugger
+    
     const configObj = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({username: "rileyflynn", password: "password"})
+        body: JSON.stringify(credentials)
     }
 
     return dispatch => {
