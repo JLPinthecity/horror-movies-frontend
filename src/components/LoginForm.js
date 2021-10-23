@@ -8,7 +8,7 @@ const Login = (props) => {
         
         const { name, value } = event.target
         const updatedFormData = {
-            ...props.loginForm
+            ...props.loginForm,
             [name]: value
         }
         
@@ -28,5 +28,7 @@ const Login = (props) => {
 const mapStateToProps = state => {
     return {
         loginForm: state.loginForm
+    }
 }
+
 export default connect(mapStateToProps, { updateLoginForm })(Login);
