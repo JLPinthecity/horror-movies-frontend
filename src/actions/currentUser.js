@@ -9,6 +9,7 @@ export const setCurrentUser = user => {
 
 //asynchronous action creators
 export const login = credentials => {
+    debugger
     const configObj = {
         method: "POST",
         headers: {

@@ -17,11 +17,9 @@ const Login = (props) => {
     }
 
     const handleSubmit = event => {
-        event.preventdefault();
+        event.preventDefault();
         props.login(props.loginForm);
-
     }
-
 
     return (
         <form onSubmit={handleSubmit}>
@@ -39,4 +37,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateLoginForm })(Login);
+export default connect(mapStateToProps, { updateLoginForm, login })(Login);
