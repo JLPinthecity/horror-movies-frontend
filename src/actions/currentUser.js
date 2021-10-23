@@ -20,6 +20,15 @@ export const login = credentials => {
 
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/login", configObj)
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.error) {
+                alert(user.error)
+            } else {
+                dispatch({type: "SET_CURRENT_USER", payload: user})
+            }
+        })
+
     }
 }
 //we are returning a function that accepts dispatch as an argument
