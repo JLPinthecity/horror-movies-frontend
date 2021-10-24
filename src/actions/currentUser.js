@@ -1,6 +1,6 @@
 //synchronous action creators
 export const setCurrentUser = (user) => {
-debugger
+    
     return {
         type: "SET_CURRENT_USER", 
         payload: user
@@ -12,6 +12,7 @@ debugger
 export const login = credentials => {
     
     const configObj = {
+        credentials: "include",
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -36,8 +37,9 @@ export const login = credentials => {
 
 
 export const getCurrentUser = () => {
-
+    console.log("DISPATCHING GET CURRENT USER")
     const configObj = {
+        credentials: "include",
         method: 'GET',
         header: {
             "Content-Type": "application/json" 
@@ -45,7 +47,7 @@ export const getCurrentUser = () => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3000/api/v1/get_current_user", configObj)
+        return fetch("http://localhost:3001/api/v1/get_current_user", configObj)
         .then(resp => resp.json())
         .then(user => {
             if (user.error) {
