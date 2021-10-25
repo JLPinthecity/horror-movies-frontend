@@ -58,3 +58,20 @@ export const getCurrentUser = () => {
         })
     }
 }
+
+export const logout = () => {
+    
+    const configObj = {
+        credentials: "include",
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+
+    return dispatch => {
+        return fetch("http://localhost:3001/api/v1/logout", configObj)
+        .then(resp => resp.json())
+        .then(notice => console.log(notice))
+    }
+}
