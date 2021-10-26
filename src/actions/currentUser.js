@@ -38,7 +38,7 @@ export const login = credentials => {
                 dispatch({type: "SET_CURRENT_USER", payload: user})
             }
         })
-
+        .catch(console.log)
     }
 }
 //we are returning a function that accepts dispatch as an argument
