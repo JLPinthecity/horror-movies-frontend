@@ -6,6 +6,14 @@ export const setCurrentUser = (user) => {
         payload: user
     }
 }
+
+export const clearCurrentUser = () => {
+
+    return {
+        type: "CLEAR_CURRENT_USER"
+    }
+}
+
 //returns an object
 
 //asynchronous action creators
@@ -63,7 +71,7 @@ export const logout = () => {
     
     const configObj = {
         credentials: "include",
-        method: "POST",
+        method: "DELETE",
         headers: {
             "Content-Type": "application/json"
         }
@@ -72,6 +80,8 @@ export const logout = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/logout", configObj)
         .then(resp => resp.json())
-        .then(notice => console.log(notice))
+        .then(notice => dispatch({
+            type: "CLEAR_CURRENT_USER"
+        }))
     }
 }

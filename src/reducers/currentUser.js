@@ -1,11 +1,13 @@
-export default (state = [], action) => {
+export default (state = null, action) => {
     
     switch (action.type) {
 
         case "SET_CURRENT_USER":
-        return action.payload
+            return action.payload
+
+        case "CLEAR_CURRENT_USER":
+            return null
         
-        debugger
         default: 
         return state
     }
