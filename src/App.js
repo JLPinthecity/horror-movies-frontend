@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Login from './components/LoginForm';
-import Logoff from './components/Logoff';
+import NavBar from './components/NavBar';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
 
@@ -13,16 +12,10 @@ class App extends React.Component {
 
   render() {
     return (
-      this.props.currentUser ? <Login /> : <Logoff />
+      <NavBar/>
   );
   }
   
 }
 
-const mapStateToProps = state => {
-  return {
-    currentUser: state.currentUser
-  }
-}
-
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default connect(null, { getCurrentUser })(App);
