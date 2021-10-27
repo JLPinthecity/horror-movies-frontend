@@ -6,6 +6,13 @@ export const updateLoginForm = (formData) => {
     }
 }
 
+export const clearLoginForm = () => {
+
+    return {
+        type: "CLEAR_LOGIN_FORM"
+    }
+}
+
 
 
 //action creators are functions
