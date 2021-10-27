@@ -10,7 +10,9 @@ const NavBar = () => {
 }
 
 const mapStateToProps = (state) => {
-    currentUser: state.currentUser
+    return {
+        currentUser: state.currentUser
+    }
 }
 
 
