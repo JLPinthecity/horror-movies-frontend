@@ -39,6 +39,7 @@ export const login = credentials => {
             } else {
                 dispatch({type: "SET_CURRENT_USER", payload: resp.data})
                 dispatch(clearLoginForm())
+                dispatch(getUserTrips())
             }
         })
         .catch(console.log)
