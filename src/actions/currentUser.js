@@ -39,8 +39,8 @@ export const login = credentials => {
                 alert(resp.error)
             } else {
                 dispatch(setCurrentUser(resp.data))
-                dispatch(clearLoginForm())
                 dispatch(getUserMovies(resp.data.id))
+                dispatch(clearLoginForm())
             }
         })
         .catch(console.log)

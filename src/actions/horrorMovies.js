@@ -8,8 +8,7 @@ export const setUserMovies = (horror_movies) => {
 }
 
 //asynchronous action creators
-export const getUserMovies = (user) => {
-
+export const getUserMovies = (userId) => {
     const configObj = {
         credentials: "include",
         method: 'GET',
@@ -19,6 +18,16 @@ export const getUserMovies = (user) => {
     }
 
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/users/${user.id}/horror_movies`)
-    }
+        return fetch(`http://localhost:3001/api/v1/users/${userId}/horror_movies`, configObj)
+        .then(resp => resp.json())
+        .then(resp => {
+            if (resp.error) {
+                alert(resp.error)
+            } else {
+                dispatch(setUserMovies())
+            }
+        })
+        .catch(console.log)
+        }
+
 }
