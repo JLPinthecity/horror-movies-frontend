@@ -1,4 +1,5 @@
 import { clearLoginForm } from './loginForm'
+import { getUserTrips } from './horrorMovies'
 
 //synchronous action creators
 export const setCurrentUser = (user) => {
