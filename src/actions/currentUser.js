@@ -38,16 +38,16 @@ export const login = credentials => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                dispatch({type: "SET_CURRENT_USER", payload: resp.data})
+                dispatch(setCurrentUser(resp.data))
                 dispatch(clearLoginForm())
-                dispatch(getUserTrips())
+                dispatch(getUserTrips(resp.data.id))
             }
         })
         .catch(console.log)
     }
 }
 //we are returning a function that accepts dispatch as an argument
-
+//resp.data.id = user.id
 
 export const getCurrentUser = () => {
     console.log("DISPATCHING GET CURRENT USER")
