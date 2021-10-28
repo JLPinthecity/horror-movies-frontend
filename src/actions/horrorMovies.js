@@ -1,9 +1,9 @@
 //synchronous action creators
-export const setUserMovies = (horror_movies) => {
+export const setUserMovies = (movies) => {
     
     return {
         type: "SET_USER_MOVIES", 
-        payload: horror_movies
+        payload: movies
     }
 }
 
@@ -24,7 +24,7 @@ export const getUserMovies = (userId) => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                dispatch(setUserMovies())
+                dispatch(setUserMovies(resp.data))
             }
         })
         .catch(console.log)
