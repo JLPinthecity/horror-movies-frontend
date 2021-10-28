@@ -1,5 +1,5 @@
 import { clearLoginForm } from './loginForm'
-import { getUserTrips } from './horrorMovies'
+import { getUserMovies } from './horrorMovies'
 
 //synchronous action creators
 export const setCurrentUser = (user) => {
@@ -40,7 +40,7 @@ export const login = credentials => {
             } else {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(clearLoginForm())
-                dispatch(getUserTrips(resp.data.id))
+                dispatch(getUserMovies(resp.data.id))
             }
         })
         .catch(console.log)

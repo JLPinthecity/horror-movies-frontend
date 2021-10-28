@@ -8,7 +8,7 @@ export const setUserMovies = (horror_movies) => {
 }
 
 //asynchronous action creators
-export const getUserTrips = () => {
+export const getUserMovies = (user) => {
 
     const configObj = {
         credentials: "include",
@@ -16,5 +16,9 @@ export const getUserTrips = () => {
         headers: {
             "Content-Type": "application/json"
         }
+    }
+
+    return dispatch => {
+        return fetch(`http://localhost:3001/api/v1/users/${user.id}/horror_movies`)
     }
 }
