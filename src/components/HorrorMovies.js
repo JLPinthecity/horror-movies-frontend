@@ -14,7 +14,7 @@ const HorrorMovies = (props) => {
 
 const mapStateToProps = state => {
     return {
-        movies = state.horrorMovies
+        movies: state.horrorMovies
     } 
 }
 
