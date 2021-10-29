@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import MovieCard from './MovieCard';
 
 const HorrorMovies = (props) => {
+    const movieCards = props.movies.map(m => <MovieCard movie={m} key={m.id}/>)
     return (
         <div>
-            test movies
+            { movieCards }
         </div>
 
     )
@@ -14,7 +15,7 @@ const HorrorMovies = (props) => {
 const mapStateToProps = state => {
     return {
         movies = state.horrorMovies
-    }
+    } 
 }
 
 export default connect(mapStateToProps)(HorrorMovies);
