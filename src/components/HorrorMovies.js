@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 
 const HorrorMovies = (props) => {
     return (
+        <div>
+            test movies
+        </div>
 
     )
 }
