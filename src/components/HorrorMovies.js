@@ -5,9 +5,7 @@ import MovieCard from './MovieCard';
 const HorrorMovies = (props) => {
     const movieCards = props.movies.map(m => <MovieCard movie={m} key={m.id}/>)
     return (
-        <div>
-            { movieCards }
-        </div>
+        movieCards.length > 0 ? movieCards : null
 
     )
 }
