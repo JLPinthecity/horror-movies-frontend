@@ -50,7 +50,7 @@ export const login = credentials => {
 //resp.data.id = user.id
 
 export const getCurrentUser = () => {
-    console.log("DISPATCHING GET CURRENT USER")
+    // console.log("DISPATCHING GET CURRENT USER")
     const configObj = {
         credentials: "include",
         method: 'GET',
@@ -66,11 +66,14 @@ export const getCurrentUser = () => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                dispatch({type: "SET_CURRENT_USER", payload: resp.data})
+                dispatch(setCurrentUser(resp.data))
+                dispatch(getUserMovies(resp.data.id))
             }
         })
     }
 }
+
+//resp.data = user here
 
 export const logout = () => {
     

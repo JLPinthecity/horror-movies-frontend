@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import MovieCard from './MovieCard';
 
 const HorrorMovies = (props) => {
-    const movieCards = props.movies.length > 0 props.movies.map(m => <MovieCard movie={m} key={m.attributes.id}/> : [])
+    const movieCards = props.movies.length > 0 ? props.movies.map(m => <MovieCard movie={m} key={m.attributes.id}/>) : null
+
     return (
-        movieCards
+        movieCards 
     )
 }
 
