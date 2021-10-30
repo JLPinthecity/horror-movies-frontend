@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const SignUp = (props) => {
+    debugger
 
     return (
         <form onSubmit={console.log("test")}>
@@ -16,7 +17,9 @@ const SignUp = (props) => {
 }
 
 const mapStateToProps = state => {
-    signupForm: state.signupForm
+    return {
+        signupForm: state.signupForm
+    }
 }
 
 export default connect(mapStateToProps)(SignUp); 
