@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
+import ContentContainer from './components/ContentContainer';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
-import HorrorMovies from './components/HorrorMovies';
+
 
 class App extends React.Component {
 
@@ -15,7 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <NavBar/>
-        <HorrorMovies/>
+        <ContentContainer/>
       </div>
   );
   }
