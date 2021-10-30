@@ -20,6 +20,22 @@ export const clearCurrentUser = () => {
 //returns an object
 
 //asynchronous action creators
+
+export const signup = credentials => {
+
+    const configObj = {
+        credentials: "include",
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(credentials)
+    }
+
+    return dispatch => {
+        return fetch()
+    }
+}
 export const login = credentials => {
     
     const configObj = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignupForm } from '../actions/signupForm';
+import { signup } from '../actions/currentUser';
 
 const SignUp = (props) => {
 
@@ -16,7 +17,7 @@ const SignUp = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        
+        signup(props.signupForm)
     }
 
     return (

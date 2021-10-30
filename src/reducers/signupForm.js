@@ -11,7 +11,9 @@ export default (state = initialState, action) => {
 
         case "UPDATE_SIGNUP_FORM":
             return action.payload
-            debugger
+
+        case "RESET_SIGNUP_FORM":
+            return initialState
 
         default:
             return state
