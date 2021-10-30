@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
+import LoginForm from './components/LoginForm';
+import Logoff from './components/Logoff';
 import ContentContainer from './components/ContentContainer';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
-
+import { BrowserRouter as Router, 
+        Route } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -16,7 +19,13 @@ class App extends React.Component {
     return (
       <div>
         <NavBar/>
-        <ContentContainer/>
+        <Router>
+          <Route exact path="/login" component={LoginForm}/>
+
+          <Route exact path="/logout" component={Logoff}/>
+
+          <Route exact path="/horror-movies" component={ContentContainer}/>
+        </Router>
       </div>
   );
   }
