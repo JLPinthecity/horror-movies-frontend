@@ -21,21 +21,6 @@ export const clearCurrentUser = () => {
 
 //asynchronous action creators
 
-export const signup = credentials => {
-
-    const configObj = {
-        credentials: "include",
-        method: "POST", 
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(credentials)
-    }
-
-    return dispatch => {
-        return fetch()
-    }
-}
 export const login = credentials => {
     
     const configObj = {
@@ -64,6 +49,35 @@ export const login = credentials => {
 }
 //we are returning a function that accepts dispatch as an argument
 //resp.data.id = user.id
+
+
+
+export const signup = credentials => {
+    console.log("from signup", credentials)
+    const configObj = {
+        credentials: "include",
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(credentials)
+    }
+
+    return dispatch => {
+        return fetch("http://localhost:3001/api/v1/signup", configObj)
+        .then(resp => resp.json())
+        .then(resp => {
+            if (resp.error) {
+                alert(resp.error)
+            } else {
+                console.log(resp)
+            }
+        })
+        .catch(console.log)
+    }
+}
+
+
 
 export const getCurrentUser = () => {
     // console.log("DISPATCHING GET CURRENT USER")

@@ -17,7 +17,7 @@ const SignUp = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        signup(props.signupForm)
+        props.signup(props.signupForm)
     }
 
     return (
@@ -38,4 +38,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateSignupForm })(SignUp); 
+export default connect(mapStateToProps, { updateSignupForm, signup })(SignUp); 
