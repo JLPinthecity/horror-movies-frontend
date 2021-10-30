@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
-const SignUp = () => {
+const SignUp = (props) => {
 
     return (
         <form onSubmit={console.log("test")}>
@@ -16,5 +15,8 @@ const SignUp = () => {
 
 }
 
+const mapStateToProps = state => {
+    signupForm: state.signupForm
+}
 
-export default connect()(SignUp); 
+export default connect(mapStateToProps)(SignUp); 
