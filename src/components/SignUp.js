@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 
 const SignUp = () => {
 
@@ -14,4 +16,5 @@ const SignUp = () => {
 
 }
 
-export default SignUp; 
+
+export default connect()(SignUp); 
