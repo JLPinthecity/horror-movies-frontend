@@ -41,7 +41,7 @@ export const login = credentials => {
             } else {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getUserMovies(resp.data.id))
-                dispatch(clearLoginForm())
+                dispatch(clearSignupForm())
             }
         })
         .catch(console.log)
@@ -70,7 +70,9 @@ export const signup = credentials => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                console.log(resp)
+                dispatch(setCurrentUser(resp.data))
+                dispatch(getUserMovies(resp.data.id))
+
             }
         })
         .catch(console.log)
