@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
         case "UPDATE_SIGNUP_FORM":
             return action.payload
 
-        case "RESET_SIGNUP_FORM":
+        case "CLEAR_SIGNUP_FORM":
             return initialState
 
         default:
