@@ -1,5 +1,6 @@
-import { clearLoginForm } from './loginForm'
-import { getUserMovies } from './horrorMovies'
+import { clearLoginForm } from './loginForm';
+import { getUserMovies } from './horrorMovies';
+import { clearSignupForm } from './signupForm';
 
 //synchronous action creators
 export const setCurrentUser = (user) => {
