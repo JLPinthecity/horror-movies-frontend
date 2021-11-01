@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import LoginForm from './components/LoginForm';
-import Logoff from './components/Logoff';
+import Home from './components/Home';
 import ContentContainer from './components/ContentContainer';
 import SignUp from './components/SignUp';
 import { connect } from 'react-redux';
