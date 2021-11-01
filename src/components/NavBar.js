@@ -6,9 +6,7 @@ import Logoff from './Logoff';
 const NavBar = (props) => {
     return (
         <div className="nav">
-            { props.currentUser ?  <p>Welcome, {props.currentUser.attributes.name}</p> : "" }
-            <Login/>
-            <Logoff/>
+           
         </div>
     )
 }
