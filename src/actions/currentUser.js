@@ -73,6 +73,7 @@ export const signup = credentials => {
             } else {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getUserMovies(resp.data.id))
+                dispatch(clearSignupForm())
 
             }
         })
