@@ -8,7 +8,9 @@ import SignUp from './components/SignUp';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
 import { BrowserRouter as Router, 
-        Route } from 'react-router-dom';
+        Route, 
+        Switch, 
+        withRouter } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -22,13 +24,15 @@ class App extends React.Component {
       <div>
         <NavBar/>
         <Router>
-          <Route exact path="/" render={()=> loggedIn ? <ContentContainer /> : <Home/> }/>
+          <Switch>
+            <Route exact path="/" render={()=> loggedIn ? <ContentContainer /> : <Home/> }/>
 
-          <Route exact path="/login" component={LoginForm}/>
+            <Route exact path="/login" component={LoginForm}/>
 
-          <Route exact path="/signup" component={SignUp}/>
+            <Route exact path="/signup" component={SignUp}/>
 
-          <Route exact path="/horror-movies" component={ContentContainer}/>
+            <Route exact path="/horror-movies" component={ContentContainer}/>
+          </Switch>
         </Router>
       </div>
     );
@@ -41,4 +45,4 @@ const mapStateToProps = state => {
   })
 }
 
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
