@@ -17,10 +17,13 @@ class App extends React.Component {
   }
 
   render() {
+    const { loggedIn } = this.props
     return (
       <div>
         <NavBar/>
         <Router>
+          <Route exact path="/" render={()=> loggedIn ? <ContentContainer /> : <Home/> }/>
+
           <Route exact path="/login" component={LoginForm}/>
 
           <Route exact path="/signup" component={SignUp}/>
@@ -28,9 +31,14 @@ class App extends React.Component {
           <Route exact path="/horror-movies" component={ContentContainer}/>
         </Router>
       </div>
-  );
+    );
   }
-  
 }
 
-export default connect(null, { getCurrentUser })(App);
+const mapStateToProps = state => {
+  return ({
+    loggedIn: !!state.currentUser
+  })
+}
+
+export default connect(mapStateToProps, { getCurrentUser })(App);
