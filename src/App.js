@@ -7,8 +7,7 @@ import ContentContainer from './components/ContentContainer';
 import SignUp from './components/SignUp';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
-import { BrowserRouter as Router, 
-        Route, 
+import { Route, 
         Switch, 
         withRouter } from 'react-router-dom';
 
@@ -23,9 +22,8 @@ class App extends React.Component {
     return (
       <div>
         <NavBar/>
-        <Router>
           <Switch>
-            <Route exact path="/" render={()=> loggedIn ? <ContentContainer /> : <Home/> }/>
+            <Route exact path="/" render={(props)=> loggedIn ? <ContentContainer /> : <Home/> }/>
 
             <Route exact path="/login" component={LoginForm}/>
 
@@ -33,7 +31,6 @@ class App extends React.Component {
 
             <Route exact path="/horror-movies" component={ContentContainer}/>
           </Switch>
-        </Router>
       </div>
     );
   }
