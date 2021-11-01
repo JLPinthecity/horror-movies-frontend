@@ -22,7 +22,7 @@ export const clearCurrentUser = () => {
 
 //asynchronous action creators
 
-export const login = credentials => {
+export const login = (credentials, history) => {
     
     const configObj = {
         credentials: "include",
@@ -43,6 +43,7 @@ export const login = credentials => {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getUserMovies(resp.data.id))
                 dispatch(clearLoginForm())
+                history.push("/")
             }
         })
         .catch(console.log)
