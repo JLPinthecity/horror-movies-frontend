@@ -6,7 +6,6 @@ import { login } from "../actions/currentUser";
 const Login = (props) => {
     
     const handleChange = event => {
-        
         const { name, value } = event.target
         const updatedFormData = {
             ...props.loginForm,
@@ -18,7 +17,7 @@ const Login = (props) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.login(props.loginForm);
+        props.login(props.loginForm, props.history);
     }
 
     return (
@@ -38,3 +37,9 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { updateLoginForm, login })(Login);
+
+
+
+//history is a mutable prop
+//it's an object, which means it's pass-by reference
+//which means you can grab it and pass it along
