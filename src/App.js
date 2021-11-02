@@ -5,6 +5,7 @@ import LoginForm from './components/LoginForm';
 import Home from './components/Home';
 import ContentContainer from './components/ContentContainer';
 import SignUp from './components/SignUp';
+import NewMovieForm from './components/NewMovieForm';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
 import { Route, 
@@ -30,6 +31,9 @@ class App extends React.Component {
             <Route exact path="/signup" component={SignUp}/>
 
             <Route exact path="/horror-movies" component={ContentContainer}/>
+
+            <Route exact path="/horror-movies/new" component={NewMovieForm}/>
+
           </Switch>
       </div>
     );
