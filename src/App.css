@@ -8,8 +8,35 @@ body {
     padding: 0;
 }
 
+a:link {
+    color: rgb(212, 149, 55);
+    text-decoration: none;
+  }
+  
+a:visited {
+    color: rgb(132, 140, 128);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(153, 134, 114);
+    text-decoration: gray wavy underline;
+  }
+
 .nav {
-    background-color: cornflowerblue;
+    background-color: darkslategrey;
+    color: whitesmoke;
+    font-size: 45px;
     width: 100%;
     height: 80px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+}
+
+.nav .left {
+    flex: 50%;
+}
+
+.nav .right {
+    flex: 50%
 }
