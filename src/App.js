@@ -35,7 +35,7 @@ class App extends React.Component {
 
             <Route exact path="/horror-movies/new" component={NewMovieForm}/>
 
-            <Route exact path="/horror-movies/:slug" component={MovieCard}
+            <Route exact path="/horror-movies/:slug" component={MovieCard}/>
 
           </Switch>
       </div>
