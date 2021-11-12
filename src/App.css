@@ -75,6 +75,11 @@ button:hover {
     
 }
 
+.nav .left button {
+    display: none;
+    margin-left: 20px;
+}
+
 @media only screen and (max-width: 850px) {
     .nav .left .links a{
         font-size: 20px;
@@ -87,4 +92,18 @@ button:hover {
         font-size: 15px;
     }
 }
-/* stuff inside here will only appear when the screen shrinks below 850px*/
+/* stuff inside here will only appear when the screen shrinks below 750px*/
+
+
+@media only screen and (max-width: 650px) {
+    .nav .left button {
+        display: flex;
+    }
+    .nav .left .links {
+        display: none;
+    }
+}
+
+/* MENU BUTTON */
+/* When the screen shrinks to the point where the menu options become smushed we want to display a button instead */
+/* This turns the MENU BUTTON off. We only want it on when the screen gets too small. */

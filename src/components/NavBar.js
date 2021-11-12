@@ -20,6 +20,8 @@ const NavBar = (props) => {
                     : <SignupLogin />
                     }
                 </div>
+
+                <button>BUTTON</button>
             </div>
     
 
