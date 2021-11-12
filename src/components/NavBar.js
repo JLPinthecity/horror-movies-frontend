@@ -3,26 +3,28 @@ import { connect } from 'react-redux';
 import Logoff from './Logoff';
 import SignupLogin from '../containers/SignupLogin';
 import { withRouter, Link } from 'react-router-dom';
+import { showMenuItems } from '../actions/navBar.js'
 
 const NavBar = (props) => {
-    debugger
+
+    const handleChange = () => {
+        props.showMenuItems()
+    }
+
+    //after we click, it needs to turn on showLinks aka change "false" to "true," which shows the menu items
+
+
     return (
         <div className="nav">
 
             <div className="left">
-                <div className="links" id={props.showLinks ? "hidden" : ""}>
-                    <Link to="/">HOME</Link>
-                    <Link to="/about">ABOUT</Link>
-                </div>
+                <ul className="links" id={props.showLinks ? "hidden" : ""}>
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/about">ABOUT</Link></li>
+                    <li>{props.currentUser ? <Logoff /> : <SignupLogin />}</li>
+                </ul>
 
-                <div className="links">
-                    {props.currentUser
-                    ? <Logoff />
-                    : <SignupLogin />
-                    }
-                </div>
-
-                <button>BUTTON</button>
+                <button onClick={handleChange}>MENU_BUTTON</button>
             </div>
     
 
@@ -42,6 +44,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default withRouter(connect(mapStateToProps)(NavBar));
+export default withRouter(connect(mapStateToProps, { showMenuItems })(NavBar));
 
-/* if showLinks is true = add an id of hidden (hidden menu) then we can style the hidden menu in css stylesheet*/

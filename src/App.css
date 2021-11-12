@@ -29,6 +29,8 @@ button:hover {
     align-items: center;
 }
 /* flex % will divide the space into two responsive sides */
+
+
 .nav .left .links {
     max-height: 80px;
 }
@@ -50,6 +52,10 @@ button:hover {
     text-decoration: gray wavy underline;
 }
 
+.nav .left button {
+    display: none;
+}
+
 .nav .right {
     flex: 25%;
     display: flex;
@@ -68,16 +74,29 @@ button:hover {
     color: black;
 }
 
-.right button {
+.nav .right button {
     height: 32px;
     width: 70px;
     font-size: 16px;
-    
 }
 
-.nav .left button {
-    display: none;
-    margin-left: 20px;
+.nav .left #hidden {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    height: 230px;
+    width: 100%;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 230px;
+    font-size: 25px;
+}
+
+.nav .left #hidden a {
+    margin: 2px;
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 850px) {
