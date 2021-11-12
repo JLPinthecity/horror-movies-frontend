@@ -9,10 +9,19 @@ const NavBar = (props) => {
         <div className="nav">
 
             <div className="left">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                {props.currentUser ? <Logoff/> : <SignupLogin/> }
+                <div className="links">
+                    <Link to="/">HOME</Link>
+                    <Link to="/about">ABOUT</Link>
+                </div>
+
+                <div className="links">
+                    {props.currentUser
+                    ? <Logoff />
+                    : <SignupLogin />
+                    }
+                </div>
             </div>
+    
 
             <div className="right">
 
@@ -28,4 +37,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(NavBar);
+export default withRouter(connect(mapStateToProps)(NavBar));

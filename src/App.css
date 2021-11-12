@@ -8,21 +8,6 @@ body {
     padding: 0;
 }
 
-a:link {
-    color: rgb(212, 149, 55);
-    text-decoration: none;
-  }
-  
-a:visited {
-    color: rgb(132, 140, 128);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: rgb(153, 134, 114);
-    text-decoration: gray wavy underline;
-  }
-
 .nav {
     background-color: darkslategrey;
     color: whitesmoke;
@@ -34,9 +19,36 @@ a:visited {
 }
 
 .nav .left {
-    flex: 50%;
+    flex: 75%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.nav .left .links {
+    max-height: 80px;
+}
+
+.nav .left .links a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 45px;
+}
+
+.nav .left .links a:visited{
+    color: rgb(212, 149, 55);
+    text-decoration: none;
+}
+
+.nav .left .links a:hover{
+    color: rgb(153, 134, 114);
+    text-decoration: gray wavy underline;
 }
 
 .nav .right {
-    flex: 50%
+    flex: 25%
 }
+
+
+/* flex 50% will divide the space into two responsive sides */
