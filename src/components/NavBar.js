@@ -24,7 +24,8 @@ const NavBar = (props) => {
     
 
             <div className="right">
-
+                <input type="text" placeholder="search"/>
+                <button>Search</button>
             </div>
             
         </div>
