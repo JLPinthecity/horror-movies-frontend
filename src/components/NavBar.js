@@ -2,14 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Logoff from './Logoff';
 import SignupLogin from '../containers/SignupLogin';
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom';
 
 const NavBar = (props) => {
+    debugger
     return (
         <div className="nav">
 
             <div className="left">
-                <div className="links">
+                <div className="links" id={props.showLinks ? "hidden" : ""}>
                     <Link to="/">HOME</Link>
                     <Link to="/about">ABOUT</Link>
                 </div>
@@ -36,8 +37,11 @@ const NavBar = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        currentUser: state.currentUser
+        currentUser: state.currentUser,
+        showLinks: state.navBar.showLinks
     }
 }
 
 export default withRouter(connect(mapStateToProps)(NavBar));
+
+/* if showLinks is true = add an id of hidden (hidden menu) then we can style the hidden menu in css stylesheet*/
