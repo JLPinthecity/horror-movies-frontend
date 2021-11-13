@@ -4,6 +4,7 @@ import Logoff from './Logoff';
 import SignupLogin from '../containers/SignupLogin';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
+import { Reorder, Search } from '@material-ui/icons';
 
 const NavBar = (props) => {
 
@@ -24,13 +25,13 @@ const NavBar = (props) => {
                     <li>{props.currentUser ? <Logoff /> : <SignupLogin />}</li>
                 </ul>
 
-                <button onClick={handleChange}>MENU_BUTTON</button>
+                <button onClick={handleChange}><Reorder/></button>
             </div>
     
 
             <div className="right">
                 <input type="text" placeholder="search"/>
-                <button>Search</button>
+                <button><Search/></button>
             </div>
             
         </div>
