@@ -4,7 +4,7 @@ import Logoff from './Logoff';
 import SignupLogin from '../containers/SignupLogin';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
-import { Reorder, Search } from '@material-ui/icons';
+import { Reorder, Search, Close } from '@material-ui/icons';
 
 const NavBar = (props) => {
 
@@ -25,7 +25,7 @@ const NavBar = (props) => {
                     <li>{props.currentUser ? <Logoff /> : <SignupLogin />}</li>
                 </ul>
 
-                <button onClick={handleChange}><Reorder/></button>
+                <button onClick={handleChange}>{props.showLinks ? <Close/> : <Reorder/>}</button>
             </div>
     
 
@@ -37,6 +37,9 @@ const NavBar = (props) => {
         </div>
     )
 }
+
+//showLinks = false, menu not clicked
+//!showLinks = true, menu clicked
 
 const mapStateToProps = (state) => {
     return {
