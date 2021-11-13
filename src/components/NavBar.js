@@ -40,7 +40,7 @@ const NavBar = (props) => {
 const mapStateToProps = (state) => {
     return {
         currentUser: state.currentUser,
-        showLinks: state.navBar.showLinks
+        showLinks: state.navBar
     }
 }
 

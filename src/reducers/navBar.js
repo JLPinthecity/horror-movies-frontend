@@ -1,13 +1,11 @@
-const initialState = {
-    showLinks: false
-}
+const showLinks = false
 
-export default (state = initialState, action) => {
+export default (state = showLinks, action) => {
     switch (action.type) {
 
         case "SHOW_MENU_ITEMS":
-            return { showLinks: true }
-
+            return !state
+            
         default: 
         return state
     }
