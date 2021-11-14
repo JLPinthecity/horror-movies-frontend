@@ -16,25 +16,26 @@ const NavBar = (props) => {
 
 
     return (
-        <div className="nav">
+        <nav className="nav">
 
-            <div className="left">
-                <ul className="links" id={props.showLinks ? "hidden" : ""}>
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/about">ABOUT</Link></li>
-                    <li>{props.currentUser ? <Logoff /> : <SignupLogin />}</li>
-                </ul>
+            <ul className="left" id={props.showLinks ? "hidden" : ""}>
 
-                <button onClick={handleChange}>{props.showLinks ? <Close/> : <Reorder/>}</button>
+                <li><Link to="/" className="nav-1">HOME</Link></li>
+                <li><Link to="/about" className="nav-2">ABOUT</Link></li>
+                <li>{props.currentUser ? <Logoff /> : <SignupLogin />}</li>
+           
+            </ul>
+
+            <div className="hide">
+                <button id="" onClick={handleChange}>{props.showLinks ? <Close/> : <Reorder/>}</button>
             </div>
-    
 
             <div className="right">
                 <input type="text" placeholder="search"/>
-                <button><Search/></button>
+                <button id="right"><Search/></button>
             </div>
             
-        </div>
+        </nav>
     )
 }
 
