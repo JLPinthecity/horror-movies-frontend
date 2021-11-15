@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Logoff from './Logoff';
+// import Logoff from './Logoff';
 import SignupLogin from '../containers/SignupLogin';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
@@ -11,24 +11,20 @@ const NavBar = (props) => {
     const handleChange = () => {
         props.showMenuItems()
     }
-
-    //after we click, it needs to turn on showLinks aka change "false" to "true," which shows the menu items
-
-
+//after we click, it needs to turn on showLinks aka change "false" to "true," which shows the menu items
     return (
         <nav className="nav">
-
-            <ul className="left" id={props.showLinks ? "hidden" : ""}>
-
-                <li><Link to="/" className="nav-1">HOME</Link></li>
-                <li><Link to="/about" className="nav-2">ABOUT</Link></li>
-                <li>{props.currentUser ? <Logoff /> : <SignupLogin />}</li>
-           
-            </ul>
-
             <div className="hide">
                 <button id="" onClick={handleChange}>{props.showLinks ? <Close/> : <Reorder/>}</button>
             </div>
+
+            <ul className="left" id={props.showLinks ? "hidden" : ""}>
+
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li>{props.currentUser ? <Link to="/logoff">LOGOFF</Link> : <SignupLogin />}</li>
+
+            </ul>
 
             <div className="right">
                 <input type="text" placeholder="search"/>
