@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import SignupLogin from '../containers/SignupLogin';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
-import { Reorder, Search, Close } from '@material-ui/icons';
+import { Reorder, Close } from '@material-ui/icons';
 
 const NavBar = (props) => {
 
@@ -14,8 +14,13 @@ const NavBar = (props) => {
 //after we click, it needs to turn on showLinks aka change "false" to "true," which shows the menu items
     return (
         <nav className="nav">
+
             <div className="hide">
                 <button id="" onClick={handleChange}>{props.showLinks ? <Close/> : <Reorder/>}</button>
+            </div>
+
+            <div className="header">
+                HORRORFLIX
             </div>
 
             <ul className="left" id={props.showLinks ? "hidden" : ""}>
@@ -26,10 +31,10 @@ const NavBar = (props) => {
 
             </ul>
 
-            <div className="right">
+            {/* <div className="right">
                 <input type="text" placeholder="search"/>
                 <button id="right"><Search/></button>
-            </div>
+            </div> */}
             
         </nav>
     )
