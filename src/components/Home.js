@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 
 const Home = () => {
     return (
         <div>
-        home
+            <button className="openModalButton">LOGIN BUTTON TB</button>
         </div>
     )
 }

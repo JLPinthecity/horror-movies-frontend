@@ -4,6 +4,7 @@ import currentUser from './reducers/currentUser.js';
 import loginForm from './reducers/loginForm.js';
 import horrorMovies from './reducers/horrorMovies.js';
 import signupForm from './reducers/signupForm.js';
+import openModalButton from './reducers/openModalButton.js';
 import navBar from './reducers/navBar.js'
 import thunk from 'redux-thunk';
 
@@ -13,7 +14,8 @@ const reducer = combineReducers({
     loginForm,
     horrorMovies,
     signupForm,
-    navBar
+    navBar,
+    openModalButton
 })
   
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
