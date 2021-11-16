@@ -27,7 +27,7 @@ const Login = (props) => {
         <div className="modalBackground">
         <div className="modalContainer">
             
-            <button onClick={ () => props.closeModal }><Close/></button>
+            <button onClick={ props.openOrCloseModal}><Close/></button>
             
             <div className="title">
                 Log in
