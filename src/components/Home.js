@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { openModal } from '../actions/openModal'
-import Modal from './Modal'
+import LoginModal from './LoginModal'
 
 const Home = (props) => {
     debugger
@@ -13,7 +13,7 @@ const Home = (props) => {
         <div>
             <button onClick={handleChange} className="openModalButton">Log In</button>
 
-            { props.button_clicked && <Modal/>}
+            { props.button_clicked && <LoginModal/>}
 
         </div>
 

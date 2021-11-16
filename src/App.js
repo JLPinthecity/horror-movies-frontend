@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
-import LoginForm from './components/LoginForm';
+import LoginModal from './components/LoginModal';
 import Home from './components/Home';
 import ContentContainer from './components/ContentContainer';
 import SignUp from './components/SignUp';
@@ -29,7 +29,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render={(props)=> loggedIn ? <ContentContainer /> : <Home/> }/>
 
-            <Route exact path="/login" component={LoginForm}/>
+            <Route exact path="/login" component={LoginModal}/>
 
             <Route exact path="/signup" component={SignUp}/>
 
