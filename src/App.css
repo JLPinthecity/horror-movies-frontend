@@ -1,7 +1,7 @@
 .App {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rbg(232, 224, 207);
 }
 
 body {
@@ -14,47 +14,51 @@ button:hover {
 }
 
 .nav {
-    color: whitesmoke;
     font-size: 35px;
     width: 100%;
     height: 80px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', sans-serif;
     display: flex;
 }
 
 .header {
     font-family: 'Playfair Display', serif;
-    font-size: 45px;
+    font-size: 50px;
     font-style: oblique;
-    color: rgb(32,28,40)
+    color: rgb(102, 43, 56);
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
 }
 
 ul {
     list-style-type: none;
 }
 
-.nav .left {
-    display: flex;
-    flex: 75%;
-    max-height: 80px;
-    justify-items: flex-end;
-    align-items: center;
-    flex-direction: row;
-}
-
-.nav .left a{
-    color: whitesmoke;
+.nav .right a{
+    color: rgb(161, 102, 107);
     text-decoration: none;
     margin: 25px;
     font-size: 30px;
 }
 
-.nav .left a:visited{
-    color: rgb(212, 149, 55);
+.nav .right {
+    flex: 75%;
+    display: flex;
+    justify-content: flex-end;
+    max-height: 80px;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 25px;
+}
+
+.nav .right a:visited{
+    color: rgb(212, 149, 80);
     text-decoration: none;
 }
 
-.nav .left a:hover{
+.nav .right a:hover{
     color: rgb(153, 134, 114);
     text-decoration: gray wavy underline;
 }
@@ -65,15 +69,9 @@ ul {
     height: 30px;
 }
 
-.nav .right {
-    flex: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 25px;
-}
 
-.nav .right input {
+
+/* .nav .right input {
     width: 230px;
     height: 30px;
     border: none;
@@ -81,13 +79,13 @@ ul {
     font-size: 15px;
     padding-left: 5px;
     color: black;
-}
+} */
 
-.nav button #right {
+/* .nav button #right {
     height: 32px;
     width: 70px;
     font-size: 15px;
-}
+} */
 
 .nav #hidden {
     position: absolute;
@@ -110,14 +108,14 @@ ul {
 }
 
 @media only screen and (max-width: 1000px) {
-    .nav .left a{
+    .nav .right a{
         font-size: 70%;
     }
 }
 /* stuff inside here will only appear when the screen shrinks below 850px*/
 
 @media only screen and (max-width: 850px) {
-    .nav .left a{
+    .nav .right a{
         font-size: 50%;
     }
 }
@@ -129,7 +127,7 @@ ul {
         display: flex;
     }
     
-    .nav .left a {
+    .nav .right a {
         display: none;
     }
 }

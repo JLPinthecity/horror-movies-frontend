@@ -23,7 +23,7 @@ const NavBar = (props) => {
                 HORRORFLIX
             </div>
 
-            <ul className="left" id={props.showLinks ? "hidden" : ""}>
+            <ul className="right" id={props.showLinks ? "hidden" : ""}>
 
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
