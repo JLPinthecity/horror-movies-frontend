@@ -4,7 +4,8 @@ import { updateLoginForm } from "../actions/loginForm";
 import { login } from "../actions/currentUser";
 import { Close } from '@material-ui/icons';
 import { withRouter, Link } from 'react-router-dom';
-import { openOrCloseModal } from '../actions/openOrCloseModal'
+import { openOrCloseModal } from '../actions/openOrCloseModal';
+import ".Modal.css";
 
 const Login = (props) => {
 
@@ -27,7 +28,7 @@ const Login = (props) => {
         <div className="modalBackground">
         <div className="modalContainer">
             
-            <button onClick={ props.openOrCloseModal}><Close/></button>
+            <button onClick={ props.openOrCloseModal }><Close/></button>
             
             <div className="title">
                 Log in
