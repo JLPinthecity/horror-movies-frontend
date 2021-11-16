@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     background-color: rbg(232, 224, 207);
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -17,7 +18,6 @@ button:hover {
     font-size: 35px;
     width: 100%;
     height: 80px;
-    font-family: 'Lato', sans-serif;
     display: flex;
 }
 
@@ -141,6 +141,11 @@ ul {
 
 
 .title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'EB Garamond', serif;
     font-size: 30px;
+    font-style: italic;
+}
+
+.modalContainer {
+    
 }

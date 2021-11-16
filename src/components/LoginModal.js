@@ -2,6 +2,9 @@ import React from "react";
 import { connect } from 'react-redux';
 import { updateLoginForm } from "../actions/loginForm";
 import { login } from "../actions/currentUser";
+import { Close } from '@material-ui/icons';
+import { withRouter, Link } from 'react-router-dom';
+
 
 const Login = (props) => {
     
@@ -24,21 +27,30 @@ const Login = (props) => {
         <div className="modalBackground">
         <div className="modalContainer">
             
-            <button>x</button>
+            <button><Close/></button>
             
             <div className="title">
                 Log in
-            </div>
- 
+            </div><br/><br/>
+
             <div className="body">
                 <form onSubmit={handleSubmit}>
-                        <input placeholder="username" type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
-                        <input placeholder="password" type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
+                        <label>Username</label><br/>
+                        <input type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
+                        <br/><br/>
+                        
+                        <label>Password</label><br/>
+                        <input type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
+                        <br/><br/>
+
                         <input type="submit" />
                 </form>
+
+                
             </div>
 
         <div className="footer">
+            <Link to="/signup">Create Account</Link>
             
         </div>
 
@@ -54,9 +66,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateLoginForm, login })(Login);
-
-
+export default withRouter(connect(mapStateToProps, { updateLoginForm, login })(Login));
 
 //history is a mutable prop
 //it's an object, which means it's pass-by reference
