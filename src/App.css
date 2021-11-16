@@ -135,3 +135,12 @@ ul {
 /* MENU BUTTON */
 /* When the screen shrinks to the point where the menu options become smushed we want to display a button instead */
 /* This turns the MENU BUTTON off. We only want it on when the screen gets too small. */
+
+
+
+
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
