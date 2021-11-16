@@ -21,12 +21,30 @@ const Login = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input placeholder="username" type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
-            <input placeholder="password" type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
-            <input type="submit" />
-        </form>
+        <div className="modalBackground">
+        <div className="modalContainer">
+            
+            <button>x</button>
+            
+            <div className="title">
+                Log in
+            </div>
+ 
+            <div className="body">
+                <form onSubmit={handleSubmit}>
+                        <input placeholder="username" type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
+                        <input placeholder="password" type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
+                        <input type="submit" />
+                </form>
+            </div>
 
+        <div className="footer">
+            
+        </div>
+
+
+        </div>
+        </div>
     )
 }
 
@@ -43,3 +61,7 @@ export default connect(mapStateToProps, { updateLoginForm, login })(Login);
 //history is a mutable prop
 //it's an object, which means it's pass-by reference
 //which means you can grab it and pass it along
+
+
+
+
