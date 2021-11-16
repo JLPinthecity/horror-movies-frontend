@@ -13,7 +13,7 @@ const Home = (props) => {
         <div>
             <button onClick={handleChange} className="openModalButton">Log In</button>
 
-            { props.button_clicked && <LoginModal/>}
+            { props.button_clicked && <LoginModal closeModal={props.handleChange}/>}
 
         </div>
 

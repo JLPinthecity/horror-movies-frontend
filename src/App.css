@@ -141,11 +141,11 @@ ul {
 
 
 .title {
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
+    font-family: 'Montagu Slab', serif;
+    font-size: 35px;
     font-style: italic;
 }
 
 .modalContainer {
-    
+    font-family: 'Lato', sans-serif;
 }
