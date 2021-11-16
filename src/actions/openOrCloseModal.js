@@ -1,5 +1,5 @@
 //synchronous action creators
-export const openModal = () => {
+export const openOrCloseModal = () => {
     
     return {
         type: "CLICKED_BUTTON"

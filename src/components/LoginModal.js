@@ -4,10 +4,10 @@ import { updateLoginForm } from "../actions/loginForm";
 import { login } from "../actions/currentUser";
 import { Close } from '@material-ui/icons';
 import { withRouter, Link } from 'react-router-dom';
-
+import { openOrCloseModal } from '../actions/openOrCloseModal'
 
 const Login = (props) => {
-    
+
     const handleChange = event => {
         const { name, value } = event.target
         const updatedFormData = {
@@ -27,7 +27,7 @@ const Login = (props) => {
         <div className="modalBackground">
         <div className="modalContainer">
             
-            <button><Close/></button>
+            <button onClick={ () => props.closeModal }><Close/></button>
             
             <div className="title">
                 Log in
@@ -51,7 +51,6 @@ const Login = (props) => {
 
         <div className="footer">
             <Link to="/signup">Create Account</Link>
-            
         </div>
 
 
@@ -66,7 +65,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateLoginForm, login })(Login));
+export default withRouter(connect(mapStateToProps, { updateLoginForm, login, openOrCloseModal })(Login));
 
 //history is a mutable prop
 //it's an object, which means it's pass-by reference
@@ -75,3 +74,4 @@ export default withRouter(connect(mapStateToProps, { updateLoginForm, login })(L
 
 
 
+//passed closeModal in props from Home component
