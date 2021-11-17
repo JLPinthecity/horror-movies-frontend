@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import LoginModal from './components/LoginModal';
 import Home from './components/Home';
 import ContentContainer from './components/ContentContainer';
-import SignUp from './components/SignUp';
+import SignupModal from './components/SignupModal';
 import MovieCard from './components/MovieCard'
 import NewMovieForm from './components/NewMovieForm';
 import About from './components/About';
@@ -31,7 +31,7 @@ class App extends React.Component {
 
             <Route exact path="/login" component={LoginModal}/>
 
-            <Route exact path="/signup" component={SignUp}/>
+            <Route exact path="/signup" component={SignupModal}/>
 
             <Route exact path="/logoff" component={Logoff}/>
 
