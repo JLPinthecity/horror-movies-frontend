@@ -12,7 +12,7 @@ const Home = (props) => {
         <div>
             <button onClick={handleChange} className="primary-button">Log In</button>
 
-            { props.button_clicked && <LoginModal/>}
+            { props.button_clicked && <LoginModal/> }
 
         </div>
 

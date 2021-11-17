@@ -13,7 +13,5 @@ export const clearLoginForm = () => {
     }
 }
 
-
-
 //action creators are functions
 //functions that return an action

@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import Logoff from './Logoff';
-import SignupLogin from '../containers/SignupLogin';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
-import { Reorder, Close } from '@material-ui/icons';
+import { Reorder, Search, Close } from '@material-ui/icons';
 
 const NavBar = (props) => {
 
@@ -19,23 +18,23 @@ const NavBar = (props) => {
                 <button id="" onClick={handleChange}>{props.showLinks ? <Close/> : <Reorder/>}</button>
             </div>
 
+
+            <div className="left">
+                <input type="text" placeholder="search"/>
+                <button id="left"><Search/></button>
+            </div>
+
+            
             <div className="header">
                 HORRORFLIX
             </div>
 
             <ul className="right" id={props.showLinks ? "hidden" : ""}>
-
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
-                <li>{props.currentUser ? <Link to="/logoff">LOGOFF</Link> : <SignupLogin />}</li>
-
+                <li><Link to="/horror-movies">MOVIES</Link></li>
+                <li></li>
             </ul>
-
-            {/* <div className="right">
-                <input type="text" placeholder="search"/>
-                <button id="right"><Search/></button>
-            </div> */}
-            
         </nav>
     )
 }
