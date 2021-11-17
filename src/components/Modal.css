@@ -1,10 +1,63 @@
-
-.title {
-    font-family: 'Montagu Slab', serif;
-    font-size: 35px;
-    font-style: italic;
+.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e2525cc;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .modalContainer {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    width: 360px;
+    height: 500px;
+    background-color: rgb(250, 247, 241);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.first_row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Montagu Slab', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.first_row button{
+    background-color: rgb(250, 247, 241);
+    color: black;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+.modalContainer .body {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.body .submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e2525;
+    font-weight: 600;
+    margin: 0px 0px 16px;
+    width: 100%;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.footer {
+    text-align: center;
 }

@@ -3,6 +3,8 @@
     height: 100%;
     background-color: rbg(232, 224, 207);
     font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #1e2525;
 }
 
 body {
@@ -12,6 +14,34 @@ body {
 
 button:hover {
     cursor: pointer;
+}
+
+input{
+    appearance: none;
+    display: block;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+    padding: 2px 8px;
+    font-size: 14px;
+    border-radius: 0;
+    height: 36px;
+    color: #1e2525;
+}
+
+.primary-button{
+    display: block;
+    background-color: #1e2525;
+    border: none;
+    border-bottom: 1px solid transparent;
+    width: 100px;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 0;
+    height: 36px;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .nav {
@@ -139,13 +169,3 @@ ul {
 
 
 
-
-.title {
-    font-family: 'Montagu Slab', serif;
-    font-size: 35px;
-    font-style: italic;
-}
-
-.modalContainer {
-    font-family: 'Lato', sans-serif;
-}

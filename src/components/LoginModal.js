@@ -5,7 +5,7 @@ import { login } from "../actions/currentUser";
 import { Close } from '@material-ui/icons';
 import { withRouter, Link } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
-import ".Modal.css";
+import "./Modal.css";
 
 const Login = (props) => {
 
@@ -26,36 +26,40 @@ const Login = (props) => {
 
     return (
         <div className="modalBackground">
-        <div className="modalContainer">
-            
-            <button onClick={ props.openOrCloseModal }><Close/></button>
-            
-            <div className="title">
-                Log in
-            </div><br/><br/>
+            <div className="modalContainer">
 
-            <div className="body">
-                <form onSubmit={handleSubmit}>
-                        <label>Username</label><br/>
-                        <input type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
-                        <br/><br/>
-                        
-                        <label>Password</label><br/>
-                        <input type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
-                        <br/><br/>
-
-                        <input type="submit" />
-                </form>
-
+                <div className="first_row">
                 
+
+                <div className="title">
+                    Log in
+                </div><br/><br/>
+
+                <div className="loginModalCloseButton">
+                    <button onClick={ props.openOrCloseModal }><Close/></button>
+                </div>
+
+                </div>
+
+
+                <div className="body">
+                    <form onSubmit={handleSubmit}>
+                            <label>Username</label><br/>
+                            <input type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
+                            <br/><br/>
+                            
+                            <label>Password</label><br/>
+                            <input type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
+                            <br/><br/>
+
+                            <input className="submit-button"type="submit" />
+                    </form>
+                </div>
+
+                <div className="footer">
+                    <Link to="/signup">Create Account</Link>
+                </div>
             </div>
-
-        <div className="footer">
-            <Link to="/signup">Create Account</Link>
-        </div>
-
-
-        </div>
         </div>
     )
 }

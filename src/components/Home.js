@@ -10,7 +10,7 @@ const Home = (props) => {
     }
     return (
         <div>
-            <button onClick={handleChange} className="openModalButton">Log In</button>
+            <button onClick={handleChange} className="primary-button">Log In</button>
 
             { props.button_clicked && <LoginModal/>}
 
