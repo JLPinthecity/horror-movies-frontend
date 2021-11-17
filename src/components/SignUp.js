@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignupForm } from '../actions/signupForm';
 import { signup } from '../actions/currentUser';
+import { withRouter, Link } from 'react-router-dom';
+import { openOrCloseModal } from '../actions/openOrCloseModal';
+import { Close } from '@material-ui/icons';
+import "./Modal.css";
 
 const SignUp = (props) => {
 
@@ -38,4 +42,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateSignupForm, signup })(SignUp); 
+export default withRouter(connect(mapStateToProps, { updateSignupForm, signup })(SignUp)); 
