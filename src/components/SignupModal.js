@@ -75,4 +75,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateSignupForm, signup })(SignUp)); 
+export default withRouter(connect(mapStateToProps, { updateSignupForm, signup, openOrCloseModal })(SignUp)); 
