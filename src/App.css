@@ -176,26 +176,18 @@ ul {
 }
 
 @media only screen and (max-width: 1000px) {
-    .nav .right a{
+    .nav .menu a{
         font-size: 70%;
     }
 }
 /* stuff inside here will only appear when the screen shrinks below 850px*/
 
-@media only screen and (max-width: 850px) {
-    .nav .right a{
-        font-size: 50%;
-    }
-}
-/* stuff inside here will only appear when the screen shrinks below 750px*/
-
-
-@media only screen and (max-width: 620px) {
-    .nav .hide {
+@media only screen and (max-width: 750px) {
+    .row .hide {
         display: flex;
     }
     
-    .nav .right a {
+    .nav .menu a {
         display: none;
     }
 }

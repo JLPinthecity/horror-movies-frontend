@@ -5,18 +5,20 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .modalContainer {
     font-family: 'Open Sans', sans-serif;
-    width: 360px;
+    width: 400px;
     height: 500px;
     background-color: rgb(250, 247, 241);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    visibility: visible;
+    padding: 30px;
+    margin: auto;
 }
 
 .first_row{

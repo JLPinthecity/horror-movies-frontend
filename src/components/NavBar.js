@@ -25,7 +25,7 @@ const NavBar = (props) => {
             <div className="row relative">
 
             <div>
-                <button className="hide">
+                <button className="hide icon">
                     <Reorder/>
                 </button>
             </div>
@@ -44,6 +44,7 @@ const NavBar = (props) => {
 
                 { props.button_clicked && <LoginModal/> }
             </div>
+
             </div>
 
             <ul className="menu" id={props.showLinks ? "hidden" : ""}>
@@ -58,8 +59,6 @@ const NavBar = (props) => {
         </div>
     )
 }
-
-
 
 
 //showLinks = false, menu not clicked
