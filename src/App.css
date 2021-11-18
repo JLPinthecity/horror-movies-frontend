@@ -1,22 +1,24 @@
 .App {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(250, 247, 241);
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    color: #1e2525;
+    width: 100vh;
+    height: 100vh;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(250, 247, 241);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-input{
+input {
     appearance: none;
     display: block;
     background-color: #fff;
@@ -30,13 +32,16 @@ input{
     color: #1e2525;
 }
 
-.primary-button{
-    display: block;
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #1e2525;
     border: none;
     border-bottom: 1px solid transparent;
     width: 100px;
     padding: 3px 8px;
+    margin: 20px;
     font-size: 15px;
     border-radius: 0;
     height: 36px;
@@ -44,78 +49,111 @@ input{
     font-family: 'Open Sans', sans-serif;
 }
 
-.nav {
-    font-size: 35px;
-    width: 100%;
-    height: 80px;
-    display: flex;
-}
-
-.header {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    font-style: oblique;
-    color: rgb(102, 43, 56);
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-    height: 80px;
-}
-
 ul {
     list-style-type: none;
 }
 
-.nav .right a{
-    color: rgb(161, 102, 107);
-    text-decoration: none;
-    margin: 25px;
-    font-size: 30px;
+.icon {
+    font-size: 40px;
+    background-color: rgb(250, 247, 241);
+    color: black;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+    margin: 20px;
 }
 
-.nav .right {
-    flex: 75%;
+.sticky {
+    position: sticky;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+
+/* HIDDEN MENU BUTTON */
+.hide {
+    display: none;
+}
+
+
+/* MAIN CONTAINER */
+.nav {
+    width: 100%;
+    height: 100%;
+} 
+
+/* FIRST CONTAINER - FLEX*/
+.row {
     display: flex;
-    justify-content: flex-end;
-    max-height: 80px;
+    height: 54px;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    padding-right: 25px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.nav .right a:visited{
+/* LEFT */
+.nav .row .left {
+    flex: 33%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* CENTER */
+.row .header {
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-style: oblique;
+    color: rgb(102, 43, 56);
+    top: 16px;
+    left: 40%;
+    display: inline-flex;
+}
+
+/* RIGHT */
+.nav .row .right {
+    align-items: center;
+}
+
+
+/* ROW OF LINKS */
+.nav .menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10;
+}
+
+.nav .menu a {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+
+.nav .menu a:visited{
     color: rgb(212, 149, 80);
     text-decoration: none;
 }
 
-.nav .right a:hover{
+.nav .menu a:hover{
     color: rgb(153, 134, 114);
     text-decoration: gray wavy underline;
 }
 
-.hide button {
-    display: none;
-    margin: 25px;
-    height: 30px;
-}
 
 
 
-/* .nav .right input {
-    width: 230px;
-    height: 30px;
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    padding-left: 5px;
-    color: black;
-} */
 
-/* .nav button #right {
-    height: 32px;
-    width: 70px;
-    font-size: 15px;
-} */
 
 .nav #hidden {
     position: absolute;
@@ -153,7 +191,7 @@ ul {
 
 
 @media only screen and (max-width: 620px) {
-    .hide button {
+    .nav .hide {
         display: flex;
     }
     
