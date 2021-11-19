@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 247, 241);
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 14px;
 }
 
@@ -46,7 +46,6 @@ input {
     border-radius: 0;
     height: 36px;
     color: whitesmoke;
-    font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -104,6 +103,7 @@ ul {
     display: flex;
     justify-content: left;
     align-items: center;
+    
 }
 
 /* CENTER */
@@ -114,7 +114,7 @@ ul {
     font-style: oblique;
     color: rgb(102, 43, 56);
     top: 16px;
-    left: 40%;
+    left: 44%;
     display: inline-flex;
 }
 
@@ -135,7 +135,6 @@ ul {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
 }
 
 
@@ -147,11 +146,6 @@ ul {
     color: rgb(153, 134, 114);
     text-decoration: gray wavy underline;
 }
-
-
-
-
-
 
 .nav #hidden {
     position: fixed;

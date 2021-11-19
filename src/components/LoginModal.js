@@ -57,7 +57,7 @@ debugger
                 </div>
 
                 <div className="footer">
-                    <Link to="/signup">Create Account</Link>
+                    <Link onClick={ props.openOrCloseModal } to="/signup">Create Account</Link>
                 </div>
             </div>
         </div>

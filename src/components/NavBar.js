@@ -36,7 +36,7 @@ const NavBar = (props) => {
 
             
             <div className="header absolute">
-                HORRORFLIX
+                horror flix
             </div>
 
             <div className="right">
