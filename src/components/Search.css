@@ -1,0 +1,46 @@
+.wrap{
+    position: relative;
+    line-height: 1;
+    z-index: 99;
+}
+
+.search-open{
+    height: 85px;
+}
+
+.search{
+    transition: height .2s ease-in-out;
+    position: relative;
+    height: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0);
+}
+
+.remove-search{
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    color: black;
+    width: 15px;
+}
+
+.searchform{
+    overflow: hidden;
+    position: relative; 
+}
+
+input{
+    border: 1px solid transparent;
+    font-size: 1.3em;
+    border-radius: 0;
+    max-width: 100%;
+    margin: 7px 0;
+    background: rgba(255,255,255,0);
+    font-family: "Caslon Old Face",serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 70px 0 30px;
+    height: 90px;
+}
+

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 0%;
+    left: 50%;
 }
 
 .modalContainer {
@@ -15,7 +15,7 @@
     height: 500px;
     background-color: rgb(250, 247, 241);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     visibility: visible;
     padding: 30px;
@@ -27,12 +27,6 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-}
-
-.title {
-    font-family: 'Montagu Slab', serif;
-    font-size: 2.5rem;
-    font-style: italic;
 }
 
 .first_row button{

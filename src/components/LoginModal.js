@@ -8,7 +8,7 @@ import { openOrCloseModal } from '../actions/openOrCloseModal';
 import "./Modal.css";
 
 const Login = (props) => {
-debugger
+
     const handleChange = event => {
         const { name, value } = event.target
         const updatedFormData = {

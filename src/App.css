@@ -48,8 +48,19 @@ input {
     color: whitesmoke;
 }
 
+.title {
+    font-family: 'Montagu Slab', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
 ul {
     list-style-type: none;
+}
+
+h2{
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
 .icon {
