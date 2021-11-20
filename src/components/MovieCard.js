@@ -20,7 +20,7 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="link">
-                <a href={`/horror_movies/${props.attributes.slug}`}>View Movie</a>
+                <a href={`/horror_movies/${movie.attributes.slug}`}>View Movie</a>
             </div>
             
         </div>

@@ -99,11 +99,9 @@ ul {
 
 /* LEFT */
 .nav .row .left {
-    flex: 33%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
+    flex-grow: 1;
+    flex-basis: 0;
+
 }
 
 /* CENTER */
