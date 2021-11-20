@@ -25,7 +25,7 @@ const NavBar = (props) => {
             <div className="row relative">
 
             <div>
-                <button onClick={handleChange}className="hide icon">
+                <button onClick={handleChange} className="hide icon">
                     <Reorder/>
                 </button>
             </div>
@@ -33,6 +33,7 @@ const NavBar = (props) => {
             <div className="left">
             <button className="icon" ><Search/></button>
             </div>
+            
 
             
             <div className="header absolute">

@@ -53,13 +53,12 @@ ul {
 }
 
 .icon {
-    font-size: 40px;
     background-color: rgb(250, 247, 241);
     color: black;
     border-width: 0;
     border-style: solid;
     border-color: currentColor;
-    margin: 20px;
+    margin: 25px;
 }
 
 .sticky {
