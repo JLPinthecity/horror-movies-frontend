@@ -5,6 +5,7 @@ import { showMenuItems } from '../actions/navBar.js'
 import { Reorder, Search, Close } from '@material-ui/icons';
 import { openOrCloseModal } from '../actions/openOrCloseModal'
 import { showOrHideSearchBar } from '../actions/showOrHideSearchBar';
+import SearchBar from './SearchBar.js'
 import LoginModal from './LoginModal'
 
 const NavBar = (props) => {
@@ -37,7 +38,11 @@ const NavBar = (props) => {
             </div>
 
             <div className="left">
+            
             <button className="icon" onClick={showSearchBar} ><Search/></button>
+
+            { props.showSearch && <SearchBar/> }
+
             </div>
             
 
@@ -49,7 +54,7 @@ const NavBar = (props) => {
             <div className="right">
                 <button onClick={changeModal} className="primary-button">Log In</button>
 
-                { props.button_clicked && <LoginModal/> }
+                { props.buttonClicked && <LoginModal/> }
             </div>
 
             </div>
@@ -75,9 +80,10 @@ const mapStateToProps = (state) => {
     return {
         currentUser: state.currentUser,
         showLinks: state.navBar,
-        button_clicked: state.openModalButton
+        buttonClicked: state.openModalButton,
+        showSearch: state.searchBar
     }
 }
 
-export default withRouter(connect(mapStateToProps, { showMenuItems, openOrCloseModal })(NavBar));
+export default withRouter(connect(mapStateToProps, { showMenuItems, openOrCloseModal, showOrHideSearchBar })(NavBar));
 

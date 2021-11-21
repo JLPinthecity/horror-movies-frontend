@@ -2,6 +2,6 @@
 export const showOrHideSearchBar = () => {
     
     return {
-        type: "CLICKED_BUTTON"
+        type: "CLICKED_SEARCH"
     }
 }

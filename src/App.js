@@ -7,7 +7,7 @@ import ContentContainer from './components/ContentContainer';
 import SignupModal from './components/SignupModal';
 import MovieCard from './components/MovieCard'
 import NewMovieForm from './components/NewMovieForm';
-import Search from './components/Search';
+import SearchBar from './components/SearchBar';
 import About from './components/About';
 import Logoff from './components/About';
 import { connect } from 'react-redux';
@@ -38,7 +38,7 @@ class App extends React.Component {
 
             <Route exact path="/about" component={About}/>
 
-            <Route exact path="/search" component={Search}/>
+            <Route exact path="/search" component={SearchBar}/>
 
             <Route exact path="/horror-movies" component={ContentContainer}/>
 
