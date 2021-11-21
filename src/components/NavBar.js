@@ -4,6 +4,7 @@ import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
 import { Reorder, Search, Close } from '@material-ui/icons';
 import { openOrCloseModal } from '../actions/openOrCloseModal'
+import { showOrHideSearchBar } from '../actions/showOrHideSearchBar';
 import LoginModal from './LoginModal'
 
 const NavBar = (props) => {
@@ -14,6 +15,11 @@ const NavBar = (props) => {
 
     const changeModal = () => {
         props.openOrCloseModal()
+    }
+
+    const showSearchBar = () => {
+        props.showOrHideSearchBar()
+
     }
 //after we click, it needs to turn on showLinks aka change "false" to "true," which shows the menu items
 
@@ -31,7 +37,7 @@ const NavBar = (props) => {
             </div>
 
             <div className="left">
-            <button className="icon" ><Search/></button>
+            <button className="icon" onClick={showSearchBar} ><Search/></button>
             </div>
             
 
