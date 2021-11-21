@@ -12,7 +12,7 @@ const Search = () => {
                 <input type="search" name="search" value="" placeholder="Search our movies" className="input_box"/>
                 </form>
 
-                <span class="remove-search"><Close/></span>
+                <span class="remove-search icon"><Close/></span>
             </div>
 
         </div>

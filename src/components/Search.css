@@ -42,5 +42,6 @@ input{
     font-style: normal;
     padding: 0 70px 0 30px;
     height: 90px;
+    outline:none;
 }
 
