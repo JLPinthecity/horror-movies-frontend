@@ -7,6 +7,7 @@ import signupForm from './reducers/signupForm.js';
 import openModalButton from './reducers/openModalButton.js';
 import searchBar from './reducers/searchBar.js';
 import navBar from './reducers/navBar.js'
+import signupModal from './reducers/signupModal.js';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
@@ -17,7 +18,8 @@ const reducer = combineReducers({
     signupForm,
     navBar,
     openModalButton,
-    searchBar
+    searchBar,
+    signupModal
 })
   
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
