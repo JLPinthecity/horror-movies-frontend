@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 50%;
+    left: 0;
 }
 
 .modalContainer {

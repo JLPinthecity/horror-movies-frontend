@@ -45,8 +45,6 @@ const NavBar = (props) => {
 
             </div>
             
-
-            
             <div className="header absolute">
                 horror flix
             </div>

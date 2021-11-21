@@ -25,7 +25,7 @@ const SignUp = (props) => {
     }
 
     return (
-        <div className="modalBackground" id={props.open_module ? "" : "hidden"}>
+        <div className="modalBackground" id={props.openModal ? "" : "hidden"}>
             <div className="modalContainer">
 
             <div className="first_row">
@@ -67,7 +67,7 @@ const SignUp = (props) => {
 const mapStateToProps = state => {
     return {
         signupForm: state.signupForm,
-        open_module: state.openModalButton
+        openModal: state.openModalButton
     }
 }
 
