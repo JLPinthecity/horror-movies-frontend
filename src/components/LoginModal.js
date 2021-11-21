@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateLoginForm } from "../actions/loginForm";
 import { login } from "../actions/currentUser";
 import { Close } from '@material-ui/icons';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
 import { showOrHideSignupModal } from '../actions/signupModal';
 import SignupModal from "./SignupModal";
@@ -28,6 +28,7 @@ const Login = (props) => {
 
     const showSignup = () => {
         props.showOrHideSignupModal();
+        props.openOrCloseModal()
     };
 
     return (
@@ -64,9 +65,11 @@ const Login = (props) => {
 
                 <div className="footer">
 
-                <button className="primary_button" onClick={showSignup}>Create Account</button>
+                <Link to="/signup" onClick={ showSignup }>Create Account</Link>
 
-                { props.clickedSignup && <SignupModal/> }
+                {/* <button className="primary_button" onClick={showSignup}>Create Account</button>
+
+                { props.clickedSignup && <SignupModal/> } */}
 
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { updateSignupForm } from '../actions/signupForm';
 import { signup } from '../actions/currentUser';
 import { withRouter, Link } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
+import { showOrHideSignupModal } from '../actions/signupModal';
 import { Close } from '@material-ui/icons';
 import "./Modal.css";
 
@@ -25,7 +26,7 @@ const SignUp = (props) => {
     }
 
     return (
-        <div className="modalBackground" id={props.openModal ? "" : "hidden"}>
+        <div className="modalBackground" id={props.openSignupModal ? "" : "hidden"}>
             <div className="modalContainer">
 
             <div className="first_row">
@@ -33,8 +34,8 @@ const SignUp = (props) => {
                 Create an account
                 </div><br/><br/>
 
-                <div className="loginModalCloseButton">
-                    <button onClick={ props.openOrCloseModal }><Close/></button>
+                <div className="icon">
+                    <button onClick={ props.showOrHideSignupModal }><Close/></button>
                 </div>
             </div>
 
@@ -67,8 +68,9 @@ const SignUp = (props) => {
 const mapStateToProps = state => {
     return {
         signupForm: state.signupForm,
-        openModal: state.openModalButton
+        openLoginModal: state.openModalButton,
+        openSignupModal: state.signupModal
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateSignupForm, signup, openOrCloseModal })(SignUp)); 
+export default withRouter(connect(mapStateToProps, { updateSignupForm, signup, openOrCloseModal, showOrHideSignupModal })(SignUp)); 
