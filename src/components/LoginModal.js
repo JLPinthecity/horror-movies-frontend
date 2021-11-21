@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { updateLoginForm } from "../actions/loginForm";
 import { login } from "../actions/currentUser";
 import { Close } from '@material-ui/icons';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
+import { showOrHideSignupModal } from '../actions/signupModal';
+import SignupModal from "./SignupModal";
 import "./Modal.css";
 
 const Login = (props) => {
@@ -23,6 +25,10 @@ const Login = (props) => {
         event.preventDefault();
         props.login(props.loginForm, props.history);
     }
+
+    const showSignup = () => {
+        props.showOrHideSignupModal();
+    };
 
     return (
         <div className="modalBackground">
@@ -57,7 +63,11 @@ const Login = (props) => {
                 </div>
 
                 <div className="footer">
-                    <Link onClick={ props.openOrCloseModal } to="/signup">Create Account</Link>
+
+                <button className="primary_button" onClick={showSignup}>Create Account</button>
+
+                { props.clickedSignup && <SignupModal/> }
+
                 </div>
             </div>
         </div>
@@ -66,11 +76,12 @@ const Login = (props) => {
 
 const mapStateToProps = state => {
     return {
-        loginForm: state.loginForm
+        loginForm: state.loginForm,
+        clickedSignup: state.signupModal
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateLoginForm, login, openOrCloseModal })(Login));
+export default withRouter(connect(mapStateToProps, { updateLoginForm, login, openOrCloseModal, showOrHideSignupModal })(Login));
 
 //history is a mutable prop
 //it's an object, which means it's pass-by reference
