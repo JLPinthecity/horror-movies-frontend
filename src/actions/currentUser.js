@@ -99,7 +99,7 @@ export const getCurrentUser = () => {
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
-                alert(resp.error)
+                dispatch(getMovies())
             } else {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getMovies())

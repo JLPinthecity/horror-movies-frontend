@@ -1,11 +1,13 @@
 //synchronous action creators
-export const setUserMovies = (movies) => {
+export const setMovies = (movies) => {
     
     return {
-        type: "SET_USER_MOVIES", 
+        type: "SET_MOVIES", 
         payload: movies
     }
 }
+
+
 
 //asynchronous action creators
 export const getMovies = () => {
@@ -18,13 +20,14 @@ export const getMovies = () => {
     }
 
     return dispatch => {
-        return fetch(`http://localhost:3001/horror_movies`, configObj)
+        return fetch(`http://localhost:3001/api/v1/horror_movies`, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                dispatch(setUserMovies(resp.data))
+                debugger
+                dispatch(setMovies(resp.data))
             }
         })
         .catch(console.log)
