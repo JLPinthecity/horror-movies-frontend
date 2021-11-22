@@ -5,6 +5,7 @@ import { showMenuItems } from '../actions/navBar.js'
 import { Reorder, Search, Close } from '@material-ui/icons';
 import { openOrCloseModal } from '../actions/openOrCloseModal'
 import { showOrHideSearchBar } from '../actions/showOrHideSearchBar';
+import Logoff from "./Logoff";
 import SearchBar from './SearchBar.js'
 import LoginModal from './LoginModal'
 
@@ -50,7 +51,7 @@ const NavBar = (props) => {
             </div>
 
             <div className="right">
-                <button onClick={changeModal} className="primary-button">Log In</button>
+                { props.currentUser ? <Logoff/> : <button onClick={changeModal} className="primary-button">Log In</button> }
 
                 { props.buttonClicked && <LoginModal/> }
             </div>

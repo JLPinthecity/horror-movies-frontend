@@ -22,6 +22,8 @@ class App extends React.Component {
     this.props.getCurrentUser()
   }
 
+  //when the homepage loads, it will grab current user along with all movies if not logged in.
+
   render() {
     const { loggedIn } = this.props
     return (

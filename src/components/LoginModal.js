@@ -6,7 +6,6 @@ import { Close } from '@material-ui/icons';
 import { withRouter, Link } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
 import { showOrHideSignupModal } from '../actions/signupModal';
-import SignupModal from "./SignupModal";
 import "./Modal.css";
 
 const Login = (props) => {

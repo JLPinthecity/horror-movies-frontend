@@ -1,5 +1,5 @@
 import { clearLoginForm } from './loginForm';
-import { getUserMovies } from './horrorMovies';
+import { getMovies } from './horrorMovies';
 import { clearSignupForm } from './signupForm';
 
 //synchronous action creators
@@ -41,7 +41,7 @@ export const login = (credentials, history) => {
                 alert(resp.error)
             } else {
                 dispatch(setCurrentUser(resp.data))
-                dispatch(getUserMovies(resp.data.id))
+                dispatch(getMovies())
                 dispatch(clearLoginForm())
                 history.push("/")
             }
@@ -73,7 +73,7 @@ export const signup = credentials => {
                 alert(resp.error)
             } else {
                 dispatch(setCurrentUser(resp.data))
-                dispatch(getUserMovies(resp.data.id))
+                dispatch(getMovies())
                 dispatch(clearSignupForm())
 
             }
@@ -102,7 +102,7 @@ export const getCurrentUser = () => {
                 alert(resp.error)
             } else {
                 dispatch(setCurrentUser(resp.data))
-                dispatch(getUserMovies(resp.data.id))
+                dispatch(getMovies())
             }
         })
     }

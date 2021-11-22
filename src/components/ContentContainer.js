@@ -6,6 +6,7 @@ const ContentContainer = () => {
     return (
         <div>
             <HorrorMovies/>
+            <Logoff/>
         </div>
     )
 } 
