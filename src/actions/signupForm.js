@@ -12,3 +12,4 @@ export const clearSignupForm = () => {
         type: "CLEAR_SIGNUP_FORM"
     }
 }
+

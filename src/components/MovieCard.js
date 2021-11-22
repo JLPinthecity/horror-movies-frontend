@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
     return (
@@ -20,7 +21,7 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="link">
-                <a href={`/horror_movies/${movie.attributes.slug}`}>View Movie</a>
+                <Link to={`/horror_movies/${movie.attributes.slug}`}>View Movie</Link>
             </div>
             
         </div>

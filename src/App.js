@@ -10,6 +10,7 @@ import NewMovieForm from './components/NewMovieForm';
 import SearchBar from './components/SearchBar';
 import About from './components/About';
 import Logoff from './components/About';
+import Footer from './components/Footer';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
 import { Route, 
@@ -47,8 +48,8 @@ class App extends React.Component {
             <Route exact path="/horror-movies/new" component={NewMovieForm}/>
 
             <Route exact path="/horror-movies/:slug" component={MovieCard}/>
-
           </Switch>
+          <Footer/>
       </div>
     );
   }
