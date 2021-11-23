@@ -49,7 +49,7 @@ class App extends React.Component {
 
             <Route exact path="/horror-movies/:slug" component={MovieCard}/>
           </Switch>
-          <Footer/>
+        <Footer/>
       </div>
     );
   }

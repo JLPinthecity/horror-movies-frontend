@@ -6,13 +6,18 @@
     border-color: currentColor;
 }
 
-body {
+.main-container {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 247, 241);
     font-family: 'Nunito', sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    text-align: left;
+   
 }
+
 
 button:hover {
     cursor: pointer;
@@ -55,16 +60,18 @@ input {
 }
 
 ul {
-    list-style-type: none;
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    list-style: none;
 }
 
-h2{
+h2 {
     font-size: 24px;
     margin-bottom: 12px;
 }
 
 .icon {
-    background-color: rgb(250, 247, 241);
     color: black;
     border-width: 0;
     border-style: solid;
