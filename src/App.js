@@ -28,28 +28,32 @@ class App extends React.Component {
   render() {
     const { loggedIn } = this.props
     return (
-      <div>
-        <NavBar/>
-          <Switch>
-            <Route exact path="/" render={(props)=> loggedIn ? <ContentContainer /> : <Home/> }/>
+      <div className="page-container">
 
-            <Route exact path="/login" component={LoginModal}/>
+        <div className="content-wrap">
+          <NavBar/>
+            <Switch>
+              <Route exact path="/" render={(props)=> loggedIn ? <ContentContainer /> : <Home/> }/>
 
-            <Route exact path="/signup" component={SignupModal}/>
+              <Route exact path="/login" component={LoginModal}/>
 
-            <Route exact path="/logoff" component={Logoff}/>
+              <Route exact path="/signup" component={SignupModal}/>
 
-            <Route exact path="/about" component={About}/>
+              <Route exact path="/logoff" component={Logoff}/>
 
-            <Route exact path="/search" component={SearchBar}/>
+              <Route exact path="/about" component={About}/>
 
-            <Route exact path="/horror-movies" component={ContentContainer}/>
+              <Route exact path="/search" component={SearchBar}/>
 
-            <Route exact path="/horror-movies/new" component={NewMovieForm}/>
+              <Route exact path="/horror-movies" component={ContentContainer}/>
 
-            <Route exact path="/horror-movies/:slug" component={MovieCard}/>
-          </Switch>
-        <Footer/>
+              <Route exact path="/horror-movies/new" component={NewMovieForm}/>
+
+              <Route exact path="/horror-movies/:slug" component={MovieCard}/>
+            </Switch>
+        </div>
+          
+          <Footer/>
       </div>
     );
   }

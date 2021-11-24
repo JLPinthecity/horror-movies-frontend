@@ -6,6 +6,16 @@
     border-color: currentColor;
 }
 
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+.content-wrap {
+  flex: 1;
+  }
+
 .main-container {
     margin: 0;
     padding: 0;
@@ -15,7 +25,6 @@
     line-height: 1.5;
     color: #000;
     text-align: left;
-   
 }
 
 
