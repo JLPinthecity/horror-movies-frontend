@@ -11,12 +11,12 @@
 
 /* FIRST PARENT CONTAINER - FLEX ROW*/
 .row {
+    margin-top: 10px;
     display: flex;
     height: 60px;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-
 
 /* CHILDREN OF FLEX BOX PARENT - row */
 .row-item {
@@ -25,7 +25,7 @@
 
 /* LEFT */
 .active-icon {
-    color: #red;
+    color: #000;
     border-width: 0;
     border-style: solid;
     background-color: rgb(238, 232, 222);
@@ -50,16 +50,20 @@
 .nav .row .right {
     flex-grow: 1;
     flex-basis: 0;
-
 }
-
-
 
 /* ROW OF LINKS */
 .nav .menu {
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 10;
+    flex: 1;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 .nav .menu a {
