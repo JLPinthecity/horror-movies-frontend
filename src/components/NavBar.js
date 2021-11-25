@@ -2,12 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
-import { Reorder, Search, Close } from '@material-ui/icons';
+import { Reorder, Search } from '@material-ui/icons';
 import { openOrCloseModal } from '../actions/openOrCloseModal'
 import { showOrHideSearchBar } from '../actions/showOrHideSearchBar';
 import Logoff from "./Logoff";
 import SearchBar from './SearchBar.js'
 import LoginModal from './LoginModal'
+import "./NavBar.css";
 
 const NavBar = (props) => {
 
@@ -30,31 +31,29 @@ const NavBar = (props) => {
     return (
         <div className="nav sticky">
 
-            <div className="row relative">
+            <div className="row relative"> 
 
-            <div>
-                <button onClick={handleChange} className="hide icon">
-                    <Reorder/>
-                </button>
-            </div>
+                <div className="hide active-icon">
+                    <button onClick={handleChange}>
+                        <Reorder/>
+                    </button>
+                </div>
 
-            <div className="left">
-            
-            <button className="icon" onClick={showSearchBar} ><Search/></button>
+                <div className="active-icon row-item">
+                    <button className="active-icon row-item" onClick={showSearchBar} ><Search/></button>
 
-            { props.showSearch && <SearchBar/> }
+                    { props.showSearch && <SearchBar/> }
+                </div>
 
-            </div>
-            
-            <div className="header absolute">
-                horror flix
-            </div>
+                <div className="header row-item">
+                    horror flix
+                </div>
 
-            <div className="right">
-                { props.currentUser ? <Logoff/> : <button onClick={changeModal} className="primary-button">Log In</button> }
+                <div className="right relative row-item">
+                    { props.currentUser ? <Logoff/> : <button onClick={changeModal} className="primary-button">Log In</button> }
 
-                { props.buttonClicked && <LoginModal/> }
-            </div>
+                    { props.buttonClicked && <LoginModal/> }
+                </div>
 
             </div>
 
@@ -64,9 +63,6 @@ const NavBar = (props) => {
                 <li><Link to="/horror-movies">MOVIES</Link></li>
                 <li></li>
             </ul>
-      
-
-                
         </div>
     )
 }
