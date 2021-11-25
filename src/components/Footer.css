@@ -9,7 +9,8 @@
     border-top: 1px solid currentColor;
     padding: 55px 40px;
     margin: 0 auto;
-    background-color: rgb(220, 186, 164);
+    background-color: rgb(28, 47, 75);
+    color: rgb(247, 247, 243);
 }
 
 .footer-content {
@@ -22,7 +23,6 @@
     flex: 1;
     max-width: 50%;
     margin-bottom: 25px;
-    
 }
 
 .footer-menu-item{
@@ -32,6 +32,7 @@
     letter-spacing: 2px;
     line-height: 1;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .social-stuff {

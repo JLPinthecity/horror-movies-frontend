@@ -33,8 +33,8 @@ const NavBar = (props) => {
 
             <div className="row relative"> 
 
-                <div className="hide active-icon">
-                    <button onClick={handleChange}>
+                <div className="hide">
+                    <button className="menu-icon active-icon" onClick={handleChange}>
                         <Reorder/>
                     </button>
                 </div>
@@ -58,6 +58,7 @@ const NavBar = (props) => {
             </div>
 
             <ul className="menu" id={props.showLinks ? "hidden" : ""}>
+
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
                 <li><Link to="/horror-movies">MOVIES</Link></li>

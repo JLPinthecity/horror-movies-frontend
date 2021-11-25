@@ -15,7 +15,7 @@
     display: flex;
     height: 60px;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 /* CHILDREN OF FLEX BOX PARENT - row */
@@ -113,6 +113,7 @@
 @media only screen and (max-width: 750px) {
     .row .hide {
         display: flex;
+        margin: 10px;
     }
     
     .nav .menu a {
