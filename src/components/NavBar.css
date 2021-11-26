@@ -64,17 +64,23 @@
     flex: 1;
     font-size: 18px;
     text-transform: uppercase;
+    color: rgb(28, 47, 75);
 }
 
 .nav .menu a {
     margin-left: 25px;
     margin-right: 25px;
     font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-decoration: none;
+    color: black;
 }
 
 
 .nav .menu a:visited{
-    color: rgb(212, 149, 80);
+    color: rbg(135,64,37);
 }
 
 .nav .menu a:hover{
