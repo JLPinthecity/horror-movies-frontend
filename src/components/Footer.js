@@ -72,11 +72,12 @@ const Footer = () => {
     
                 </div>
         
-                <div class="copyright">
+            </div>
+
+            <div class="copyright">
                     © 2021, horrorflix | stay scared
                 </div>
                 
-            </div>
 
         </footer> 
     )

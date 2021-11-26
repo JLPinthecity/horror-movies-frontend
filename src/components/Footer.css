@@ -25,7 +25,7 @@
     margin-bottom: 25px;
 }
 
-.footer-menu-item, .copyright{
+.footer-menu-item{
     padding: 12px 0;
     font-size: 12px;
     font-weight: 300;
@@ -47,4 +47,6 @@
 
 .copyright{
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
 }

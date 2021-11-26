@@ -65,8 +65,6 @@
     font-size: 18px;
     text-transform: uppercase;
     color: rgb(28, 47, 75);
-    background-color: darkseagreen;
-
 }
 
 .nav .menu a {
@@ -115,8 +113,7 @@
     height: 100vh;
     background-color: thistle;
     cursor: pointer;
-    font-size: 22px;
-    font-family: 'Playfair Display', serif;
+
 }
 
 
