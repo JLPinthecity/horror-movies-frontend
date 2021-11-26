@@ -6,6 +6,7 @@ import { Close } from '@material-ui/icons';
 import { withRouter, Link } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
 import { showOrHideSignupModal } from '../actions/signupModal';
+
 import "./Modal.css";
 
 const Login = (props) => {
@@ -32,19 +33,17 @@ const Login = (props) => {
 
     return (
         <div className="modalBackground">
+            
             <div className="modalContainer">
 
                 <div className="first_row">
-                
+                    <div className="title">
+                        Log in
+                    </div><br/><br/>
 
-                <div className="title">
-                    Log in
-                </div><br/><br/>
-
-                <div className="loginModalCloseButton">
-                    <button onClick={ props.openOrCloseModal }><Close/></button>
-                </div>
-
+                    <div className="loginModalCloseButton">
+                        <button onClick={ props.openOrCloseModal }><Close/></button>
+                    </div>
                 </div>
 
 
