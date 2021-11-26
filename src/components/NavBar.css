@@ -121,7 +121,11 @@
         display: flex;
         margin: 10px;
     }
-    
+
+    .nav .menu {
+        border: none;
+    }
+
     .nav .menu a {
         display: none;
     }
