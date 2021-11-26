@@ -71,6 +71,10 @@ const Footer = () => {
                     <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank"><Pinterest/></a>
     
                 </div>
+        
+                <div class="copyright">
+                    © 2021, horrorflix | stay scared
+                </div>
                 
             </div>
 

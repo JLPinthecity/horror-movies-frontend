@@ -104,7 +104,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     border-top: 2px solid #2A2B2A;
     border-bottom: 1px solid #2A2B2A;
     list-style: none;
@@ -116,6 +115,8 @@
     height: 100vh;
     background-color: thistle;
     cursor: pointer;
+    font-size: 22px;
+    font-family: 'Playfair Display', serif;
 }
 
 

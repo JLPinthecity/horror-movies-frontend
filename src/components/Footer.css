@@ -25,7 +25,7 @@
     margin-bottom: 25px;
 }
 
-.footer-menu-item{
+.footer-menu-item, .copyright{
     padding: 12px 0;
     font-size: 12px;
     font-weight: 300;
@@ -44,3 +44,7 @@
     margin-left: 0;
 }
 
+
+.copyright{
+    text-align: center;
+}
