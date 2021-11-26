@@ -60,16 +60,14 @@ const NavBar = (props) => {
 
             <div className="menu-container">
 
-                <div className="menu-row">
-                    <span className={props.menuButtonClicked ? "menu-title" : "hide"}>Menu</span>
-
-                    <span className={props.menuButtonClicked ? "menu-close" : "hide"}><Close/></span>
-
-                </div>
-
-            
-
                 <ul className="menu" id={props.menuButtonClicked ? "hidden" : ""}>
+
+                    <div className="menu-row">
+                        <span className={props.menuButtonClicked ? "menu-title" : "hide"}>Menu</span>
+
+                        <span className={props.menuButtonClicked ? "menu-close" : "hide"}><Close onClick={handleChange}/></span>
+
+                    </div>
 
                     <li><Link to="/">HOME</Link></li>
                     <li><Link to="/about">ABOUT</Link></li>
