@@ -60,7 +60,7 @@ const NavBar = (props) => {
 
             <div className="menu-container">
 
-                    <div id={props.menuButtonClicked ? "hidden" : ""}>
+                <div id={props.menuButtonClicked ? "hidden" : ""}>
 
                     <div className="menu-row">
                         <span className={props.menuButtonClicked ? "menu-title" : "hide"}>Menu</span>
@@ -68,7 +68,7 @@ const NavBar = (props) => {
                         <span className={props.menuButtonClicked ? "menu-close" : "hide"}><Close onClick={handleChange}/></span>
                     </div>
 
-                    <ul className="menu">
+                    <ul className={props.menuButtonClicked ? "menu-column" : "menu"}>
 
                         <li><Link to="/">HOME</Link></li>
                         <li><Link to="/about">ABOUT</Link></li>
@@ -76,7 +76,7 @@ const NavBar = (props) => {
                         <li></li>
                     </ul>
 
-                    </div>
+                </div>
 
             </div>
         </div>
