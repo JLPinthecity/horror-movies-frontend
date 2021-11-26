@@ -56,14 +56,21 @@ const NavBar = (props) => {
                 </div>
 
             </div>
+            
 
-            <ul className="menu" id={props.showLinks ? "hidden" : ""}>
+            <div className="menu-container">
 
-                <li><Link to="/">HOME</Link></li>
-                <li><Link to="/about">ABOUT</Link></li>
-                <li><Link to="/horror-movies">MOVIES</Link></li>
-                <li></li>
-            </ul>
+                <ul className="menu" id={props.menuButtonClicked ? "hidden" : ""}>
+
+                    <span className={props.menuButtonClicked ? "" : "hide"}>Menu</span>
+
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/about">ABOUT</Link></li>
+                    <li><Link to="/horror-movies">MOVIES</Link></li>
+                    <li></li>
+                </ul>
+
+            </div>
         </div>
     )
 }
@@ -75,7 +82,7 @@ const NavBar = (props) => {
 const mapStateToProps = (state) => {
     return {
         currentUser: state.currentUser,
-        showLinks: state.navBar,
+        menuButtonClicked: state.navBar,
         buttonClicked: state.openModalButton,
         showSearch: state.searchBar
     }
