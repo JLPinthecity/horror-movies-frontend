@@ -55,7 +55,6 @@ const SignUp = (props) => {
                 Already have an account? 
                 <br/><br/>
                 <Link className="login_btn" to="/login">Sign in here.</Link>
-ç
                 <br/><br/>
             </div>
         </div>

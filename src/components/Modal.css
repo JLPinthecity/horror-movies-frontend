@@ -2,10 +2,14 @@
     width: 100vw;
     height: 100vh;
     background-color: #1e2525cc;
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: 0.3s;
+    position: fixed;    
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
 }
 
@@ -19,7 +23,7 @@
     flex-direction: column;
     visibility: visible;
     padding: 30px;
-    margin: auto;
+    transition: transform .3s ease-in-out;
 }
 
 .first_row{
