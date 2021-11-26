@@ -6,8 +6,6 @@ export const setMovies = (movies) => {
     }
 }
 
-
-
 //asynchronous action creators
 export const getMovies = () => {
     const configObj = {
@@ -25,7 +23,6 @@ export const getMovies = () => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                debugger
                 dispatch(setMovies(resp.data))
             }
         })
