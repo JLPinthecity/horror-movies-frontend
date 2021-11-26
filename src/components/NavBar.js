@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { showMenuItems } from '../actions/navBar.js'
-import { Reorder, Search } from '@material-ui/icons';
+import { Reorder, Search, Close } from '@material-ui/icons';
 import { openOrCloseModal } from '../actions/openOrCloseModal'
 import { showOrHideSearchBar } from '../actions/showOrHideSearchBar';
 import Logoff from "./Logoff";
@@ -60,9 +60,16 @@ const NavBar = (props) => {
 
             <div className="menu-container">
 
-                <ul className="menu" id={props.menuButtonClicked ? "hidden" : ""}>
+                <div className="menu-row">
+                    <span className={props.menuButtonClicked ? "menu-title" : "hide"}>Menu</span>
 
-                    <span className={props.menuButtonClicked ? "" : "hide"}>Menu</span>
+                    <span className={props.menuButtonClicked ? "menu-close" : "hide"}><Close/></span>
+
+                </div>
+
+            
+
+                <ul className="menu" id={props.menuButtonClicked ? "hidden" : ""}>
 
                     <li><Link to="/">HOME</Link></li>
                     <li><Link to="/about">ABOUT</Link></li>
