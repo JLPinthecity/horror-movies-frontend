@@ -16,10 +16,23 @@ const Home  = (props) => {
 
 
     return (
-        <div>
+        <div className="homeMainImageWrapper">
+
+            <div className="left_side">
             <img src={ props.image } onMouseEnter={ showImageOnHover } 
             onMouseOut={ showOriginalImage } />
+
+
+            </div>
+            
+
+            <div className="right_side">
+
+            <h3 class="h3_home">Find a few new spooky movies and keep track of old favorites.</h3>
+
+            </div>
         </div>
+
     )
 }
 
