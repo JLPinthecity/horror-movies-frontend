@@ -27,7 +27,7 @@
 
 .footer-menu-item{
     padding: 12px 0;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 1;
@@ -47,6 +47,7 @@
 
 .copyright{
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: darkgray;
 }
