@@ -6,6 +6,7 @@
     align-items: center;
     height: 100%;
     background-color: powderblue;
+    margin-top: 0px;
 }
 
 
@@ -15,16 +16,14 @@
     float: left;
     border-right: 1px solid currentColor;
     background-color: pink;
-    width: 60%;
+    width: 50%;
     height: 100%;
-    padding: 52px;
-}  
+    padding: 88px;
+}
 
 
 .left_side img {
     width: 100%;
-    height: 100%;
-    max-height: 303px;
     float: left;
     overflow: hidden;
 }
@@ -32,10 +31,10 @@
 
 /* SECOND CHILD - FLEXBOX*/
 .right_side {
-    margin: 20px;
-    width: 40%;
+    width: 50%;
     height: auto;
     padding: 72px;
+    background-color: peru;
 }
 
 .right_side .h3_home {
