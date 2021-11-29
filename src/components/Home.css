@@ -39,3 +39,12 @@
     font-family: 'Playfair Display', serif;
     font-size: 28px;
 }
+
+.right_side .home_link {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: #1e2525;
+    text-decoration: none;
+    margin: 0px;
+}
+
