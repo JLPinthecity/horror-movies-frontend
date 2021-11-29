@@ -7,7 +7,6 @@
     height: 100%;
     margin-top: 0px;
     border-bottom: 1px solid currentColor;
-
 }
 
 
@@ -48,3 +47,21 @@
     margin: 0px;
 }
 
+@media only screen and (max-width: 900px) {
+
+    .homeMainImageWrapper{
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+    .left_side {
+        width: 100%;
+    }
+
+    .right_side {
+        width: 100%;
+        padding: 10px;
+    }
+
+}
