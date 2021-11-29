@@ -32,19 +32,25 @@
     width: 50%;
     height: auto;
     padding: 72px;
+    display: flex;
+    flex-direction: column;
 }
 
-.right_side .h3_home {
+.h3_home {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
 }
 
-.right_side .home_link {
+.home_link {
     background-color: transparent;
     border: 1px solid currentColor;
     color: #1e2525;
     text-decoration: none;
-    margin: 0px;
+    align-self: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding:5px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -61,7 +67,6 @@
 
     .right_side {
         width: 100%;
-        padding: 10px;
     }
 
 }
