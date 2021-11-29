@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { switchImage } from '../actions/homeComponent';
 import { revertImage } from '../actions/homeComponent';
+import { withRouter, Link } from 'react-router-dom';
 import "./Home.css";
 
 const Home  = (props) => {
@@ -30,6 +31,10 @@ const Home  = (props) => {
 
             <h3 class="h3_home">Find a few new spooky movies and keep track of old favorites.</h3>
 
+            <Link className="home_link primary-button" to="/horror_movies" >Add Movies</Link>
+
+
+            
             </div>
         </div>
 

@@ -5,20 +5,19 @@
     display: flex;
     align-items: center;
     height: 100%;
-    background-color: powderblue;
     margin-top: 0px;
+    border-bottom: 1px solid currentColor;
+
 }
 
 
 /* FIRST CHILD - FLEXBOX*/
 
 .left_side {
-    float: left;
     border-right: 1px solid currentColor;
-    background-color: pink;
     width: 50%;
     height: 100%;
-    padding: 88px;
+    padding: 75px;
 }
 
 
@@ -34,7 +33,6 @@
     width: 50%;
     height: auto;
     padding: 72px;
-    background-color: peru;
 }
 
 .right_side .h3_home {
