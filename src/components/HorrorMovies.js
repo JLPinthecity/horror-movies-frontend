@@ -7,7 +7,9 @@ const HorrorMovies = (props) => {
     const movieCards = props.movies.length > 0 ? props.movies.map(m => <MovieCard movie={m} key={m.attributes.id}/>) : null
 
     return (
-        movieCards 
+        <div className="movies-main-container">
+            { movieCards }
+        </div>
     )
 }
 
