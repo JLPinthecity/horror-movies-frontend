@@ -4,6 +4,7 @@
     border-width: 0;
     border-style: solid;
     border-color: currentColor;
+    font-family: 'Nunito', sans-serif;
 }
 
 .page-container {
@@ -13,12 +14,12 @@
     box-sizing: border-box;
 }
 
+
 .content-wrap {
     flex: 1;
     margin: 0;
     padding: 0;
     background-color: rgb(238, 232, 222);
-    font-family: 'Nunito', sans-serif;
     font-size: 14px;
     line-height: 1.563;
     color: #1e2525;
@@ -55,7 +56,6 @@ input {
     border-radius: 0;
     height: 25px;
     color: whitesmoke;
-    
     line-height: 1;
     text-transform: uppercase;
 }
@@ -76,6 +76,11 @@ ul {
 h2 {
     font-size: 15px;
     margin-bottom: 12px;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
 }
 
 .sticky {

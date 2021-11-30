@@ -1,0 +1,9 @@
+.movies-main-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 120px;
+    max-width: 100vh;
+    padding: 20px;
+}
+
