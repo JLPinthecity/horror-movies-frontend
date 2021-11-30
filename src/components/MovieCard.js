@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Card.css";
 
 const MovieCard = ({ movie }) => {
@@ -17,7 +17,7 @@ const MovieCard = ({ movie }) => {
                 <p>{movie.attributes.avg_score}</p>
             </div>
 
-            <div className="title">
+            <div className="movie-title">
                 <p>{movie.attributes.director}</p>
             </div>
 
