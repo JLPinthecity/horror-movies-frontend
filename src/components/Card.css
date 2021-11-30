@@ -1,5 +1,6 @@
 .card {
-    border: 1px solid #efefef;
+    border: 1px solid lightgrey;
+    width: 250px;
 
 }
 
@@ -9,12 +10,11 @@
 
 .poster img{
     width: 150px;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 10%;
+    border-radius: 25%;
+    margin: 5px;
 }
 
 
 .link {
-   padding-top: 10px;
-   padding-left:20px;
+    height:50px;
 }
