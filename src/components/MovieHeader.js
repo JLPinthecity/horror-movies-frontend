@@ -11,7 +11,6 @@ const Header = () => {
             <div className="total-out-of"> </div>
             </div>
 
-
         </div>
     )
 }

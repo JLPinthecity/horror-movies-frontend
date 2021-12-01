@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './MovieHeader';
 import "./Card.css";
 
 const MovieCard = ({ movie }) => {
     return (
-        <div className="card">
+        <div className="card-wrapper">
             <div className="poster">
                 <img src={movie.attributes.poster} alt={movie.attributes.title} width="500" />
             </div>
