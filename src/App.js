@@ -47,11 +47,11 @@ class App extends React.Component {
 
               <Route exact path="/search" component={SearchBar}/>
 
-              <Route exact path="/horror-movies" component={ContentContainer}/>
+              <Route exact path="/horror_movies" component={ContentContainer}/>
 
-              <Route exact path="/horror-movies/new" component={NewMovieForm}/>
+              <Route exact path="/horror_movies/new" component={NewMovieForm}/>
 
-              <Route exact path="/horror-movies/:slug" component={MovieCard}/>
+              <Route exact path="/horror_movies/:slug" component={IndividualMovieShow}/>
             </Switch>
         </div>
           

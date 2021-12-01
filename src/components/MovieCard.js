@@ -24,7 +24,7 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="link">
-                <Link to={`/horror-movies/${movie.attributes.slug}`}>View Movie</Link>
+                <Link to={`/horror_movies/${movie.attributes.slug}`}>View Movie</Link>
             </div>
             
         </div>

@@ -11,7 +11,7 @@ export const setMovie = () => {
 //asynchronous action creators
 
 export const getMoviePlusReviews = (url) => {
-    
+    debugger
     const configObj = {
         credentials: "include",
         method: "GET",
@@ -21,7 +21,7 @@ export const getMoviePlusReviews = (url) => {
     }
 
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/${url}`, configObj)
+        return fetch(`http://localhost:3001/api/v1${url}`, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {

@@ -72,7 +72,7 @@ const NavBar = (props) => {
 
                         <li><Link to="/">HOME</Link></li>
                         <li><Link to="/about">ABOUT</Link></li>
-                        <li><Link to="/horror-movies">MOVIES</Link></li>
+                        <li><Link to="/horror_movies">MOVIES</Link></li>
                         <li></li>
                     </ul>
 
