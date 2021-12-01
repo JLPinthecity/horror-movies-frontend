@@ -9,6 +9,8 @@ const HorrorMovies = (props) => {
     return (
         <div className="movies-main-container">
             { movieCards }
+
+            TEST
         </div>
     )
 }

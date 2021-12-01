@@ -11,11 +11,13 @@ import SearchBar from './components/SearchBar';
 import About from './components/About';
 import Logoff from './components/About';
 import Footer from './components/Footer';
+import IndividualMovieShow from './components/IndividualMovieShow';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser'
 import { Route, 
         Switch, 
         withRouter } from 'react-router-dom';
+import HorrorMovies from './components/HorrorMovies';
 
 class App extends React.Component {
 
