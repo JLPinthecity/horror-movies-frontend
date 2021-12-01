@@ -1,8 +1,8 @@
 //synchronous action creators
-export const setMovie = () => {
-    
+export const setMovie = (action) => {
     return {
-        type: "SET_MOVIE"
+        type: "SET_MOVIE", 
+        payload: action
     }
 }
 
@@ -11,7 +11,6 @@ export const setMovie = () => {
 //asynchronous action creators
 
 export const getMoviePlusReviews = (url) => {
-    debugger
     const configObj = {
         credentials: "include",
         method: "GET",
@@ -27,7 +26,7 @@ export const getMoviePlusReviews = (url) => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                console.log(resp)
+                dispatch(setMovie(resp.data))
             }
         })
         .catch(console.log)
