@@ -11,6 +11,7 @@ import signupModal from './reducers/signupModal.js';
 import backgroundImage from './reducers/backgroundImage.js';
 import newMovieForm from './reducers/newMovieForm.js';
 import horrorMovie from './reducers/horrorMovie.js';
+import movieDataLoaded from './reducers/movieDataLoaded.js';
 import review from './reducers/review.js';
 import thunk from 'redux-thunk';
 
@@ -27,7 +28,8 @@ const reducer = combineReducers({
     backgroundImage,
     newMovieForm,
     horrorMovie, 
-    review
+    review,
+    movieDataLoaded
 })
   
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
