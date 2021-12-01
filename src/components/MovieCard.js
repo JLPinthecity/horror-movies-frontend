@@ -16,7 +16,7 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="rating">
-                <p>{movie.attributes.avg_score}</p>
+                <p>{movie.attributes.average_score}</p>
             </div>
 
             <div className="movie-title">
