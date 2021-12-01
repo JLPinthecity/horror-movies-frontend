@@ -6,6 +6,12 @@ export const setMovie = (action) => {
     }
 }
 
+export const movieLoaded = () => {
+    return {
+        type: "LOAD_MOVIE"
+    }
+}
+
 
 
 //asynchronous action creators
@@ -27,6 +33,8 @@ export const getMoviePlusReviews = (url) => {
                 alert(resp.error)
             } else {
                 dispatch(setMovie(resp.data))
+                dispatch(movieLoaded())
+                
             }
         })
         .catch(console.log)
