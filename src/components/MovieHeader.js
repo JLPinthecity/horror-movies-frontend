@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const MovieHeader = (props) => {
     return (
         <div className="header-wrapper">
             <h1>Movie Name</h1>
@@ -15,4 +15,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default MovieHeader;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { getMoviePlusReviews } from '../actions/individualMovie'
 import { connect } from 'react-redux';
+import MovieHeader from './MovieHeader';
 
 class IndividualMovieShow extends React.Component {
 
@@ -13,7 +14,16 @@ class IndividualMovieShow extends React.Component {
 
         return (
             <div className="movie-wrapper">
-            hello 
+                <div className="column-1">
+                    <MovieHeader/>
+
+                </div>
+
+                <div className="column-2">
+
+                </div>
+
+             
             </div>
         )
 
