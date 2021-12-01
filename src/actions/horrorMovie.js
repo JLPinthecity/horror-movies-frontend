@@ -1,5 +1,5 @@
 //synchronous action creators
-export const setHorrorMovie = () => {
+export const setMovie = () => {
     
     return {
         type: "SET_MOVIE"
