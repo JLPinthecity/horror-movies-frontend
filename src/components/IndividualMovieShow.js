@@ -15,7 +15,7 @@ class IndividualMovieShow extends React.Component {
         return (
             <div className="movie-wrapper">
                 <div className="column-1">
-                    <MovieHeader/>
+                    { <MovieHeader/>}
 
                 </div>
 
@@ -23,15 +23,19 @@ class IndividualMovieShow extends React.Component {
 
                 </div>
 
-             
+
             </div>
         )
 
     }
-    
-    
 }
 
-export default connect(null, { getMoviePlusReviews })(IndividualMovieShow);
+const mapStateToProps = state => {
+    return {
+        loaded: state.loaded
+    }
+}
+
+export default connect(mapStateToProps, { getMoviePlusReviews })(IndividualMovieShow);
 
 //props.match.url = '/horror-movies/hereditary'

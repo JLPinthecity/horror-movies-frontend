@@ -4,7 +4,7 @@ export default (state = movieLoaded, action) => {
     switch (action.type) {
        
         case "LOAD_MOVIE":
-            return !state
+            return true
             
         default: 
         return state
