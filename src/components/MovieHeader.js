@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 
 const MovieHeader = (props) => {
 
-    const { poster, title, director, year_released, slug, average_score, reviews } = props.attributes
+    const { poster, title, director, year_released, slug, average_score } = props.attributes
+    const { reviews } = props
     
     return (
         <div className="header-wrapper">
