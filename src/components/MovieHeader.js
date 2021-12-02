@@ -16,5 +16,10 @@ const MovieHeader = (props) => {
         </div>
     )
 }
+const mapStateToProps = state => {
+    return {
+        attributes: state.horrorMovie.attributes
+    }
+}
 
-export default connect(MovieHeader);
+export default connect(mapStateToProps)(MovieHeader);
