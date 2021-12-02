@@ -9,3 +9,7 @@
     height: 100vh;
     overflow: scroll;
 }
+
+.column-2 {
+    background-color: gray;
+}
