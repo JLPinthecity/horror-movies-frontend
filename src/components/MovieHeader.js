@@ -1,16 +1,20 @@
+
 import React from 'react';
 import { connect } from 'react-redux';
 
 const MovieHeader = (props) => {
+
+    const { poster, title, director, year_released, slug, average_score, reviews } = props.attributes
     
     return (
         <div className="header-wrapper">
-            <h1>Movie Name</h1>
+           
+            <h1><img src={ poster } alt={ title }/> { title }</h1>
 
             <div>
-            <div className="total-reviews"> </div>
+            <div className="total-reviews">{ reviews.length } user reviews</div>
             <div className="star-rating"> </div>
-            <div className="total-out-of"> </div>
+            <div className="total-out-of">{ average_score } out of 5</div>
             </div>
 
         </div>
@@ -18,7 +22,8 @@ const MovieHeader = (props) => {
 }
 const mapStateToProps = state => {
     return {
-        attributes: state.horrorMovie.attributes
+        attributes: state.horrorMovie.attributes,
+        reviews: state.horrorMovie.relationships.reviews.data
     }
 }
 
