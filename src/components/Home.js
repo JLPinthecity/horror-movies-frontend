@@ -31,7 +31,7 @@ const Home  = (props) => {
 
             <h3 class="h3_home">Find a few new spooky movies and keep track of old favorites.</h3>
 
-            <Link className="home_link" to="/horror-movies">VIEW Movies</Link>
+            <Link className="home_link" to="/horror_movies">VIEW Movies</Link>
 
 
             
