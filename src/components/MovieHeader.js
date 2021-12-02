@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const MovieHeader = (props) => {
+    debugger
     return (
         <div className="header-wrapper">
             <h1>Movie Name</h1>
@@ -15,4 +17,4 @@ const MovieHeader = (props) => {
     )
 }
 
-export default MovieHeader;
+export default connect(MovieHeader);
