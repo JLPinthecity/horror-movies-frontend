@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateNewMovieForm } from '../actions/newMovieForm';
+import { postNewMovie } from '../actions/newMovieForm';
 
 const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm }) => {
 
@@ -10,7 +11,7 @@ const NewTripForm = ({ title, director, poster, year_released, history, updateNe
 
     const handleSubmit = event => {
         event.preventDefault();
-
+        postNewMovie(history);
     }
 
     return (
@@ -45,5 +46,5 @@ const mapStateToProps = state => {
 
 
 
-export default connect(mapStateToProps, { updateNewMovieForm })(NewTripForm);
+export default connect(mapStateToProps, { updateNewMovieForm, postNewMovie })(NewTripForm);
 
