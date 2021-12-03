@@ -2,23 +2,27 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateNewMovieForm } from '../actions/newMovieForm';
 
-const NewTripForm = (props) => {
+const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm }) => {
 
     const handleChange = event => {
         event.preventDefault();
-        props.updateNewMovieForm(event.target.name, event.target.value)
+        updateNewMovieForm(event.target.name, event.target.value)
+    }
+
+    const handleSubmit = event => {
+
     }
 
     return (
 
-        <form>
-            <input name="title" placeholder="Title" value={props.name} onChange={handleChange}/>
+        <form onSubmit={handleSubmit}>
+            <input name="title" placeholder="Title" value={title} onChange={handleChange}/>
             <br/>
-            <input name="director" placeholder="Director" value={props.director} onChange={handleChange}/>
+            <input name="director" placeholder="Director" value={director} onChange={handleChange}/>
             <br/>
-            <input name="poster" placeholder="Link to image or movie poster" value={props.poster} onChange={handleChange}/>
+            <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
             <br/>
-            <input name="year_released" placeholder="Year released" value={props.year_released} onChange={handleChange}/>
+            <input name="year_released" placeholder="Year released" value={year_released} onChange={handleChange}/>
 
             <input type="submit" value="Add New Movie"/>
 
