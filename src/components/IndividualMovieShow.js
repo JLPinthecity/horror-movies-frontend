@@ -32,6 +32,7 @@ class IndividualMovieShow extends React.Component {
                 </div>
 
                 <div className="column-2">
+                    
                     <div className="review-form">
                         FORM GOES HERE
                     </div>

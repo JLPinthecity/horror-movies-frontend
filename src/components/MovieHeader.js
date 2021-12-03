@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './MovieHeader.css';
 
-
 const MovieHeader = (props) => {
 
     const { poster, title, director, year_released, slug, average_score } = props.attributes
