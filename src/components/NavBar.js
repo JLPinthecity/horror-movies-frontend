@@ -50,7 +50,7 @@ const NavBar = (props) => {
                 </div>
 
                 <div className="right relative row-item">
-                    { props.currentUser ? <Logoff/> : <button onClick={changeModal} className="primary-button">Log In</button> }
+                    { props.currentUser ? <Logoff className="logoff"/> : <button onClick={changeModal} className="primary-button">Log In</button> }
 
                     { props.buttonClicked && <LoginModal/> }
                 </div>

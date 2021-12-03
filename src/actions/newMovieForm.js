@@ -10,7 +10,7 @@ export const updateNewMovieForm = (name, value) => {
 //asynchronous actions 
 
 export const postNewMovie = (movieData) => {
-    console.log("postNewMovie action creator")
+    console.log("postNewMovie action creator", movieData)
     const configObj = {
         credentials: "include",
         method: "POST",
