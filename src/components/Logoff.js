@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { logout } from "../actions/currentUser";
+import { withRouter } from "react-router";
 
 const Logoff = ({ history, logout }) => {
 
@@ -18,4 +19,4 @@ const Logoff = ({ history, logout }) => {
     )
 }
 
-export default connect(null, { logout })(Logoff);
+export default withRouter(connect(null, { logout })(Logoff));
