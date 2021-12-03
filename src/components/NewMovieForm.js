@@ -5,11 +5,11 @@ import { updateNewMovieForm } from '../actions/newMovieForm';
 const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm }) => {
 
     const handleChange = event => {
-        event.preventDefault();
         updateNewMovieForm(event.target.name, event.target.value)
     }
 
     const handleSubmit = event => {
+        event.preventDefault();
 
     }
 
