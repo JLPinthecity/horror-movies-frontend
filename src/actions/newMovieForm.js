@@ -9,15 +9,15 @@ export const updateNewMovieForm = (name, value) => {
 
 //asynchronous actions 
 
-export const postNewMovie = () => {
-    console.log("from signup")
+export const postNewMovie = (movieData) => {
+    console.log("postNewMovie action creator")
     const configObj = {
         credentials: "include",
         method: "POST",
         headers: {
         "Content-Type": "application/json"
         },
-        body: JSON.stringify()
+        body: JSON.stringify(movieData)
     }
 
     return dispatch => {

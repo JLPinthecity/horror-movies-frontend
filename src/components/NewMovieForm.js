@@ -5,13 +5,15 @@ import { postNewMovie } from '../actions/newMovieForm';
 
 const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm }) => {
 
+    const movieData = { title, director, poster, year_released }
+
     const handleChange = event => {
         updateNewMovieForm(event.target.name, event.target.value)
     }
 
     const handleSubmit = event => {
         event.preventDefault();
-        postNewMovie(history);
+        postNewMovie(movieData, history);
     }
 
     return (
