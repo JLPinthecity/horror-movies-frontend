@@ -7,28 +7,43 @@ export const updateNewMovieForm = (name, value) => {
     }
 }
 
-//asynchronous actions 
+export const addMovie = (movie) => {
+    return {
+        type: "ADD_MOVIE",
+        payload: {movie}
+    }
+}
 
-export const postNewMovie = (movieData) => {
-    console.log("postNewMovie action creator", movieData)
+
+
+//asynchronous actions 
+export const postNewMovie = (movieData, history) => {
+    console.log("from postNewMovie action creator", movieData)
+
+    const sendableData = {
+        title: movieData.title,
+        poster: movieData.poster,
+        director: movieData.director,
+        year_released: movieData.year_released
+    }
+
     const configObj = {
         credentials: "include",
         method: "POST",
         headers: {
         "Content-Type": "application/json"
         },
-        body: JSON.stringify(movieData)
+        body: JSON.stringify(sendableData)
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/signup", configObj)
+        return fetch("http://localhost:3001/api/v1/horror_movies", configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                console.log(resp)
-
+                console.log("post new movie FETCH RESP:", resp)
             }
         })
         .catch(console.log)
