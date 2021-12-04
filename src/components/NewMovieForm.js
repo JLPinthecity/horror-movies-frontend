@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateNewMovieForm } from '../actions/newMovieForm';
 import { postNewMovie } from '../actions/newMovieForm';
 
-const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm }) => {
+const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm, postNewMovie }) => {
 
     const movieData = { title, director, poster, year_released }
 
