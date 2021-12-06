@@ -10,7 +10,7 @@ export const updateNewMovieForm = (name, value) => {
 export const addMovie = (movie) => {
     return {
         type: "ADD_MOVIE",
-        payload: {movie}
+        payload: movie
     }
 }
 
@@ -43,7 +43,7 @@ export const postNewMovie = (movieData, history) => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                console.log("post new movie FETCH RESP:", resp)
+                dispatch(addMovie(resp.data))
             }
         })
         .catch(console.log)
