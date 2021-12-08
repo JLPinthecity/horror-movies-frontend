@@ -16,8 +16,6 @@ export const clearMovieForm = () => {
 }
 
 
-
-
 //asynchronous actions 
 export const postNewMovie = (movieData, history) => {
     console.log("from postNewMovie action creator", movieData)
@@ -47,6 +45,7 @@ export const postNewMovie = (movieData, history) => {
             } else {
                 dispatch(addMovie(resp.data))
                 dispatch(clearMovieForm())
+                history.push('/horror_movies')
             }
         })
         .catch(console.log)
