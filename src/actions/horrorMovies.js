@@ -6,6 +6,13 @@ export const setMovies = (movies) => {
     }
 }
 
+export const addMovie = (movie) => {
+    return {
+        type: "ADD_MOVIE",
+        payload: movie
+    }
+}
+
 //asynchronous action creators
 export const getMovies = () => {
     const configObj = {

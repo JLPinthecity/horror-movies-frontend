@@ -1,3 +1,5 @@
+import { addMovie } from './horrorMovies'
+
 //synchronous actions 
 export const updateNewMovieForm = (name, value) => {
     console.log("value is", value)
@@ -7,12 +9,12 @@ export const updateNewMovieForm = (name, value) => {
     }
 }
 
-export const addMovie = (movie) => {
+export const clearMovieForm = () => {
     return {
-        type: "ADD_MOVIE",
-        payload: movie
+        type: "RESET_NEW_MOVIE_FORM"
     }
 }
+
 
 
 
@@ -44,6 +46,7 @@ export const postNewMovie = (movieData, history) => {
                 alert(resp.error)
             } else {
                 dispatch(addMovie(resp.data))
+                dispatch(clearMovieForm())
             }
         })
         .catch(console.log)
