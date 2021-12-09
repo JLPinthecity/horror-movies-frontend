@@ -1,8 +1,7 @@
 const initialState = {
     poster: "",
     title: "",
-    director: "",
-    year_released: ""
+    director: ""
 }
 
 export default (state = initialState, action) => {

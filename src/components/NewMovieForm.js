@@ -38,7 +38,9 @@ const NewTripForm = (props) => {
             <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
             <br/>
 
-            <Calendar className="react-calendar" onChange={handleDateChange} value={props.date}/>
+            <Calendar className="react-calendar" 
+            onChange={handleDateChange} 
+            value={props.date}/>
 
             <input type="submit" value="Add New Movie"/>
 

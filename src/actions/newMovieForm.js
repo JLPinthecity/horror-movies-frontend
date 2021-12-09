@@ -15,10 +15,11 @@ export const clearMovieForm = () => {
     }
 }
 
-
 //asynchronous actions 
 export const postNewMovie = (movieData, history) => {
     console.log("from postNewMovie action creator", movieData)
+
+    debugger
 
     const sendableData = {
         title: movieData.title,
