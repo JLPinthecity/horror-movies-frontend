@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateNewMovieForm } from '../actions/newMovieForm';
 import { postNewMovie } from '../actions/newMovieForm';
+import Calendar from 'react-calendar';
+
+
 
 const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm, postNewMovie }) => {
 
@@ -25,7 +28,8 @@ const NewTripForm = ({ title, director, poster, year_released, history, updateNe
             <br/>
             <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
             <br/>
-            <input name="year_released" placeholder="Year released" value={year_released} onChange={handleChange}/>
+            
+            <Calendar />
 
             <input type="submit" value="Add New Movie"/>
 
@@ -42,7 +46,6 @@ const mapStateToProps = state => {
         poster,
         director,
         year_released
-
     }
 }
 
