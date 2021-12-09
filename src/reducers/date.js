@@ -1,4 +1,4 @@
-const date = null
+const date = new Date();
 
 export default (state = date, action) => {
     switch (action.type) {

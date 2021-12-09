@@ -2,19 +2,28 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateNewMovieForm } from '../actions/newMovieForm';
 import { postNewMovie } from '../actions/newMovieForm';
+import { updateDate } from '../actions/date';
 import Calendar from 'react-calendar';
 
-const NewTripForm = ({ title, director, poster, year_released, date, history, updateNewMovieForm, postNewMovie }) => {
+const NewTripForm = (props) => {
 
+    const { title, poster, director, year_released } = props.formData
+        
     const movieData = { title, director, poster, year_released }
 
+    const selectedDate = props.date
+
     const handleChange = event => {
-        updateNewMovieForm(event.target.name, event.target.value)
+        props.updateNewMovieForm(event.target.name, event.target.value)
     }
 
     const handleSubmit = event => {
         event.preventDefault();
-        postNewMovie(movieData, history);
+        props.postNewMovie(movieData, props.history);
+    }
+
+    const handleDateChange = (selectedDate) => {
+        props.updateDate(selectedDate)
     }
 
     return (
@@ -27,7 +36,7 @@ const NewTripForm = ({ title, director, poster, year_released, date, history, up
             <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
             <br/>
 
-            <Calendar onChange={handleChange} value={date}/>
+            <Calendar onChange={handleDateChange} value={props.date}/>
 
             <input type="submit" value="Add New Movie"/>
 
@@ -38,20 +47,12 @@ const NewTripForm = ({ title, director, poster, year_released, date, history, up
 
 const mapStateToProps = state => {
 
-    const { title, poster, director, year_released } = state.newMovieForm
-
-    const { date } = state.date
-
     return {
-        title,
-        poster,
-        director,
-        year_released,
-        date
+        formData: state.newMovieForm,
+        date: state.date
     }
+
 }
 
-
-
-export default connect(mapStateToProps, { updateNewMovieForm, postNewMovie })(NewTripForm);
+export default connect(mapStateToProps, { updateNewMovieForm, postNewMovie, updateDate })(NewTripForm);
 
