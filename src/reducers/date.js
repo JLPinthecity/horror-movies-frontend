@@ -1,4 +1,4 @@
-const date = ""
+const date = null
 
 export default (state = date, action) => {
     switch (action.type) {

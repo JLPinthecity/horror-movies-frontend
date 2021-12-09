@@ -4,9 +4,7 @@ import { updateNewMovieForm } from '../actions/newMovieForm';
 import { postNewMovie } from '../actions/newMovieForm';
 import Calendar from 'react-calendar';
 
-
-
-const NewTripForm = ({ title, director, poster, year_released, history, updateNewMovieForm, postNewMovie }) => {
+const NewTripForm = ({ title, director, poster, year_released, date, history, updateNewMovieForm, postNewMovie }) => {
 
     const movieData = { title, director, poster, year_released }
 
@@ -28,8 +26,8 @@ const NewTripForm = ({ title, director, poster, year_released, history, updateNe
             <br/>
             <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
             <br/>
-            
-            <Calendar />
+
+            <Calendar onChange={handleChange} value={date}/>
 
             <input type="submit" value="Add New Movie"/>
 
@@ -41,11 +39,15 @@ const NewTripForm = ({ title, director, poster, year_released, history, updateNe
 const mapStateToProps = state => {
 
     const { title, poster, director, year_released } = state.newMovieForm
+
+    const { date } = state.date
+
     return {
         title,
         poster,
         director,
-        year_released
+        year_released,
+        date
     }
 }
 
