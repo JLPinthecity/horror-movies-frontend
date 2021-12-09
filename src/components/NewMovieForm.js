@@ -4,6 +4,7 @@ import { updateNewMovieForm } from '../actions/newMovieForm';
 import { postNewMovie } from '../actions/newMovieForm';
 import { updateDate } from '../actions/date';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css'
 
 const NewTripForm = (props) => {
 
@@ -29,6 +30,7 @@ const NewTripForm = (props) => {
     return (
 
         <form onSubmit={handleSubmit}>
+
             <input name="title" placeholder="Title" value={title} onChange={handleChange}/>
             <br/>
             <input name="director" placeholder="Director" value={director} onChange={handleChange}/>
@@ -36,7 +38,7 @@ const NewTripForm = (props) => {
             <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
             <br/>
 
-            <Calendar onChange={handleDateChange} value={props.date}/>
+            <Calendar className="react-calendar" onChange={handleDateChange} value={props.date}/>
 
             <input type="submit" value="Add New Movie"/>
 
