@@ -12,7 +12,7 @@ import "./NavBar.css";
 
 const NavBar = (props) => {
 
-    const handleChange = () => {
+    const showOrCloseSideMenu = () => {
         props.showMenuItems()
     }
 
@@ -34,7 +34,7 @@ const NavBar = (props) => {
             <div className="row relative"> 
 
                 <div className="hide">
-                    <button className="menu-icon active-icon" onClick={handleChange}>
+                    <button className="menu-icon active-icon" onClick={showOrCloseSideMenu}>
                         <Reorder/>
                     </button>
                 </div>
@@ -65,7 +65,7 @@ const NavBar = (props) => {
                     <div className="menu-row">
                         <span className={props.menuButtonClicked ? "menu-title" : "hide"}>Menu</span>
 
-                        <span className={props.menuButtonClicked ? "menu-close" : "hide"}><Close onClick={handleChange}/></span>
+                        <span className={props.menuButtonClicked ? "menu-close" : "hide"}><Close onClick={showOrCloseSideMenu}/></span>
                     </div>
 
                     <ul className={props.menuButtonClicked ? "menu-column" : "menu"}>
