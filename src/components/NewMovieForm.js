@@ -20,7 +20,7 @@ const NewTripForm = (props) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.postNewMovie(movieData, props.history);
+        props.postNewMovie(movieData, selectedDate, props.history);
     }
 
     const handleDateChange = (selectedDate) => {

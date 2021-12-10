@@ -16,16 +16,14 @@ export const clearMovieForm = () => {
 }
 
 //asynchronous actions 
-export const postNewMovie = (movieData, history) => {
+export const postNewMovie = (movieData, selectedDate, history) => {
     console.log("from postNewMovie action creator", movieData)
-
-    debugger
 
     const sendableData = {
         title: movieData.title,
         poster: movieData.poster,
         director: movieData.director,
-        year_released: movieData.year_released
+        year_released: selectedDate.toISOString().split("T")[0]
     }
 
     const configObj = {
