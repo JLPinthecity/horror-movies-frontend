@@ -7,3 +7,10 @@ export const updateDate = (date) => {
         payload: date
     }
 }
+
+export const resetDate = () => {
+
+    return {
+        type: "RESET_DATE"
+    }
+}

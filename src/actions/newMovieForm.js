@@ -1,4 +1,5 @@
-import { addMovie } from './horrorMovies'
+import { addMovie } from './horrorMovies';
+import { resetDate } from './date';
 
 //synchronous actions 
 export const updateNewMovieForm = (name, value) => {
@@ -44,6 +45,7 @@ export const postNewMovie = (movieData, selectedDate, history) => {
             } else {
                 dispatch(addMovie(resp.data))
                 dispatch(clearMovieForm())
+                dispatch(resetDate())
                 history.push('/horror_movies')
             }
         })

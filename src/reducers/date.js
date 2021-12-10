@@ -5,6 +5,9 @@ export default (state = date, action) => {
        
         case "SET_DATE":
             return action.payload
+
+        case "RESET_DATE":
+            return date
             
         default: 
         return state
