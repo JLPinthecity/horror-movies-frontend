@@ -4,7 +4,8 @@ import { updateNewMovieForm } from '../actions/newMovieForm';
 import { postNewMovie } from '../actions/newMovieForm';
 import { updateDate } from '../actions/date';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'
+import 'react-calendar/dist/Calendar.css';
+import './NewMovieForm.css'
 
 const NewTripForm = (props) => {
 
@@ -29,23 +30,46 @@ const NewTripForm = (props) => {
 
     return (
 
-        <form onSubmit={handleSubmit}>
+        <div className="movieFormWrapper">
 
-            <input name="title" placeholder="Title" value={title} onChange={handleChange}/>
-            <br/>
-            <input name="director" placeholder="Director" value={director} onChange={handleChange}/>
-            <br/>
-            <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
-            <br/>
+            <div className="movieFormContainer">
 
-            <Calendar className="react-calendar" 
-            onChange={handleDateChange} 
-            value={props.date}/>
 
-            <input type="submit" value="Add New Movie"/>
+            <div className="first_row">
+                <div className="title">
+                    Add Movie
+                </div><br/><br/>
+            </div>
 
-        </form>
+            <div className="body">
 
+                <form onSubmit={handleSubmit}>
+                    
+                    <label>Title</label>
+                    <input name="title" placeholder="Title" value={title} onChange={handleChange}/>
+                    <br/>
+                    <label>Director</label>
+                    <input name="director" placeholder="Director" value={director} onChange={handleChange}/>
+                    <br/>
+                    <label>Link to Image (Movie Poster)</label>
+                    <input name="poster" placeholder="Link to image or movie poster" value={poster} onChange={handleChange}/>
+                    <br/>
+
+                    
+                    <label>Release Date</label>
+                    <Calendar className="react-calendar" 
+                    onChange={handleDateChange} 
+                    value={props.date}/>
+
+                    <br/>
+                    <input type="submit" className="primary-button" value="Add New Movie"/>
+                    <br/>
+
+                </form>
+            </div>
+        </div>
+
+        </div>
     )
 };
 

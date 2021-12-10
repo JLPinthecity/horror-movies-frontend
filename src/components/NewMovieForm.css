@@ -1,0 +1,22 @@
+.movieFormWrapper {
+    align-content: center;
+}
+
+.movieFormContainer {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: 1px solid;
+    margin: 5px;
+    padding:10px;
+}
+
+.movieFormContainer .primary-button {
+    width: 100%;
+    margin:0px;
+    align-content: center;
+}

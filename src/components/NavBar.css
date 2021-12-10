@@ -137,12 +137,12 @@
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
 }
 
 .menu-title {
     justify-content: flex-start;
-    margin: 10px;
+    margin: 16px;
 }
 
 .menu-close {
