@@ -70,10 +70,10 @@ const NavBar = (props) => {
 
                     <ul className={props.menuButtonClicked ? "menu-column" : "menu"}>
 
-                        <li><Link to="/">HOME</Link></li>
-                        <li><Link to="/about">ABOUT</Link></li>
-                        <li><Link to="/horror_movies">MOVIES</Link></li>
-                        <li><Link to="/horror_movies/new">ADD MOVIE</Link></li>
+                        <li><Link to="/" onClick={showOrCloseSideMenu} >HOME</Link></li>
+                        <li><Link to="/about" onClick={showOrCloseSideMenu} >ABOUT</Link></li>
+                        <li><Link to="/horror_movies" onClick={showOrCloseSideMenu} >MOVIES</Link></li>
+                        <li><Link to="/horror_movies/new" onClick={showOrCloseSideMenu} >ADD MOVIE</Link></li>
                         <li></li>
                     </ul>
 
