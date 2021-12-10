@@ -6,6 +6,7 @@ import { withRouter, Link } from 'react-router-dom';
 import { openOrCloseModal } from '../actions/openOrCloseModal';
 import { showOrHideSignupModal } from '../actions/signupModal';
 import { Close } from '@material-ui/icons';
+
 import "./Modal.css";
 
 const SignUp = (props) => {
@@ -27,29 +28,30 @@ const SignUp = (props) => {
 
     return (
         <div className="modalBackground" id={props.openSignupModal ? "" : "hidden"}>
+
             <div className="modalContainer">
 
-            <div className="first_row">
-                <div className="title">
-                Create an account
-                </div><br/><br/>
+                <div className="first_row">
+                    <div className="title">
+                        Create an account
+                    </div><br/><br/>
 
-                <div className="icon">
-                    <button onClick={ props.showOrHideSignupModal }><Close/></button>
+                    <div className="icon">
+                        <button onClick={ props.showOrHideSignupModal }><Close/></button>
+                    </div>
                 </div>
-            </div>
 
-            <div className="body">
-                <form onSubmit={handleSubmit}>
-                    <label>Name</label>
-                    <input type="text" name="name" value={props.signupForm.name} onChange={handleChange}/>
-                    <label>Username</label>
-                    <input type="text" name="username" value={props.signupForm.username} onChange={handleChange}/>
-                    <label>Password</label>
-                    <input type="text" name="password" value={props.signupForm.password} onChange={handleChange}/>
-                    <input className="submit-button" type="submit" value="Sign Up" />
-                </form>
-            </div>
+                <div className="body">
+                    <form onSubmit={handleSubmit}>
+                        <label>Name</label>
+                        <input type="text" name="name" value={props.signupForm.name} onChange={handleChange}/>
+                        <label>Username</label>
+                        <input type="text" name="username" value={props.signupForm.username} onChange={handleChange}/>
+                        <label>Password</label>
+                        <input type="text" name="password" value={props.signupForm.password} onChange={handleChange}/>
+                        <input className="submit-button" type="submit" value="Sign Up" />
+                    </form>
+                </div>
 
             <div className="footer">
                 Already have an account? 

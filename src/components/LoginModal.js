@@ -49,26 +49,24 @@ const Login = (props) => {
 
                 <div className="body">
                     <form onSubmit={handleSubmit}>
-                            <label>Username</label><br/>
-                            <input type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
-                            <br/><br/>
-                            
-                            <label>Password</label><br/>
-                            <input type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
-                            <br/><br/>
+                        <label>Username</label><br/>
+                        <input type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
+                        <br/><br/>
+                        
+                        <label>Password</label><br/>
+                        <input type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
+                        <br/><br/>
 
-                            <input className="submit-button" type="submit" />
+                        <input className="submit-button" type="submit" />
                     </form>
                 </div>
 
                 <div className="footer">
+                    <Link to="/signup" onClick={ showSignup }>Create Account</Link>
 
-                <Link to="/signup" onClick={ showSignup }>Create Account</Link>
+                    {/* <button className="primary_button" onClick={showSignup}>Create Account</button>
 
-                {/* <button className="primary_button" onClick={showSignup}>Create Account</button>
-
-                { props.clickedSignup && <SignupModal/> } */}
-
+                    { props.clickedSignup && <SignupModal/> } */}
                 </div>
             </div>
         </div>

@@ -51,7 +51,7 @@
     flex-basis: 0;
 }
 
-.right input {
+/* .test input {
     align-items: center;
     justify-content: center;
     background-color: #1e2525;
@@ -65,7 +65,7 @@
     color: whitesmoke;
     line-height: 1;
     text-transform: uppercase;
-}
+} */
 
 /* ROW OF LINKS */
 .nav .menu {
