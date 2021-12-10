@@ -11,6 +11,7 @@ export const updateNewMovieForm = (name, value) => {
 }
 
 export const clearMovieForm = () => {
+    debugger
     return {
         type: "RESET_NEW_MOVIE_FORM"
     }
@@ -18,7 +19,7 @@ export const clearMovieForm = () => {
 
 //asynchronous actions 
 export const postNewMovie = (movieData, selectedDate, history) => {
-    console.log("from postNewMovie action creator", movieData)
+    console.log("postNewMovie action fired")
 
     const sendableData = {
         title: movieData.title,

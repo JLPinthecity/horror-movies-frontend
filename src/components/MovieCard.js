@@ -23,6 +23,10 @@ const MovieCard = ({ movie }) => {
                 <p>{movie.attributes.director}</p>
             </div>
 
+            <div className="release-date">
+                <p>{movie.attributes.year_released}</p>
+            </div>
+
             <div className="link">
                 <Link to={`/horror_movies/${movie.attributes.slug}`}>View Movie</Link>
             </div>
