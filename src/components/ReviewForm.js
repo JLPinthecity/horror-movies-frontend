@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { updateReviewForm } from '../actions/newReviewForm';
 import { postNewReview } from '../actions/newReviewForm';
 
@@ -17,7 +18,7 @@ const ReviewForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.postNewReview(formData)
+        props.postNewReview(formData, props.history)
     }
 
     return (
@@ -47,8 +48,9 @@ const ReviewForm = (props) => {
 
 const mapStateToProps = state => {
     return {
-        reviewFormData: state.reviewForm
+        reviewFormData: state.reviewForm,
+        horrorMovieId: state.horrorMovie.id
     }
 }
 
-export default connect(mapStateToProps, { updateReviewForm, postNewReview })(ReviewForm);
+export default withRouter(connect(mapStateToProps, { updateReviewForm, postNewReview })(ReviewForm));
