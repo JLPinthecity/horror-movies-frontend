@@ -5,7 +5,7 @@ import { postNewMovie } from '../actions/newMovieForm';
 import { updateDate } from '../actions/date';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './MovieForm.css'
+import './Form.css'
 
 const NewTripForm = (props) => {
 
