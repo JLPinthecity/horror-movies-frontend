@@ -17,7 +17,7 @@ class IndividualMovieShow extends React.Component {
             <div className="movie-wrapper">
                 { this.props.loaded && 
                     <Fragment>
-                        <div className="column content">
+                        <div className="column-content">
                             <div className ="main">
                                 <MovieHeader/>
                             </div>
@@ -27,7 +27,7 @@ class IndividualMovieShow extends React.Component {
                             </div>
                         </div>
 
-                        <div className="column review">
+                        <div className="column-review">
                             <div className="review-form">
                                 <ReviewForm/>
                             </div>

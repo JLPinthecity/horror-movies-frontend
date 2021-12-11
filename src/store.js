@@ -14,6 +14,7 @@ import horrorMovie from './reducers/horrorMovie.js';
 import movieDataLoaded from './reducers/movieDataLoaded.js';
 import review from './reducers/review.js';
 import date from './reducers/date.js';
+import reviewForm from './reducers/reviewForm.js';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
@@ -31,7 +32,8 @@ const reducer = combineReducers({
     horrorMovie, 
     review,
     movieDataLoaded,
-    date
+    date,
+    reviewForm
 })
   
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
