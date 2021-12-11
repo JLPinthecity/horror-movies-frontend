@@ -1,9 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateReviewForm } from '../actions/newReviewForm'
+import { updateReviewForm } from '../actions/newReviewForm';
+import { postNewReview } from '../actions/newReviewForm';
 
 const ReviewForm = (props) => {
+
     const { title, description, rating } = props.reviewFormData 
+
+    const formData = { title, description, rating }
 
     const handleChange = event => {
         console.log("name is", event.target.name, "value is", event.target.value)
@@ -13,7 +17,7 @@ const ReviewForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        props.postNewReview(formData)
     }
 
     return (
@@ -47,4 +51,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateReviewForm })(ReviewForm);
+export default connect(mapStateToProps, { updateReviewForm, postNewReview })(ReviewForm);

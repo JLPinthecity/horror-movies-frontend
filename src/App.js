@@ -5,19 +5,18 @@ import LoginModal from './components/LoginModal';
 import Home from './components/Home';
 import ContentContainer from './components/ContentContainer';
 import SignupModal from './components/SignupModal';
-import MovieCard from './components/MovieCard'
 import NewMovieForm from './components/NewMovieForm';
 import SearchBar from './components/SearchBar';
 import About from './components/About';
 import Logoff from './components/About';
 import Footer from './components/Footer';
+import ReviewForm from './components/ReviewForm';
 import IndividualMovieShow from './components/IndividualMovieShow';
 import { connect } from 'react-redux';
-import { getCurrentUser } from './actions/currentUser'
+import { getCurrentUser } from './actions/currentUser';
 import { Route, 
         Switch, 
         withRouter } from 'react-router-dom';
-import HorrorMovies from './components/HorrorMovies';
 
 class App extends React.Component {
 
