@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { getMoviePlusReviews } from '../actions/individualMovie'
 import { connect } from 'react-redux';
 import MovieHeader from './MovieHeader';
@@ -13,37 +13,29 @@ class IndividualMovieShow extends React.Component {
     }
 
     render() {
-        
-
         return (
             <div className="movie-wrapper">
+                { this.props.loaded && 
+                    <Fragment>
+                        <div className="column-1">
+                            <div className ="main">
+                                <MovieHeader/>
+                            </div>
 
-                <div className="column-1">
+                            <div className="reviews">
 
-                    <div className ="main">
+                            </div>
+                        </div>
 
-                        { this.props.loaded && <MovieHeader/>}
-
-                    </div>
-
-                    <div className="reviews">
-
-                    </div>
-
-                </div>
-
-                <div className="column-2">
-                    
-                    <div className="review-form">
-                        <ReviewForm/>
-                    </div>
-            
-                </div>
-
-
+                        <div className="column-2">
+                            <div className="review-form">
+                                <ReviewForm/>
+                            </div>
+                        </div>
+                    </Fragment>
+                }
             </div>
         )
-
     }
 }
 
