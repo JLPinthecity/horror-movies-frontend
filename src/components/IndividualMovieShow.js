@@ -3,6 +3,7 @@ import { getMoviePlusReviews } from '../actions/individualMovie'
 import { connect } from 'react-redux';
 import MovieHeader from './MovieHeader';
 import "./IndividualMovieShow.css";
+import ReviewForm from './ReviewForm';
 
 class IndividualMovieShow extends React.Component {
 
@@ -34,7 +35,7 @@ class IndividualMovieShow extends React.Component {
                 <div className="column-2">
                     
                     <div className="review-form">
-                        FORM GOES HERE
+                        <ReviewForm/>
                     </div>
             
                 </div>
