@@ -5,7 +5,7 @@ import { postNewMovie } from '../actions/newMovieForm';
 import { updateDate } from '../actions/date';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './NewMovieForm.css'
+import './MovieForm.css'
 
 const NewTripForm = (props) => {
 
@@ -30,9 +30,9 @@ const NewTripForm = (props) => {
 
     return (
 
-        <div className="movieFormWrapper">
+        <div className="FormWrapper">
 
-            <div className="movieFormContainer">
+            <div className="FormContainer">
 
 
             <div className="first_row">
