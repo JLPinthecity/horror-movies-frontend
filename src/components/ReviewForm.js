@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const ReviewForm = () => {
+const ReviewForm = (props) => {
+
+    const { title, description, rating } = props.reviewForm
 
     const handleChange = (event) => {
 
@@ -41,4 +43,5 @@ const mapStateToProps = state => {
         reviewFormData: state.reviewForm
     }
 }
+
 export default connect(mapStateToProps)(ReviewForm);
