@@ -1,6 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const ReviewForm = () => {
+
+    const handleChange = (event) => {
+
+    }
+
+    const handleSubmit = (event) => {
+
+    }
 
     return (
         <div className="FormWrapper">
@@ -21,16 +30,15 @@ const ReviewForm = () => {
                         <button type="submit">Submit Your Review</button>
 
                     </div>
-
-
-
-
                 </form>
             </div>
         </div>
     )
-
-
 }
 
-export default ReviewForm;
+const mapStateToProps = state => {
+    return {
+        reviewFormData: state.reviewForm
+    }
+}
+export default connect(mapStateToProps)(ReviewForm);
