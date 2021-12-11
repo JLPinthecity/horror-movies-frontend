@@ -12,6 +12,7 @@ const ReviewForm = (props) => {
     //we want to pass the name and value to the action creator
 
     const handleSubmit = (event) => {
+        event.preventDefault();
 
     }
 
@@ -19,7 +20,7 @@ const ReviewForm = (props) => {
         <div className="FormWrapper">
 
             <div className="FormContainer">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div>Watched this movie? Leave a quick review.</div>
 
                     <label>Title</label>
@@ -30,8 +31,6 @@ const ReviewForm = (props) => {
 
                     <div className="ratingContainer">
                         <div className="ratingTitleText">Rate This Airline</div>
-
-                        
 
                         <button type="submit">Submit Your Review</button>
 
