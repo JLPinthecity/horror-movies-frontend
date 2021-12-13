@@ -9,6 +9,12 @@ export const updateReviewForm = (name, value) => {
     }
 }
 
+export const showReviewForm = () => {
+    return {
+        type: "SHOW_REVIEW_FORM"
+    }
+}
+
 
 //asynchronous actions 
 export const postNewReview = (formData, history, horrorMovieId) => {

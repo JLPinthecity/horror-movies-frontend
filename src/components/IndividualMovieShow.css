@@ -1,19 +1,27 @@
 .movie-wrapper {
-    margin: 5px;
+    margin: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-
     flex-wrap: nowrap;
 }
 
-.column-content {
+.reviews-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-x: scroll;
-    overflow-y: scroll; 
-    overflow: scroll;
+    align-content: center;
+    justify-content: center;
+}
+
+.review-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transparent-button {
+    padding: 20px;
 }
 
 .column-review {

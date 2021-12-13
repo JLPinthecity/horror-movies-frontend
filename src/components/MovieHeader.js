@@ -10,8 +10,7 @@ const MovieHeader = (props) => {
     return (
         <div className="header-wrapper">
            
-            <h1><img src={ poster } alt={ title }/> { title }</h1>
-
+            <h1><img src={ poster } alt={ title }/> <br /><br />{ title }</h1>
             <div className="review_details">
                 <div className="total-reviews">{ reviews.length } user reviews</div>
                 <div className="star-rating"> </div>

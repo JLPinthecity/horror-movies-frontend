@@ -15,6 +15,7 @@ import movieDataLoaded from './reducers/movieDataLoaded.js';
 import review from './reducers/review.js';
 import date from './reducers/date.js';
 import reviewForm from './reducers/reviewForm.js';
+import showReviewForm from './reducers/showReviewForm.js';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
@@ -33,7 +34,8 @@ const reducer = combineReducers({
     review,
     movieDataLoaded,
     date,
-    reviewForm
+    reviewForm,
+    showReviewForm
 })
   
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

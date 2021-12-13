@@ -5,6 +5,7 @@ import MovieHeader from './MovieHeader';
 import "./IndividualMovieShow.css";
 import ReviewForm from './ReviewForm';
 
+
 class IndividualMovieShow extends React.Component {
 
     componentDidMount() {
@@ -17,12 +18,22 @@ class IndividualMovieShow extends React.Component {
             <div className="movie-wrapper">
                 { this.props.loaded && 
                     <Fragment>
-                        <div className="column-content">
-                            <div className ="main">
+                        <div className="reviews-container">
+                            <br /><br />
+                            <div className ="movie-details">
                                 <MovieHeader/>
                             </div>
 
+                            <div className="review-button">
+                                <span>
+                                    <button className="transparent_button">Write a review</button>
+                                </span>
+                            </div>
+
                             <div className="reviews">
+                                <span>
+
+                                </span>
 
                             </div>
                         </div>
