@@ -18,7 +18,7 @@ const ReviewForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.postNewReview(formData, props.history)
+        props.postNewReview(formData, props.history, props.horrorMovieId);
     }
 
     return (

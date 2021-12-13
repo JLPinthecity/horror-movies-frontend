@@ -11,11 +11,15 @@ export const updateReviewForm = (name, value) => {
 
 
 //asynchronous actions 
-export const postNewReview = () => {
+export const postNewReview = (formData, history, horrorMovieId) => {
+    
     console.log("POST NEW REVIEW action fired")
 
     const sendableData = {
-        
+        title: formData.title,
+        description: formData.description,
+        rating: formData.rating,
+        horror_movie_id: parseInt(horrorMovieId)
     }
 
     const configObj = {

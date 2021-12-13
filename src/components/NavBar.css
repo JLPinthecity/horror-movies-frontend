@@ -51,22 +51,6 @@
     flex-basis: 0;
 }
 
-/* .test input {
-    align-items: center;
-    justify-content: center;
-    background-color: #1e2525;
-    border: none;
-    width: 100px;
-    padding: 3px 8px;
-    margin: 20px;
-    font-size: 12px;
-    border-radius: 0;
-    height: 25px;
-    color: whitesmoke;
-    line-height: 1;
-    text-transform: uppercase;
-} */
-
 /* ROW OF LINKS */
 .nav .menu {
     border-top: 1px solid currentColor;
@@ -93,7 +77,6 @@
     text-decoration: none;
     color: black;
 }
-
 
 .nav .menu a:visited{
     color: rbg(135,64,37);
