@@ -3,8 +3,8 @@ import { getMoviePlusReviews } from '../actions/individualMovie';
 import { showReviewForm } from '../actions/newReviewForm';
 import { connect } from 'react-redux';
 import MovieHeader from './MovieHeader';
-import "./IndividualMovieShow.css";
 import ReviewForm from './ReviewForm';
+import "./IndividualMovieShow.css";
 
 class IndividualMovieShow extends React.Component {
 
@@ -16,6 +16,8 @@ class IndividualMovieShow extends React.Component {
     showOrHideReviewForm = () => {
         this.props.showReviewForm()
     }
+
+    
 
     render() {
         return (
@@ -30,7 +32,7 @@ class IndividualMovieShow extends React.Component {
 
                             <div className="review-button">
                                 <span>
-                                    <button className="transparent_button">Write a review</button>
+                                    <button className="transparent_button" onClick={this.showOrHideReviewForm} >Write a review</button>
                                 </span>
                             </div>
 
