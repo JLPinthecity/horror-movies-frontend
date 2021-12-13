@@ -1,17 +1,16 @@
 .FormWrapper {
-    align-content: left;
+    border: 1px solid;
     width: 100vw;
-    height: 100vh;
-    min-height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: hidden;
-    border: 1px solid;
 }
 
+/* 1 - PARENT CONTAINER FLEX */
 .FormContainer {
     box-sizing: border-box; 
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: left;
     font-size: 1.4rem;
@@ -24,5 +23,5 @@
 .FormContainer .primary-button {
     width: 100%;
     margin: 0px;
-    align-content: center;
 }
+

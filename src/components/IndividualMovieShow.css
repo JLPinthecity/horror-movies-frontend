@@ -1,3 +1,4 @@
+/* MAIN PARENT FLEXBOX */
 .movie-wrapper {
     margin: 0px;
     display: flex;
@@ -6,6 +7,7 @@
     flex-wrap: nowrap;
 }
 
+/* SECOND PARENT INSIDE MAIN FLEXBOX I */
 .reviews-container {
     flex: 1;
     display: flex;
@@ -20,20 +22,16 @@
     align-items: center;
 }
 
-.transparent-button {
-    padding: 20px;
-}
 
+/* SECOND PARENT INSIDE MAIN FLEXBOX II */
 .column-review {
     flex: 2;
     display: flex;
     flex-direction: column;
-    overflow-x: scroll;
-    overflow-y: scroll; 
-    overflow: scroll;
 }
 
 .review-form {
-    width: 50%;
-    background-color: pink;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10px;
 }

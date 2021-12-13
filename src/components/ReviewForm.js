@@ -26,8 +26,8 @@ const ReviewForm = (props) => {
 
             <div className="FormContainer">
                 <form onSubmit={handleSubmit}>
-                    <div>Watched this movie? Leave a quick review.</div>
-
+                    <div className="title">Watched this movie? Leave a quick review.</div>
+                    <br/>
                     <label>Title</label>
                     <input text="type" name="title" value={title} placeholder="Review Title" onChange={handleChange}/>
 
@@ -37,7 +37,7 @@ const ReviewForm = (props) => {
                     <div className="ratingContainer">
                         <div className="ratingTitleText">Rate This Airline</div>
 
-                        <button type="submit">Submit Your Review</button>
+                        <button className="transparent_button float_right" type="submit">Submit Review</button>
 
                     </div>
                 </form>
