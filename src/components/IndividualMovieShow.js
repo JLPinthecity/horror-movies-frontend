@@ -1,16 +1,20 @@
 import React, { Fragment } from 'react';
-import { getMoviePlusReviews } from '../actions/individualMovie'
+import { getMoviePlusReviews } from '../actions/individualMovie';
+import { showReviewForm } from '../actions/newReviewForm';
 import { connect } from 'react-redux';
 import MovieHeader from './MovieHeader';
 import "./IndividualMovieShow.css";
 import ReviewForm from './ReviewForm';
-
 
 class IndividualMovieShow extends React.Component {
 
     componentDidMount() {
         const url = this.props.match.url
         this.props.getMoviePlusReviews(url)
+    }
+
+    showOrHideReviewForm = () => {
+        this.props.showReviewForm()
     }
 
     render() {
@@ -56,7 +60,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getMoviePlusReviews })(IndividualMovieShow);
+export default connect(mapStateToProps, { getMoviePlusReviews, showReviewForm })(IndividualMovieShow);
 
 //props.match.url = '/horror-movies/hereditary'
 //loaded checks to see if we've made our api request and have the data
