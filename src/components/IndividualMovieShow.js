@@ -13,12 +13,6 @@ class IndividualMovieShow extends React.Component {
         this.props.getMoviePlusReviews(url)
     }
 
-    showOrHideReviewForm = () => {
-        this.props.showReviewForm()
-    }
-
-    
-
     render() {
         return (
             <div className="movie-wrapper">
@@ -32,7 +26,7 @@ class IndividualMovieShow extends React.Component {
 
                             <div className="review-button">
                                 <span>
-                                    <button className="transparent_button" onClick={this.showOrHideReviewForm} >Write a review</button>
+                                    <button className="transparent_button" onClick={this.props.showReviewForm} >Write a review</button>
                                 </span>
                             </div>
 
@@ -45,7 +39,7 @@ class IndividualMovieShow extends React.Component {
                         </div>
 
                         <div className="column-review">
-                            <div className="review-form">
+                            <div className="review-form" id={ this.props.showForm ? "" : "hide"}>
                                 <ReviewForm/>
                             </div>
                         </div>
@@ -58,7 +52,8 @@ class IndividualMovieShow extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        loaded: state.movieDataLoaded
+        loaded: state.movieDataLoaded,
+        showForm: state.showReviewForm
     }
 }
 

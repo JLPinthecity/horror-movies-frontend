@@ -23,10 +23,6 @@ export default (state = initialState, action) => {
                 rating: action.rating
             }
             
-
-
-
-
         default:
             return state
     }

@@ -4,8 +4,7 @@ export default (state = hover, action) => {
     switch (action.type) {
        
         case "SET_HOVER":
-            debugger
-            return action.payload
+            return action.rating
 
 
         case "RESET_HOVER":

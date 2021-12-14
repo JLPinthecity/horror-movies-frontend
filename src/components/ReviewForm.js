@@ -11,7 +11,7 @@ const ReviewForm = (props) => {
 
     const formData = { title, description, rating }
 
-    const ratingOptions = [5, 4, 3, 2, 1].map( (score, index) => {
+    const ratingOptions = [5, 4, 3, 2, 1].map( (score) => {
 
         return (
             <Fragment>
