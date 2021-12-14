@@ -5,6 +5,7 @@ import { updateReviewForm } from '../actions/newReviewForm';
 import { postNewReview } from '../actions/newReviewForm';
 
 import "./ReviewForm.css";
+import StarRating from './StarRating';
 
 const ReviewForm = (props) => {
 
@@ -50,9 +51,13 @@ const ReviewForm = (props) => {
                     <br/>
 
                     <div className="ratingContainer">
+                        
                         <div className="ratingTitleText">Rate This Airline</div>
 
+                        <div className="rating-box">
                         {ratingOptions}
+                        <StarRating/>
+                        </div>
 
                         <button className="transparent_button float_right" type="submit">Submit Review</button>
 

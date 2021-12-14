@@ -1,0 +1,26 @@
+.ratingContainer {
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 40px 0 10px 0;
+}
+
+.rating-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    position:relative;
+}
+
+.rating-box input{
+    display: none;
+}
+
+.rating-box label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: url();
+
+}
+
