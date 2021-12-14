@@ -2,9 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 20px;
-    row-gap: 120px;
+    row-gap: 20px;
     width: 100%;
-    padding: 20px;
     overflow: hidden;
 }
 

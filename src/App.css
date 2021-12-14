@@ -38,6 +38,7 @@ input {
     font-size: 14px;
     height: 32px;
     color: #1e2525;
+    padding: 5px;
 }
 
 .primary-button {

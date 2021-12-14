@@ -1,5 +1,6 @@
-//synchronous actions
+import { setReview } from "./review";
 
+//synchronous actions
 export const updateReviewForm = (name, value) => {
     console.log("value is", value)
 

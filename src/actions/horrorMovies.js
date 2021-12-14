@@ -13,6 +13,7 @@ export const addMovie = (movie) => {
     }
 }
 
+
 //asynchronous action creators
 export const getMovies = () => {
     const configObj = {

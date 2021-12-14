@@ -18,7 +18,7 @@ const ReviewForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.postNewReview(formData, props.history, props.horrorMovieId);
+        props.postNewReview(formData, props.history, props.horrorMovie);
     }
 
     return (
@@ -26,13 +26,17 @@ const ReviewForm = (props) => {
 
             <div className="FormContainer">
                 <form onSubmit={handleSubmit}>
+
                     <div className="title">Watched this movie? Leave a quick review.</div>
                     <br/>
+
                     <label>Title</label>
-                    <input text="type" name="title" value={title} placeholder="Review Title" onChange={handleChange}/>
+                    <input type="text" name="title" value={title} placeholder="Enter review title" onChange={handleChange}/>
+                    <br/>
 
                     <label>Review Body</label>
-                    <input text="type" name="description" value={description} placeholder="Review Description" onChange={handleChange}/>
+                    <input type="text" name="description" value={description} placeholder="Enter review body" onChange={handleChange}/>
+                    <br/>
 
                     <div className="ratingContainer">
                         <div className="ratingTitleText">Rate This Airline</div>
@@ -49,8 +53,14 @@ const ReviewForm = (props) => {
 const mapStateToProps = state => {
     return {
         reviewFormData: state.reviewForm,
-        horrorMovieId: state.horrorMovie.id
+        horrorMovie: state.horrorMovie
     }
 }
 
 export default withRouter(connect(mapStateToProps, { updateReviewForm, postNewReview })(ReviewForm));
+
+
+//when we want to add a review
+//we want the horror_movie object in state to refresh with new reviews
+//so from here, we need to send the whole horror_movie object to the action creator that's posting the new review, so 
+//we can dispatch the action to refresh the horror_movie object in state from there. 

@@ -11,7 +11,6 @@
 
 
 /* FIRST CHILD - FLEXBOX*/
-
 .left_side {
     border-right: 1px solid currentColor;
     width: 50%;
@@ -40,7 +39,6 @@
     font-family: 'Playfair Display', serif;
     font-size: 28px;
 }
-
 
 @media only screen and (max-width: 900px) {
 
