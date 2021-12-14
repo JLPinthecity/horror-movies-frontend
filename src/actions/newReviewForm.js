@@ -25,7 +25,7 @@ export const addRating = (rating) => {
 
 export const setHover = (rating) => {
     return {
-        type: "ADD_RATING",
+        type: "SET_HOVER",
         rating
     }
 }
@@ -35,15 +35,6 @@ export const resetHover = () => {
         type: "RESET_HOVER"
     }
 }
-
-
-
-// case "SET_HOVER":
-//     return action.payload
-
-// case "RESET_HOVER":
-//     return hover
-
 
 //asynchronous actions 
 export const postNewReview = (formData, history, horrorMovie) => {

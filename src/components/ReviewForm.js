@@ -2,10 +2,8 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { updateReviewForm, postNewReview, addRating, setHover, resetHover } from '../actions/newReviewForm';
-import { FaStar } from 'react-icons/fa'
-
+import { FaStar } from 'react-icons/fa';
 import "./ReviewForm.css";
-
 
 const ReviewForm = (props) => {
 
@@ -13,31 +11,29 @@ const ReviewForm = (props) => {
 
     const formData = { title, description, rating }
 
-    const currentRating = props.reviewFormData.rating
-
     const ratingOptions = [5, 4, 3, 2, 1].map( (score, index) => {
 
         return (
             <Fragment>
                 <label>
-                    <input type="radio" 
+                    <input 
+                    type="radio" 
                     value={score} 
                     name="rating" 
                     onClick={()=> props.addRating(score)} 
                     id={`rating-${score}`}
                     />
+                    
                     <FaStar 
                     className="star" 
-                    color={ score <= currentRating ? "#ffc107": "#D3D3D3" }
-                    onMouseEnter={() => setHover(score)}
-                    onMouseLeave={() => resetHover()}
+                    color={ score <= (props.hover || rating) ? "#ffc107": "#D3D3D3" }
+                    onMouseEnter={() => props.setHover(score)}
+                    onMouseLeave={() => props.resetHover()}
                     />
                 </label>
             </Fragment>
         )
     })
-
-    
 
     const handleChange = event => {
         console.log("name is", event.target.name, "value is", event.target.value)
@@ -87,7 +83,9 @@ const ReviewForm = (props) => {
 const mapStateToProps = state => {
     return {
         reviewFormData: state.reviewForm,
-        horrorMovie: state.horrorMovie
+        horrorMovie: state.horrorMovie, 
+        rating: state.reviewForm.rating,
+        hover: state.hoverEffect
     }
 }
 
