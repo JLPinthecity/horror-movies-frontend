@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { updateReviewForm } from '../actions/newReviewForm';
-import { postNewReview } from '../actions/newReviewForm';
+import { updateReviewForm, postNewReview, addRating } from '../actions/newReviewForm';
+import { FaStar } from 'react-icons/fa'
 
 import "./ReviewForm.css";
-import StarRating from './StarRating';
+
 
 const ReviewForm = (props) => {
 
@@ -14,13 +14,18 @@ const ReviewForm = (props) => {
     const formData = { title, description, rating }
 
     const ratingOptions = [5, 4, 3, 2, 1].map( (score, index) => {
+
         return (
             <Fragment>
-                <input type="radio" value={score} name="rating" onChange={() => console.log("selected", score)} id={`rating-${score}`}/>
-                <label></label>
+                <label>
+                    <input type="radio" value={score} name="rating" onClick={()=> props.addRating(score)} id={`rating-${score}`}/>
+                    <FaStar/>
+                </label>
             </Fragment>
         )
     })
+
+    
 
     const handleChange = event => {
         console.log("name is", event.target.name, "value is", event.target.value)
@@ -55,8 +60,7 @@ const ReviewForm = (props) => {
                         <div className="ratingTitleText">Rate This Airline</div>
 
                         <div className="rating-box">
-                        {ratingOptions}
-                        <StarRating/>
+                            {ratingOptions}
                         </div>
 
                         <button className="transparent_button float_right" type="submit">Submit Review</button>
@@ -75,7 +79,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateReviewForm, postNewReview })(ReviewForm));
+export default withRouter(connect(mapStateToProps, { updateReviewForm, postNewReview, addRating })(ReviewForm));
 
 
 //when we want to add a review

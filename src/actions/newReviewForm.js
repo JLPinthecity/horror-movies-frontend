@@ -16,6 +16,13 @@ export const showReviewForm = () => {
     }
 }
 
+export const addRating = (rating) => {
+    return {
+        type: "ADD_RATING",
+        rating
+    }
+}
+
 
 //asynchronous actions 
 export const postNewReview = (formData, history, horrorMovie) => {
