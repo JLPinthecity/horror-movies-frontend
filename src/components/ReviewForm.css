@@ -12,8 +12,13 @@
     position:relative;
 }
 
+/* this hides the radio buttons next to stars */
 .rating-box input{
     display: none;
+}
+
+.star :hover{
+    color: yellow;
 }
 
 .rating-box label {

@@ -13,13 +13,15 @@ const ReviewForm = (props) => {
 
     const formData = { title, description, rating }
 
+    const currentRating = props.reviewFormData.rating
+
     const ratingOptions = [5, 4, 3, 2, 1].map( (score, index) => {
 
         return (
             <Fragment>
                 <label>
                     <input type="radio" value={score} name="rating" onClick={()=> props.addRating(score)} id={`rating-${score}`}/>
-                    <FaStar/>
+                    <FaStar className="star" color={ score <= currentRating ? "#ffc107": "#D3D3D3" }/>
                 </label>
             </Fragment>
         )
