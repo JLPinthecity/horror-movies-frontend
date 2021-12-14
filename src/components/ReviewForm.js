@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { updateReviewForm, postNewReview, addRating } from '../actions/newReviewForm';
+import { updateReviewForm, postNewReview, addRating, setHover, resetHover } from '../actions/newReviewForm';
 import { FaStar } from 'react-icons/fa'
 
 import "./ReviewForm.css";
@@ -20,8 +20,18 @@ const ReviewForm = (props) => {
         return (
             <Fragment>
                 <label>
-                    <input type="radio" value={score} name="rating" onClick={()=> props.addRating(score)} id={`rating-${score}`}/>
-                    <FaStar className="star" color={ score <= currentRating ? "#ffc107": "#D3D3D3" }/>
+                    <input type="radio" 
+                    value={score} 
+                    name="rating" 
+                    onClick={()=> props.addRating(score)} 
+                    id={`rating-${score}`}
+                    />
+                    <FaStar 
+                    className="star" 
+                    color={ score <= currentRating ? "#ffc107": "#D3D3D3" }
+                    onMouseEnter={() => setHover(score)}
+                    onMouseLeave={() => resetHover()}
+                    />
                 </label>
             </Fragment>
         )
@@ -81,7 +91,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateReviewForm, postNewReview, addRating })(ReviewForm));
+export default withRouter(connect(mapStateToProps, { updateReviewForm, postNewReview, addRating, setHover, resetHover })(ReviewForm));
 
 
 //when we want to add a review

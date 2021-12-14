@@ -6,7 +6,7 @@ export default (state = hover, action) => {
         case "SET_HOVER":
             return action.payload
 
-        case "RESER_HOVER":
+        case "RESET_HOVER":
             return hover
             
         default: 
