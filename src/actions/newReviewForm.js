@@ -18,15 +18,19 @@ export const showReviewForm = () => {
 
 
 //asynchronous actions 
-export const postNewReview = (formData, history, horrorMovieId) => {
-    
+export const postNewReview = (formData, history, horrorMovie) => {
+
+    let reviews =  horrorMovie.relationships.reviews.data
+
     console.log("POST NEW REVIEW action fired")
+
+    debugger
 
     const sendableData = {
         title: formData.title,
         description: formData.description,
         rating: formData.rating,
-        horror_movie_id: parseInt(horrorMovieId)
+        horror_movie_id: parseInt(horrorMovie.id)
     }
 
     const configObj = {
@@ -45,7 +49,8 @@ export const postNewReview = (formData, history, horrorMovieId) => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                console.log(resp)
+                
+                setReview(resp.data)
             }
         })
         .catch(console.log)

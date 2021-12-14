@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { updateReviewForm } from '../actions/newReviewForm';
 import { postNewReview } from '../actions/newReviewForm';
+
+import "./ReviewForm.css";
 
 const ReviewForm = (props) => {
 
     const { title, description, rating } = props.reviewFormData 
 
     const formData = { title, description, rating }
+
+    const ratingOptions = [5, 4, 3, 2, 1].map( (score, index) => {
+        return (
+            <Fragment>
+                <input type="radio" value={score} name="rating" onChange={() => console.log("selected", score)} id={`rating-${score}`}/>
+                <label></label>
+            </Fragment>
+        )
+    })
 
     const handleChange = event => {
         console.log("name is", event.target.name, "value is", event.target.value)
@@ -40,6 +51,8 @@ const ReviewForm = (props) => {
 
                     <div className="ratingContainer">
                         <div className="ratingTitleText">Rate This Airline</div>
+
+                        {ratingOptions}
 
                         <button className="transparent_button float_right" type="submit">Submit Review</button>
 
