@@ -1,7 +1,8 @@
 //synchronous action creators
-export const setReview = () => {
+export const addReview = (review) => {
     
     return {
-        type: "SET_REVIEW"
+        type: "ADD_REVIEW_TO_MOVIE",
+        review
     }
 }

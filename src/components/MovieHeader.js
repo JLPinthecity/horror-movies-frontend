@@ -5,7 +5,6 @@ import './MovieHeader.css';
 const MovieHeader = (props) => {
 
     const { poster, title, director, year_released, slug, average_score } = props.attributes
-    const { reviews } = props
 
     return (
         <div className="header-wrapper">
@@ -15,10 +14,13 @@ const MovieHeader = (props) => {
             </div>
 
             <div className="header-right">
-                <h1>{ title }</h1><br/>
-                <div className="total-reviews">{ reviews.length } user reviews</div>
+                <h1>{ title }</h1><br/> 
+                Directed by { director } 
+                <br/>
+                <label>Release date:</label> { year_released }
+                <div className="total-reviews">{ props.reviews.length } user reviews</div>
                 <div className="star-rating"> </div>
-                <div className="total-out-of">{ average_score } out of 5</div>
+                <div className="total-out-of">{ average_score } out of 5 stars</div>
             </div>
 
         </div>

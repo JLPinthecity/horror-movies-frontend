@@ -1,4 +1,4 @@
-import { setReview } from "./review";
+import { addReview } from "./review";
 
 //synchronous actions
 export const updateReviewForm = (name, value) => {
@@ -39,11 +39,9 @@ export const resetHover = () => {
 //asynchronous actions 
 export const postNewReview = (formData, history, horrorMovie) => {
 
-    let reviews =  horrorMovie.relationships.reviews.data
-
     console.log("POST NEW REVIEW action fired")
 
-    debugger
+    const reviews = horrorMovie.relationships.reviews
 
     const sendableData = {
         title: formData.title,
@@ -68,10 +66,15 @@ export const postNewReview = (formData, history, horrorMovie) => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                
-                setReview(resp.data)
+                dispatch(addReview(resp.data))
+
             }
         })
         .catch(console.log)
     }
 }
+
+//after we post a review, what do we need to do? 
+//a) need to add review to horror movie object
+//b)
+//c)
