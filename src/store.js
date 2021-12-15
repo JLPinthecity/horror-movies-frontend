@@ -12,7 +12,7 @@ import backgroundImage from './reducers/backgroundImage.js';
 import newMovieForm from './reducers/newMovieForm.js';
 import horrorMovie from './reducers/horrorMovie.js';
 import movieDataLoaded from './reducers/movieDataLoaded.js';
-import review from './reducers/review.js';
+import reviews from './reducers/reviews.js';
 import date from './reducers/date.js';
 import reviewForm from './reducers/reviewForm.js';
 import showReviewForm from './reducers/showReviewForm.js';
@@ -32,7 +32,7 @@ const reducer = combineReducers({
     backgroundImage,
     newMovieForm,
     horrorMovie, 
-    review,
+    reviews,
     movieDataLoaded,
     date,
     reviewForm,
