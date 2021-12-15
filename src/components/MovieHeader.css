@@ -1,13 +1,34 @@
 .header-wrapper {
-    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: pink;
+    width: 100vw;
+    padding: 20px;
+    margin-bottom: 20px;
 
 }
 
-.header-wrapper img {
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.header-left img {
     width: 250px;
 }
 
-.header-wrapper h1 {
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.header-right h1 {
     font-size: 16px;
 
 }
