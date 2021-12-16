@@ -1,3 +1,5 @@
+import { setReviews } from './review.js';
+
 //synchronous action creators
 export const setMovie = (action) => {
     return {
@@ -34,6 +36,7 @@ export const getMoviePlusReviews = (url) => {
             } else {
                 debugger
                 dispatch(setMovie(resp.data))
+                dispatch(setReviews())
                 dispatch(movieLoaded())
                 
             }

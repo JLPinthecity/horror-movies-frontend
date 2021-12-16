@@ -6,3 +6,13 @@ export const addReview = (review) => {
         review
     }
 }
+
+export const setReviews = (reviews) => {
+    
+    return {
+        type: "SET_REVIEWS",
+        reviews
+    }
+}
+
+
