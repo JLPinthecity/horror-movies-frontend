@@ -4,7 +4,7 @@ import './MovieHeader.css';
 
 const MovieHeader = (props) => {
 
-    const { poster, title, director, year_released, slug, average_score } = props.attributes
+    const { poster, title, director, year_released, average_score } = props.attributes
 
     return (
         <div className="header-wrapper">

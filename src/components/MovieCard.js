@@ -8,7 +8,7 @@ const MovieCard = ({ movie }) => {
         <div className="card-wrapper">
 
             <div className="poster">
-                <img src={movie.attributes.poster} alt={movie.attributes.title} width="500" />
+                <img src={movie.attributes.poster} alt={movie.attributes.title} width="500"/>
             </div>
             
             <div className="title">

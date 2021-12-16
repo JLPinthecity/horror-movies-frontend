@@ -10,7 +10,6 @@ import SearchBar from './components/SearchBar';
 import About from './components/About';
 import Logoff from './components/About';
 import Footer from './components/Footer';
-import ReviewForm from './components/ReviewForm';
 import IndividualMovieShow from './components/IndividualMovieShow';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/currentUser';

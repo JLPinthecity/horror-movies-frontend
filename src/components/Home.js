@@ -21,12 +21,12 @@ const Home  = (props) => {
 
             <div className="left_side">
                 <img src={ props.image } onMouseEnter={ showImageOnHover } 
-                onMouseOut={ showOriginalImage } />
+                onMouseOut={ showOriginalImage }/>
             </div>
             
 
             <div className="right_side">
-                <h3 class="h3_home">Find a few new spooky movies and keep track of old favorites.</h3>
+                <h3 className="h3_home">Find a few new spooky movies and keep track of old favorites.</h3>
 
                 <Link className="transparent_button" to="/horror_movies">View Movies</Link>
             </div>

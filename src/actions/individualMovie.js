@@ -34,9 +34,8 @@ export const getMoviePlusReviews = (url) => {
             if (resp.error) {
                 alert(resp.error)
             } else {
-                debugger
                 dispatch(setMovie(resp.data))
-                dispatch(setReviews())
+                dispatch(setReviews(resp.included))
                 dispatch(movieLoaded())
                 
             }

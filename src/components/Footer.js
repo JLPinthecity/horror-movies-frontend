@@ -10,50 +10,50 @@ const Footer = () => {
 
                 <div className="footer-content">
 
-                    <ul class="footer-menu">
+                    <ul className="footer-menu">
             
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         About
                         </li>
                     
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         Something else
                         </li>
                     
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         Another link
                         </li>
                     
                     </ul>
 
 
-                    <ul class="footer-menu">
+                    <ul className="footer-menu">
             
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         About 2
                         </li>
                     
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         Something else 2
                         </li>
                     
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         Another link 3
                         </li>
                     
                     </ul>
 
-                    <ul class="footer-menu">
+                    <ul className="footer-menu">
             
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         About 2
                         </li>
                     
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         Something else 2
                         </li>
                     
-                        <li class="footer-menu-item">
+                        <li className="footer-menu-item">
                         Another link 3
                         </li>
         
@@ -62,16 +62,16 @@ const Footer = () => {
                 </div>
 
                 <div className="social-stuff">
-                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank"><Facebook/></a>
+                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank" rel="noreferrer"><Facebook/></a>
 
-                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank"><LinkedIn/></a>
+                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank" rel="noreferrer"><LinkedIn/></a>
 
-                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank"><Instagram/></a>
+                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank" rel="noreferrer"><Instagram/></a>
 
-                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank"><Pinterest/></a>
+                    <a href="https://www.facebook.com/" className="footer-social-link icon" target="_blank" rel="noreferrer"><Pinterest/></a>
                 </div>
 
-                <div class="copyright">
+                <div className="copyright">
                     © 2021, horrorflix | stay scared
                 </div>
         

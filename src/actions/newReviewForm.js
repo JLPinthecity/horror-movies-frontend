@@ -41,8 +41,6 @@ export const postNewReview = (formData, history, horrorMovie) => {
 
     console.log("POST NEW REVIEW action fired")
 
-    const reviews = horrorMovie.relationships.reviews
-
     const sendableData = {
         title: formData.title,
         description: formData.description,
