@@ -14,10 +14,7 @@ export const movieLoaded = () => {
     }
 }
 
-
-
 //asynchronous action creators
-
 export const getMoviePlusReviews = (url) => {
     const configObj = {
         credentials: "include",

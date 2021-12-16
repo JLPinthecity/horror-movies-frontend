@@ -16,6 +16,12 @@ export const showReviewForm = () => {
     }
 }
 
+export const clearReviewForm = () => {
+    return {
+        type: "CLEAR_REVIEW_FORM"
+    }
+}
+
 export const addRating = (rating) => {
     return {
         type: "ADD_RATING",
@@ -38,8 +44,6 @@ export const resetHover = () => {
 
 //asynchronous actions 
 export const postNewReview = (formData, history, horrorMovie) => {
-
-    console.log("POST NEW REVIEW action fired")
 
     const sendableData = {
         title: formData.title,
@@ -65,6 +69,9 @@ export const postNewReview = (formData, history, horrorMovie) => {
                 alert(resp.error)
             } else {
                 dispatch(addReview(resp.data))
+                dispatch(clearReviewForm())
+                dispatch(showReviewForm())
+                history.push(history.location.pathname)
 
             }
         })
@@ -73,6 +80,6 @@ export const postNewReview = (formData, history, horrorMovie) => {
 }
 
 //after we post a review, what do we need to do? 
-//a) need to add review to horror movie object
-//b)
-//c)
+//a) need to add review to horror movie object - done
+//b) reset form
+//c) close review form

@@ -14,7 +14,7 @@ export default (state = initialState, action) => {
                 [action.formData.name]: action.formData.value
             }
 
-        case "RESET_REVIEW_FORM": 
+        case "CLEAR_REVIEW_FORM": 
             return initialState
 
         case "ADD_RATING":
