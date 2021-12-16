@@ -6,16 +6,19 @@
     align-items: center;
     height: 100%;
     margin-top: 0px;
-    border-bottom: 1px solid currentColor;
+    border-bottom: 1px solid;
 }
 
 
 /* FIRST CHILD - FLEXBOX*/
 .left_side {
-    border-right: 1px solid currentColor;
+    float: left;
     width: 50%;
+    padding: 72px;
     height: 100%;
-    padding: 75px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid currentColor;
 }
 
 
@@ -28,17 +31,22 @@
 
 /* SECOND CHILD - FLEXBOX*/
 .right_side {
+    float: right;
     width: 50%;
-    height: auto;
     padding: 72px;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .h3_home {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 18px;
 }
+
+
 
 @media only screen and (max-width: 900px) {
 

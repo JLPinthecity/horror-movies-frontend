@@ -1,0 +1,16 @@
+.review_card {
+    flex: 0 1 30%;
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    height: 350px;
+}
+
+.review-title {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    
+}

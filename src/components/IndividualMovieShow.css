@@ -29,17 +29,10 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 24px 0 0 0;
+    background-color: yellowgreen;
 }
 
-.review {
-    flex: 0 1 30%;
-    border: 1px solid;
-    border-color: #333029;
-    border-color: var(--colorTextBody);
-    padding: 20px !important;
-    margin: 1.5% !important;
-    text-align: center;
-}
+
 
 
 

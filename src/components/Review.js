@@ -1,5 +1,5 @@
-import { PinDropRounded } from '@material-ui/icons';
 import React from 'react';
+import './Review.css'
 
 const Review = (props) => {
     return (
@@ -13,7 +13,7 @@ const Review = (props) => {
                 </div>
             </div>
 
-            <div className="title">
+            <div className="review-title">
                 {props.attributes.title}
             </div>
 
