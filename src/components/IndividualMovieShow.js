@@ -4,6 +4,7 @@ import { showReviewForm } from '../actions/newReviewForm';
 import { connect } from 'react-redux';
 import MovieHeader from './MovieHeader';
 import ReviewForm from './ReviewForm';
+import Review from './Review';
 import "./IndividualMovieShow.css";
 
 class IndividualMovieShow extends React.Component {
@@ -17,7 +18,9 @@ class IndividualMovieShow extends React.Component {
         return (
             <div className="movie-wrapper">
                 { this.props.loaded && 
+                
                     <Fragment>
+                        
                         <div className="reviews-container">
                             <br /><br />
                             <div className ="movie-details">
@@ -30,18 +33,21 @@ class IndividualMovieShow extends React.Component {
                                 </span>
                             </div>
 
-                            <div className="reviews">
-                                <span>
-
-                                </span>
-
-                            </div>
                         </div>
 
                         <div className="column-review">
                             <div className="review-form" id={ this.props.showForm ? "" : "hide"}>
                                 <ReviewForm/>
                             </div>
+                        </div>
+
+                        
+
+                        <div className="reviews">
+
+                            {this.props.reviews ? this.props.reviews.map((review, index) => 
+                            <Review attributes={review.attributes} key={index} />): 'LOADING...'}
+
                         </div>
                     </Fragment>
                 }
@@ -50,10 +56,13 @@ class IndividualMovieShow extends React.Component {
     }
 }
 
+
+
 const mapStateToProps = state => {
     return {
         loaded: state.movieDataLoaded,
-        showForm: state.showReviewForm
+        showForm: state.showReviewForm,
+        reviews: state.reviews
     }
 }
 
