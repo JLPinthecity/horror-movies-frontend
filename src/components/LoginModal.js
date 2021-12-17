@@ -51,8 +51,8 @@ const Login = (props) => {
                     <form onSubmit={handleSubmit}>
                         <label>Username</label><br/>
                         <input type="text" name="username" value={props.loginForm.username} onChange={handleChange} />
-                        <br/><br/>
-                        
+                  
+                        <br/>
                         <label>Password</label><br/>
                         <input type="text" name="password" value={props.loginForm.password} onChange={handleChange} />
                         <br/><br/>

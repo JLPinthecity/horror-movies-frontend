@@ -1,26 +1,33 @@
-/* MAIN PARENT FLEXBOX */
+/* WRAPPER */
 .movie-wrapper {
     margin: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     flex-wrap: nowrap;
 }
 
-/* SECOND PARENT INSIDE MAIN FLEXBOX I */
-.reviews-container {
-    flex: 1;
+
+
+/* SECOND PARENT INSIDE MAIN FLEXBOX I -- header and button */
+.reviews-container{
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.review-button {
+.reviews-container .review-button {
     display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    width: 1000px;
+    align-content: center;
+}
+
+.reviews-container button{
+    height: 50px;
+    margin: 20px;
 }
 
 
