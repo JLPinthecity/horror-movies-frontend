@@ -20,15 +20,16 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="movie-title">
-                <p>{movie.attributes.director}</p>
+                <p>Directed by {movie.attributes.director}</p>
             </div>
 
             <div className="release-date">
-                <p>{movie.attributes.year_released}</p>
+                <p>Release date: {movie.attributes.year_released}</p>
             </div>
 
+            <br/>
             <div className="link">
-                <Link to={`/horror_movies/${movie.attributes.slug}`}>View Movie</Link>
+                <Link to={`/horror_movies/${movie.attributes.slug}`} className="transparent_button">View Movie</Link>
             </div>
             
         </div>
