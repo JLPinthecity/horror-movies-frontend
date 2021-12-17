@@ -1,4 +1,5 @@
 import React from 'react';
+import Rating from './Rating';
 import './Review.css'
 
 const Review = (props) => {
@@ -8,7 +9,7 @@ const Review = (props) => {
 
             <div className="rating-container">
                 <div className="rating-score">
-
+                    <Rating/>
                 </div>
             </div>
 

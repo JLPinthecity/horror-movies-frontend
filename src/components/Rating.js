@@ -1,13 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Rating = props => {
+const Rating = ({ userRating }) => {
 
     return (
-        <span>
+        <span className="star-wrapper">
+            <span className="star-rating">
+
+            </span>
 
         </span>
     )
 
 }
 
-export default Rating;
+const mapStateToProps = state => {
+    return {
+        userRating: state.horrorMovie.attributes.average_score
+    }
+}
+
+export default connect(mapStateToProps)(Rating);
