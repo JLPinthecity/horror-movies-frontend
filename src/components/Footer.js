@@ -5,58 +5,20 @@ import "./Footer.css";
 const Footer = () => {
     return (
         <footer className="footer">
-
             <div className="footer-container">
-
                 <div className="footer-content">
-
                     <ul className="footer-menu">
-            
                         <li className="footer-menu-item">
                         About
                         </li>
-                    
-                        <li className="footer-menu-item">
-                        Something else
-                        </li>
-                    
-                        <li className="footer-menu-item">
-                        Another link
-                        </li>
-                    
-                    </ul>
 
+                        <li className="footer-menu-item">
+                        Movies
+                        </li>
 
-                    <ul className="footer-menu">
-            
                         <li className="footer-menu-item">
-                        About 2
+                        Add Movie
                         </li>
-                    
-                        <li className="footer-menu-item">
-                        Something else 2
-                        </li>
-                    
-                        <li className="footer-menu-item">
-                        Another link 3
-                        </li>
-                    
-                    </ul>
-
-                    <ul className="footer-menu">
-            
-                        <li className="footer-menu-item">
-                        About 2
-                        </li>
-                    
-                        <li className="footer-menu-item">
-                        Something else 2
-                        </li>
-                    
-                        <li className="footer-menu-item">
-                        Another link 3
-                        </li>
-        
                     </ul>
 
                 </div>

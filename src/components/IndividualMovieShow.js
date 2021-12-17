@@ -41,13 +41,9 @@ class IndividualMovieShow extends React.Component {
                             </div>
                         </div>
 
-                        
-
                         <div className="reviews">
-
                             {this.props.reviews ? this.props.reviews.map((review, index) => 
                             <Review attributes={review.attributes} key={index} />): 'LOADING...'}
-
                         </div>
                     </Fragment>
                 }

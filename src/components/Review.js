@@ -9,7 +9,6 @@ const Review = (props) => {
             <div className="rating-container">
                 <div className="rating-score">
 
-
                 </div>
             </div>
 
