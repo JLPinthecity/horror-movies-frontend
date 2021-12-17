@@ -60,7 +60,7 @@ const NewMovieForm = (props) => {
                         value={props.date}/>
 
                         <br/>
-                        <input type="submit" className="transparent_button float_center" value="Add New Movie"/>
+                        <input type="submit" className="transparent_button" value="Add New Movie"/>
                         <br/>
 
                     </form>
