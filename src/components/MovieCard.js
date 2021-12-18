@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rating from './Rating';
 import "./Card.css";
 
 const MovieCard = ({ movie }) => {
@@ -16,7 +17,7 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="rating">
-                <p>{movie.attributes.average_score}</p>
+                { movie.attributes.average_score > 0 ? <Rating score={movie.attributes.average_score}/> : "No reviews yet"} 
             </div>
 
             <div className="movie-title">
