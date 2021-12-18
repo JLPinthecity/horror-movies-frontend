@@ -1,0 +1,20 @@
+.star-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffc107;
+}
+
+.star-wrapper::before, .stars::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f005 \0020 \f005 \0020 \f005 \0020 \f005 \0020 \f005";
+}
+
+/* this creates */

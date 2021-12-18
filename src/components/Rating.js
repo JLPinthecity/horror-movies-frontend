@@ -1,23 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import './Rating.css'
 
-const Rating = ({ userRating }) => {
+const Rating = ({ score }) => {
+
+    const ratingPercentage = (score / 5) * 100
 
     return (
         <span className="star-wrapper">
-            <span className="star-rating">
-
+            <span className="stars" style={{ width: ratingPercentage + "%" }}>
             </span>
-
         </span>
     )
-
 }
 
-const mapStateToProps = state => {
-    return {
-        userRating: state.horrorMovie.attributes.average_score
-    }
-}
-
-export default connect(mapStateToProps)(Rating);
+export default Rating;
