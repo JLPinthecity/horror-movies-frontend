@@ -51,6 +51,7 @@ export const postNewReview = (formData, history, horrorMovie) => {
         rating: formData.rating,
         horror_movie_id: parseInt(horrorMovie.id)
     }
+ 
 
     const configObj = {
         credentials: "include",
@@ -81,5 +82,6 @@ export const postNewReview = (formData, history, horrorMovie) => {
 
 //after we post a review, what do we need to do? 
 //a) need to add review to horror movie object - done
-//b) reset form
-//c) close review form
+//b) reset form - done
+//c) close review form - done
+//d) after we add review, we need to update the number of reviews and update the average score

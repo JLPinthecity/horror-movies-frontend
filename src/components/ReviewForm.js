@@ -36,7 +36,6 @@ const ReviewForm = (props) => {
     })
 
     const handleChange = event => {
-        console.log("name is", event.target.name, "value is", event.target.value)
         props.updateReviewForm(event.target.name, event.target.value)
     }
     //we want to pass the name and value to the action creator

@@ -29,7 +29,7 @@ class IndividualMovieShow extends React.Component {
 
                             <div className="review-button">
                                 <span>
-                                    <button className="transparent_button" onClick={this.props.showReviewForm} >Write review</button>
+                                    <button className="transparent_button" onClick={this.props.showReviewForm}>Write review</button>
                                 </span>
                             </div>
 
