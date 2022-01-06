@@ -2,6 +2,9 @@ import { clearLoginForm } from './loginForm';
 import { getMovies } from './horrorMovies';
 import { clearSignupForm } from './signupForm';
 
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
+const loginPath = "api/v1/login"
+
 //synchronous action creators
 export const setCurrentUser = (user) => {
     
@@ -34,7 +37,9 @@ export const login = (credentials, history) => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/login", configObj)
+        debugger
+
+        return fetch(endpoint + loginPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
