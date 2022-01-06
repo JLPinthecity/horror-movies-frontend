@@ -4,6 +4,8 @@ import { clearSignupForm } from './signupForm';
 
 const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const loginPath = "api/v1/login"
+const signupPath = "api/v1/signup"
+const currentUserPath = "api/v1/get_current_user"
 
 //synchronous action creators
 export const setCurrentUser = (user) => {
@@ -37,8 +39,6 @@ export const login = (credentials, history) => {
     }
 
     return dispatch => {
-        debugger
-
         return fetch(endpoint + loginPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
@@ -60,7 +60,7 @@ export const login = (credentials, history) => {
 
 
 export const signup = credentials => {
-    console.log("from signup", credentials)
+    // console.log("from signup", credentials)
     const configObj = {
         credentials: "include",
         method: "POST",
@@ -71,7 +71,7 @@ export const signup = credentials => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/signup", configObj)
+        return fetch(endpoint + signupPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
@@ -100,7 +100,7 @@ export const getCurrentUser = () => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/get_current_user", configObj)
+        return fetch(endpoint + currentUserPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
