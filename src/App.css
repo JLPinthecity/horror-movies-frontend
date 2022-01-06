@@ -41,6 +41,10 @@ input {
     padding: 5px;
 }
 
+.logoff {
+    background-color: blueviolet;
+}
+
 .primary-button {
     align-items: center;
     justify-content: center;

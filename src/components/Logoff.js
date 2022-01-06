@@ -13,7 +13,7 @@ const Logoff = ({ history, logout }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="submit" value="Log Out" />
+            <input type="submit" className="primary-button" value="Log Out" />
         </form>
 
     )
