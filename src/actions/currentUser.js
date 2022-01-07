@@ -1,6 +1,7 @@
 import { clearLoginForm } from './loginForm';
 import { getMovies } from './horrorMovies';
 import { clearSignupForm } from './signupForm';
+import { openOrCloseModal } from './openOrCloseModal';
 
 const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const loginPath = "api/v1/login"
