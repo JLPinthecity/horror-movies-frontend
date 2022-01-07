@@ -50,7 +50,8 @@ export const login = (credentials, history) => {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getMovies())
                 dispatch(clearLoginForm())
-                history.push("/")
+                dispatch(openOrCloseModal())
+                history.push("/horror_movies")
             }
         })
         .catch(console.log)
