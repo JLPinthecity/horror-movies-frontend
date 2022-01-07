@@ -6,6 +6,7 @@ const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const loginPath = "api/v1/login"
 const signupPath = "api/v1/signup"
 const currentUserPath = "api/v1/get_current_user"
+const logoff = "api/v1/logoff"
 
 //synchronous action creators
 export const setCurrentUser = (user) => {
@@ -126,7 +127,7 @@ export const logout = () => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/logout", configObj)
+        return fetch(endpoint + logoff, configObj)
         .then(resp => resp.json())
         .then(notice => dispatch({
             type: "CLEAR_CURRENT_USER"
