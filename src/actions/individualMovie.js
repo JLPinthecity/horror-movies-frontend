@@ -1,5 +1,8 @@
 import { setReviews } from './review.js';
 
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
+const version = "api/v1"
+
 //synchronous action creators
 export const setMovie = (action) => {
     return {
@@ -15,7 +18,7 @@ export const movieLoaded = () => {
 }
 
 //asynchronous action creators
-export const getMoviePlusReviews = (url) => {
+export const getMoviePlusReviews = (slug) => {
     const configObj = {
         credentials: "include",
         method: "GET",
@@ -25,7 +28,7 @@ export const getMoviePlusReviews = (url) => {
     }
 
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1${url}`, configObj)
+        return fetch(endpoint + version + slug, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
