@@ -1,4 +1,8 @@
 //synchronous action creators
+
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
+const moviesPath = "api/v1/horror_movies"
+
 export const setMovies = (movies) => {
     return {
         type: "SET_MOVIES", 
@@ -25,7 +29,7 @@ export const getMovies = () => {
     }
 
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/horror_movies`, configObj)
+        return fetch(endpoint + moviesPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {

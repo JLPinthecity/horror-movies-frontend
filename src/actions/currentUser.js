@@ -90,8 +90,6 @@ export const signup = credentials => {
     }
 }
 
-
-
 export const getCurrentUser = () => {
     // console.log("DISPATCHING GET CURRENT USER")
     const configObj = {
