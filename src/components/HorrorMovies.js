@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 import "./HorrorMovies.css";
 
 const HorrorMovies = (props) => {
-    const movieCards = props.movies.length > 0 ? props.movies.map(m => <div key={m.attributes.id} ><MovieCard movie={m} /> </div>) : null
+    const movieCards = props.movies.length > 0 ? props.movies.map(m => <MovieCard key={m.attributes.id} movie={m} />) : null
 
     return (
         <div className="movies-main-container">
