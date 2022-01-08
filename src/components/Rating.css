@@ -10,11 +10,11 @@
     overflow: hidden;
     white-space: nowrap;
     color: #ffc107;
+    font-weight: 900;
 }
+
 
 .star-wrapper::before, .stars::before {
     font-family: 'Font Awesome 5 Free';
     content: "\f005 \0020 \f005 \0020 \f005 \0020 \f005 \0020 \f005";
 }
-
-/* this creates */
