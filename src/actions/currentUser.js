@@ -62,8 +62,8 @@ export const login = (credentials, history) => {
 //resp.data.id = user.id
 
 
-
-export const signup = credentials => {
+//NEED TO PASS HISTORY OBJECT HERE ALONG W/CREDENTIALS 1/8/22
+export const signup = (credentials, history) => {
     // console.log("from signup", credentials)
     const configObj = {
         credentials: "include",
@@ -85,6 +85,7 @@ export const signup = credentials => {
                 dispatch(getMovies())
                 dispatch(clearSignupForm())
                 dispatch(showOrHideSignupModal())
+                history.push("/")
             }
         })
         .catch(console.log)
