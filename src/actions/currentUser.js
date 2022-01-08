@@ -2,6 +2,7 @@ import { clearLoginForm } from './loginForm';
 import { getMovies } from './horrorMovies';
 import { clearSignupForm } from './signupForm';
 import { openOrCloseModal } from './openOrCloseModal';
+import { showOrHideSignupModal } from './signupModal';
 
 const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const loginPath = "api/v1/login"
@@ -83,7 +84,7 @@ export const signup = credentials => {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getMovies())
                 dispatch(clearSignupForm())
-                dispatch(openOrCloseModal())
+                dispatch(showOrHideSignupModal())
             }
         })
         .catch(console.log)
