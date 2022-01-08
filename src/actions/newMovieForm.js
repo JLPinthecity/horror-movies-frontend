@@ -1,9 +1,12 @@
 import { addMovie } from './horrorMovies';
 import { resetDate } from './date';
 
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
+const moviesPath = "api/v1/horror_movies"
+
 //synchronous actions 
 export const updateNewMovieForm = (name, value) => {
-    console.log("value is", value)
+    // console.log("value is", value)
     return {
         type: "UPDATE_NEW_MOVIE_FORM",
         formData: { name, value }
@@ -11,7 +14,6 @@ export const updateNewMovieForm = (name, value) => {
 }
 
 export const clearMovieForm = () => {
-    debugger
     return {
         type: "RESET_NEW_MOVIE_FORM"
     }
@@ -19,8 +21,7 @@ export const clearMovieForm = () => {
 
 //asynchronous actions 
 export const postNewMovie = (movieData, selectedDate, history) => {
-    console.log("postNewMovie action fired")
-
+    // console.log("postNewMovie action fired")
     const sendableData = {
         title: movieData.title,
         poster: movieData.poster,
@@ -38,7 +39,7 @@ export const postNewMovie = (movieData, selectedDate, history) => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/horror_movies", configObj)
+        return fetch(endpoint + moviesPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
