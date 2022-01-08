@@ -83,7 +83,7 @@ export const signup = credentials => {
                 dispatch(setCurrentUser(resp.data))
                 dispatch(getMovies())
                 dispatch(clearSignupForm())
-
+                dispatch(openOrCloseModal())
             }
         })
         .catch(console.log)
