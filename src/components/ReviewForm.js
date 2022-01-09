@@ -70,7 +70,7 @@ const ReviewForm = (props) => {
                             {ratingOptions}
                         </div>
 
-                        <button className="transparent_button float_right" type="submit">Submit Review</button>
+                        <button className="transparent_button" type="submit">Submit Review</button>
 
                     </div>
                 </form>
