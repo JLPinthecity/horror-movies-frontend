@@ -13,9 +13,10 @@ const Review = (props) => {
                 </div>
             </div>
 
-            <div className="review-title">
+            <div className="review-title title">
                 {props.attributes.title}
             </div>
+            <br/>
 
             <div className="description">
                 {props.attributes.description}
