@@ -30,7 +30,7 @@ const MovieCard = ({ movie }) => {
 
             <br/>
             <div className="link">
-                <Link to={`/horror_movies/${movie.attributes.slug}`} className="transparent_button">View Movie</Link>
+                <Link to={`/horror_movies/${movie.attributes.slug}`} className="transparent_button">View Reviews</Link>
             </div>
             
         </div>
