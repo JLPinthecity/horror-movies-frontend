@@ -1,5 +1,8 @@
 import { addReview } from "./review";
 
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
+const reviewsPath = "api/v1/reviews"
+
 //synchronous actions
 export const updateReviewForm = (name, value) => {
     console.log("value is", value)
@@ -63,7 +66,7 @@ export const postNewReview = (formData, history, horrorMovie) => {
     }
 
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/reviews", configObj)
+        return fetch(endpoint + reviewsPath, configObj)
         .then(resp => resp.json())
         .then(resp => {
             if (resp.error) {
