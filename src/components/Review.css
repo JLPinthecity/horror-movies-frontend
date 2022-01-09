@@ -1,17 +1,16 @@
 .review_card {
     flex: 0 1 30%;
     border: 1px solid;
-    padding: 10px;
+    padding: 20px;
     margin: 10px 0px 10px 0px;
     text-align: center;
-    height: 350px;
-    width: 350px;
+    height: 250px;
+    width: 500px;
 }
 
 .rating-score {
     display: flex;
     flex-direction: row;
-    
 }
 
 .review-title {
