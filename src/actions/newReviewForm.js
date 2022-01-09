@@ -49,12 +49,12 @@ export const resetHover = () => {
 export const postNewReview = (formData, history, horrorMovie) => {
 
     const sendableData = {
+        name: formData.name,
         title: formData.title,
         description: formData.description,
         rating: formData.rating,
         horror_movie_id: parseInt(horrorMovie.id)
     }
- 
 
     const configObj = {
         credentials: "include",

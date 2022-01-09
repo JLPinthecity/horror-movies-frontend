@@ -7,9 +7,9 @@ import "./ReviewForm.css";
 
 const ReviewForm = (props) => {
 
-    const { title, description, rating } = props.reviewFormData 
+    const { name, title, description, rating } = props.reviewFormData 
 
-    const formData = { title, description, rating }
+    const formData = { name, title, description, rating }
 
     const ratingOptions = [5, 4, 3, 2, 1].map( (score) => {
 
@@ -52,6 +52,9 @@ const ReviewForm = (props) => {
                 <form onSubmit={handleSubmit}>
 
                     <div className="title">Watched this movie? Leave a quick review.</div>
+                    <br/>
+                    <label>Name</label>
+                    <input type="text" name="name" value={name} placeholder="Enter your name" onChange={handleChange}/>
                     <br/>
 
                     <label>Title</label>

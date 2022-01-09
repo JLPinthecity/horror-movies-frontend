@@ -7,7 +7,7 @@ const Review = (props) => {
         
         <div className="review_card">
 
-            <div className="rating-container">
+            <div className="rating-container ">
                 <div className="rating-score">
                     <Rating score={props.attributes.rating}/>
                 </div>
