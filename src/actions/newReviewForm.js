@@ -65,6 +65,7 @@ export const postNewReview = (formData, history, horrorMovie) => {
         body: JSON.stringify(sendableData)
     }
 
+    // endpoint + reviewsPath
     return dispatch => {
         return fetch(endpoint + reviewsPath, configObj)
         .then(resp => resp.json())
@@ -88,3 +89,6 @@ export const postNewReview = (formData, history, horrorMovie) => {
 //b) reset form - done
 //c) close review form - done
 //d) after we add review, we need to update the number of reviews and update the average score
+
+
+// 1/9/21 -- neeed to make sure backend accepts new name attr in review form

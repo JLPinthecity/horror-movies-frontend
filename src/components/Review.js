@@ -3,6 +3,7 @@ import Rating from './Rating';
 import './Review.css'
 
 const Review = (props) => {
+    
     return (
         
         <div className="review_card">
@@ -15,6 +16,11 @@ const Review = (props) => {
 
             <div className="review-title title">
                 {props.attributes.title}
+            </div>
+            <br/>
+
+            <div className="name">
+                Submitted by: {props.attributes.name}
             </div>
             <br/>
 

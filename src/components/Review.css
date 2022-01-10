@@ -4,8 +4,8 @@
     padding: 20px;
     margin: 10px 0px 10px 0px;
     text-align: center;
-    height: 250px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
 }
 
 .rating-score {
@@ -21,5 +21,11 @@
     padding: 20px 0 0 0;
 }
 
-.rating-container{
+.name {
+    font-size: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.description {
+    font-size: 15px;
 }
