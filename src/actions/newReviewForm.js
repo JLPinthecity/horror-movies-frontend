@@ -90,5 +90,4 @@ export const postNewReview = (formData, history, horrorMovie) => {
 //c) close review form - done
 //d) after we add review, we need to update the number of reviews and update the average score
 
-
-// 1/9/21 -- neeed to make sure backend accepts new name attr in review form
+// 1/9/21 -- neeed to make sure backend accepts new name attr in review form - done

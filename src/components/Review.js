@@ -3,7 +3,13 @@ import Rating from './Rating';
 import './Review.css'
 
 const Review = (props) => {
-    
+
+    const createdAt = props.attributes.created_at.split("T")[0]
+
+    const [yyyy, mm, dd] = createdAt.split("-")
+
+    const newDateFormat = `${mm}-${dd}-${yyyy}`;
+
     return (
         
         <div className="review_card">
@@ -20,7 +26,7 @@ const Review = (props) => {
             <br/>
 
             <div className="name">
-                Submitted by: {props.attributes.name}
+                Submitted by: {props.attributes.name} on {newDateFormat}
             </div>
             <br/>
 

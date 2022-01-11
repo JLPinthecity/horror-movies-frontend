@@ -4,6 +4,13 @@ import Rating from './Rating';
 import "./Card.css";
 
 const MovieCard = ({ movie }) => {
+
+    const date = movie.attributes.year_released;
+
+    const [yyyy, mm, dd] = date.split("-") 
+    
+    const newDate = `${mm}-${dd}-${yyyy}`;
+    
     return (
         
         <div className="card-wrapper">
@@ -25,10 +32,13 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className="release-date">
-                <p>Release date: {movie.attributes.year_released}</p>
-            </div>
+                
+                <p>Release date: {movie.attributes.year_released === null ? "No release date entered" : newDate} 
+                </p>
 
             <br/>
+            </div>
+
             <div className="link">
                 <Link to={`/horror_movies/${movie.attributes.slug}`} className="transparent_button">View Reviews</Link>
             </div>
