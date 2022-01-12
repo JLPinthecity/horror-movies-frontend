@@ -20,7 +20,7 @@ const Home  = (props) => {
         <div className="homeMainImageWrapper">
 
             <div className="left_side">
-                <img src={ props.image } onMouseEnter={ showImageOnHover } 
+                <img alt="photo of an apple" src={ props.image } onMouseEnter={ showImageOnHover } 
                 onMouseOut={ showOriginalImage }/>
             </div>
             
