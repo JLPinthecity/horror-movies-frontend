@@ -32,11 +32,13 @@ Node.js, npm, Rails, and PostgreSQL should be installed on your machine. Other p
 
 ### Installing
 
-Fork and clone this front-end repo and the accompanying [Rails API](https://github.com/JLPinthecity/horror-movies-backend). 
-cd into this repo and run $ npm install in your terminal.
+1. Fork and clone this front-end repo and the accompanying [Rails API](https://github.com/JLPinthecity/horror-movies-backend).
 
-cd into the backend repo and run $ rails s in your terminal. 
-The app will open in your browser. To close, enter CTRL + C in your terminal to stop running either server. 
+2. cd into this repo and run $ npm install in your terminal.
+
+3. cd into the backend repo and run $ rails s in your terminal.
+
+4. The app will open in your browser. To close, enter CTRL + C in your terminal to stop running either server.
 
 ## Version History
 
