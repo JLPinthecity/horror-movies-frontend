@@ -4,7 +4,8 @@ HorrorFlix is a minimalist horror-movie review site.
 
 **Find new spooky movies to watch and keep track of old favorites.**
 
-<img width="520" alt="Screen Shot 2022-01-23 at 11 37 16 AM" src="https://user-images.githubusercontent.com/38967615/150688448-220b1d6f-5b90-4355-9452-410975669682.png">
+<img width="903" alt="Screen Shot 2022-01-23 at 11 32 17 AM" src="https://user-images.githubusercontent.com/38967615/150688477-ada5674f-788d-4b23-b120-dea2382af341.png">
+
 
 
 #  ABOUT
