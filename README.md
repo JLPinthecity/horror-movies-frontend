@@ -24,16 +24,27 @@ Each movie has its individual show page where users can read each review as well
 ## LIVE LINK
 [HorrorFlix](https://scarymovies.netlify.app/)
 
-
 ## Getting Started
 
-### Installation
+## General dependencies.
 
-* 
+Node.js, npm, Rails, and PostgreSQL should be installed on your machine. Other project dependencies and versions can be found in the package.json file once you have cloned the project repository.
 
+### Installing
+
+Fork and clone this front-end repo and the accompanying [Rails API](https://github.com/JLPinthecity/horror-movies-backend). 
+cd into this repo and run $ npm install in your terminal.
+
+cd into the backend repo and run $ rails s in your terminal. 
+The app will open in your browser. To close, enter CTRL + C in your terminal to stop running either server. 
 
 ## Version History
 
+* 0.2 [TO COME]
+  Implement user profile pages
+
+
 * 0.1
     * Initial Release
+
 
